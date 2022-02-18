@@ -1,0 +1,13 @@
+digraph {
+
+welcome -> vinciStd
+welcome -> vinciDev
+vinciStd -> basicData
+approval -> vinciDev
+vinciDev -> mlData
+dart -> mlData
+dart -> basicData
+
+// nodex[label="Node\nLabel"]
+
+}
