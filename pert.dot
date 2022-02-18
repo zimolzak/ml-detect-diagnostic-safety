@@ -13,7 +13,7 @@ condaEnv -> runAnalysis
 
 pivReader -> remote
 RAMP -> remote
-software -> remote
+citrixSoftware -> remote
 
 PIV -> VANetwork
 PIV -> remote
@@ -21,6 +21,13 @@ PIV -> remote
 VANetwork -> RAMP
 VANetwork -> CAPRI
 VANetwork -> MDrive
+VANetwork -> welcome
+
+acos -> dart
+
+supervisorRSOP -> acos
+
+initialForms -> trainings -> fingerprint -> PIV
 
 // nodex[label="Node\nLabel"]
 
