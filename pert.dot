@@ -8,6 +8,20 @@ vinciDev -> mlData
 dart -> mlData
 dart -> basicData
 
+mlData -> runAnalysis
+condaEnv -> runAnalysis
+
+pivReader -> remote
+RAMP -> remote
+software -> remote
+
+PIV -> VANetwork
+PIV -> remote
+
+VANetwork -> RAMP
+VANetwork -> CAPRI
+VANetwork -> MDrive
+
 // nodex[label="Node\nLabel"]
 
 }
