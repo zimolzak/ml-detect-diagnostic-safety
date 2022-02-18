@@ -1,12 +1,12 @@
 digraph {
 
-welcome -> vinciStd
+welcome -> vinciStd [label = 0]
 welcome -> vinciDev
-vinciStd -> basicData
-approval -> vinciDev
+vinciStd -> basicData [label = 0]
+requestDev -> vinciDev [label = 5] // Not sure??
 vinciDev -> mlData
 dart -> mlData
-dart -> basicData
+dart -> basicData [label = 0]
 
 mlData -> runAnalysis
 condaEnv -> runAnalysis
@@ -15,20 +15,22 @@ pivReader -> remote
 RAMP -> remote
 citrixSoftware -> remote
 
-PIV -> VANetwork
+PIV -> VANetwork [label = 0]
 PIV -> remote
 
 VANetwork -> RAMP
 VANetwork -> CAPRI
 VANetwork -> MDrive
-VANetwork -> welcome
+VANetwork -> welcome [label = 1]
 
-acos -> dart
-
-supervisorRSOP -> acos
-
-initialForms -> trainings -> fingerprint -> PIV
-
-// nodex[label="Node\nLabel"]
+acos -> dart [label = 0]
+supervisorRSOP -> acos [label = 32]
+start -> initialForms [label = 1]
+initialForms -> trainings [label = 5]
+trainings -> fingerprint [label = 24]
+fingerprint -> PIV [label = 16]
+trainings -> supervisorRSOP [label = 5]
+VANetwork -> requestDev
+vinciDev -> condaEnv
 
 }
