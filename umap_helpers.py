@@ -1,4 +1,3 @@
-import pandas as pd
 import numpy as np
 
 
@@ -13,9 +12,6 @@ def points_near(x0, y0, point_array, k=10):
 
     n_total_points = point_array.shape[0]
     x0y0 = np.tile(np.array([x0, y0]), [n_total_points, 1])
-    dists = np.linalg.norm(x0y0 - point_array, axis=1, keepdims=True)
-
-    df = pd.DataFrame(point_array).rename(columns={0: "x", 1: "y"})
-    df["distance"] = dists
-    k_nearest = df.sort_values(by="distance")[:k]
-    return k_nearest
+    dists = np.linalg.norm(x0y0 - point_array, axis=1)
+    indices = dists.argsort()
+    return indices[:k]
