@@ -12,8 +12,7 @@ def points_near(x0: float, y0: float, point_array: np.ndarray, k: int = 10) -> n
     :return: Array of indices of the nearest points.
     """
 
-    n_total_points = point_array.shape[0]
-    x0y0 = np.tile(np.array([x0, y0]), [n_total_points, 1])
-    dists = np.linalg.norm(x0y0 - point_array, axis=1)
-    indices = dists.argsort()
-    return indices[:k]
+    x0y0 = np.broadcast_to(np.array([x0, y0]), point_array.shape)
+    distances = np.linalg.norm(x0y0 - point_array, axis=1)
+    nearest_indices = distances.argsort()
+    return nearest_indices[:k]
