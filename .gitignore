@@ -12,3 +12,5 @@ __pycache__/
 *.pkl
 *.RRF
 *.xls
+*.joblib
+*.png
