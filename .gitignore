@@ -3,3 +3,15 @@
 *.pdf
 .idea/
 __pycache__/
+*.csv
+*.xlsx
+*.json
+*.exe
+*.zip
+*.xmi
+*.pkl
+*.RRF
+*.xls
+*.joblib
+*.png
+
