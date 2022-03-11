@@ -1,5 +1,6 @@
 # This file may be used to create an environment using:
 # $ conda create --name <env> --file <this file>
+# AJZ note: This list was current as of 2021-01-14 and may have changed!
 # platform: win-64
 @EXPLICIT
 https://repo.anaconda.com/pkgs/main/win-64/_py-xgboost-mutex-2.0-cpu_0.conda
