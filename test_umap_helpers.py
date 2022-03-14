@@ -21,7 +21,7 @@ def test_points_near():
 
 
 def test_points_near_exception():
-    with pytest.raises(Exception):
+    with pytest.raises(ValueError):
         x = points_near(np.array([5]), EXAMPLE_POINTS)
         # That is bad because [5] gets broadcast to shape (10, 2).
         # In other words, it silently changes [5] to [5,5] which is probably a surprise
