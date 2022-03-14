@@ -14,7 +14,11 @@ def points_near(point_of_interest: np.ndarray, point_array: np.ndarray, k: int =
     :return: Array of indices of the nearest points.
     """
 
-    # fixme - should probably check assumptions about .shape and .ndim of inputs.
+    if point_array.ndim != 2:
+        raise ValueError("point_array is %i dimensional, not 2-dimensional" % point_array.ndim)
+    if point_array.shape[1] != point_of_interest.shape[-1]:
+        raise ValueError("point_array has %i dimensional points vs point_of_interest %i" %
+                         (point_array.shape[1], point_of_interest.shape[-1]))
 
     poi_repeated = np.broadcast_to(point_of_interest, point_array.shape)
     distances = np.linalg.norm(poi_repeated - point_array, axis=1)
