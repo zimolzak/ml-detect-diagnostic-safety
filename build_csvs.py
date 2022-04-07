@@ -16,8 +16,21 @@ FILENAMES = LS.split()
 if __name__ == '__main__':
     for name in FILENAMES:
         df = pd.read_csv(name)
-        if df.columns[0] == 'ICD-10-CM Code':
+
+        # Figure out which is our 2nd column (column containing the name of the top-level grouping of ICD codes).
+        if '10' in name:
+            if 'risk' in name:
+                super_column = 'Risk factors description'
+            else:
+                super_column = 'ICD10 description'
             df['icd-repaired'] = df['ICD-10-CM Code'].apply(repair_icd)
-        elif df.columns[0] == 'ICD-9-CM CODE':
+
+        else:  # assume ICD-9
+            if 'risk' in name:
+                super_column = 'Description'
+            else:
+                super_column = "'ICD-9-CM CODE DESCRIPTION'"  # Yes, it really has single quotes in its name.
             df['icd-repaired'] = df['ICD-9-CM CODE'].apply(repair_icd)
-        df.to_csv('tidy-' + name)
+
+        df_out = df[['icd-repaired', super_column]]
+        df_out.to_csv('tidy-' + name)
