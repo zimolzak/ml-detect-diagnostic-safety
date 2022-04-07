@@ -1,6 +1,17 @@
 import numpy as np
 
 
+def repair_icd(icd) -> str:
+    """Take a "funny" ICD code composed of only numbers.
+    Return a string w/ the dot in the proper place, given some assumptions
+
+    :param icd: An ICD code without a dot, like 4011. Allow int or str.
+    :return: Properly dotted ICD code like 401.1 or H81.01
+    """
+
+    return icd
+
+
 def points_near(point_of_interest: np.ndarray, point_array: np.ndarray, k: int = 10) -> np.ndarray:
     """Take a numpy array representing N points. Figure out which are closest to a single specified point.
     Note: Returns only the indices (not the points themselves, not the distances).
