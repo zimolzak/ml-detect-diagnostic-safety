@@ -34,4 +34,4 @@ if __name__ == '__main__':
 
         df['group'] = df[super_column_name]
         df_out = df[['icd', 'group']]
-        df_out.to_csv('tidy-' + filename)
+        df_out.to_csv('tidy-' + filename, index=False)
