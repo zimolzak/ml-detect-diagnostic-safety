@@ -1,4 +1,5 @@
 import pandas as pd
+from helpers import repair_icd
 
 LS = """icd10-dizzy.csv
 icd10-headache.csv
@@ -15,6 +16,8 @@ FILENAMES = LS.split()
 if __name__ == '__main__':
     for name in FILENAMES:
         df = pd.read_csv(name)
-        prefix = name.split('.')[0]
-        new_name = prefix + '-tidy.csv'
-        df.to_csv(new_name)
+        if df.columns[0] == 'ICD-10-CM Code':
+            df['icd-repaired'] = df['ICD-10-CM Code'].apply(repair_icd)
+        elif '9' in df.columns[0]:
+            pass
+        df.to_csv('tidy-' + name)
