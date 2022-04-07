@@ -1,0 +1,134 @@
+﻿ICD-10-CM Code,ICD-10-CM Code Description,CCSR Category,CCSR Category Description,Default CCSR (Y/N/X),Rationale,ICD10 description
+G43601,"Persistent migraine aura with cerebral infarction, not intractable, with status migrainosus",CIR020,Cerebral infarction,Y,05 Exception to condition AA with condition BB,migraine aura with cerebral infarction
+G43609,"Persistent migraine aura with cerebral infarction, not intractable, without status migrainosus",CIR020,Cerebral infarction,Y,05 Exception to condition AA with condition BB,migraine aura with cerebral infarction
+G43611,"Persistent migraine aura with cerebral infarction, intractable, with status migrainosus",CIR020,Cerebral infarction,Y,05 Exception to condition AA with condition BB,migraine aura with cerebral infarction
+G43619,"Persistent migraine aura with cerebral infarction, intractable, without status migrainosus",CIR020,Cerebral infarction,Y,05 Exception to condition AA with condition BB,migraine aura with cerebral infarction
+I6000,Ntrm subarach hemorrhage from unsp carotid siphon and bifurc,CIR021,Acute hemorrhagic cerebrovascular disease,Y,0 Not Applicable,I60 Nontraumatic subarachnoid hemorrhage
+I6001,Ntrm subarach hemor from right carotid siphon and bifurc,CIR021,Acute hemorrhagic cerebrovascular disease,Y,0 Not Applicable,I60 Nontraumatic subarachnoid hemorrhage
+I6002,Ntrm subarach hemorrhage from left carotid siphon and bifurc,CIR021,Acute hemorrhagic cerebrovascular disease,Y,0 Not Applicable,I60 Nontraumatic subarachnoid hemorrhage
+I6010,Ntrm subarach hemorrhage from unsp middle cerebral artery,CIR021,Acute hemorrhagic cerebrovascular disease,Y,0 Not Applicable,I60 Nontraumatic subarachnoid hemorrhage
+I6011,Ntrm subarach hemorrhage from right middle cerebral artery,CIR021,Acute hemorrhagic cerebrovascular disease,Y,0 Not Applicable,I60 Nontraumatic subarachnoid hemorrhage
+I6012,Ntrm subarach hemorrhage from left middle cerebral artery,CIR021,Acute hemorrhagic cerebrovascular disease,Y,0 Not Applicable,I60 Nontraumatic subarachnoid hemorrhage
+I602,Ntrm subarach hemorrhage from anterior communicating artery,CIR021,Acute hemorrhagic cerebrovascular disease,Y,0 Not Applicable,I60 Nontraumatic subarachnoid hemorrhage
+I6020,Nontraumatic subarachnoid hemorrhage from unspecified anteri,CIR021,Acute hemorrhagic cerebrovascular disease,Y,0 Not Applicable,I60 Nontraumatic subarachnoid hemorrhage
+I6021,Nontraumatic subarachnoid hemorrhage from right anterior com,CIR021,Acute hemorrhagic cerebrovascular disease,Y,0 Not Applicable,I60 Nontraumatic subarachnoid hemorrhage
+I6022,Nontraumatic subarachnoid hemorrhage from left anterior comm,CIR021,Acute hemorrhagic cerebrovascular disease,Y,0 Not Applicable,I60 Nontraumatic subarachnoid hemorrhage
+I6030,Ntrm subarach hemor from unsp posterior communicating artery,CIR021,Acute hemorrhagic cerebrovascular disease,Y,0 Not Applicable,I60 Nontraumatic subarachnoid hemorrhage
+I6031,Ntrm subarach hemor from right post communicating artery,CIR021,Acute hemorrhagic cerebrovascular disease,Y,0 Not Applicable,I60 Nontraumatic subarachnoid hemorrhage
+I6032,Ntrm subarach hemor from left posterior communicating artery,CIR021,Acute hemorrhagic cerebrovascular disease,Y,0 Not Applicable,I60 Nontraumatic subarachnoid hemorrhage
+I604,Nontraumatic subarachnoid hemorrhage from basilar artery,CIR021,Acute hemorrhagic cerebrovascular disease,Y,0 Not Applicable,I60 Nontraumatic subarachnoid hemorrhage
+I6050,Nontraumatic subarachnoid hemorrhage from unsp verteb art,CIR021,Acute hemorrhagic cerebrovascular disease,Y,0 Not Applicable,I60 Nontraumatic subarachnoid hemorrhage
+I6051,Nontraumatic subarachnoid hemorrhage from r verteb art,CIR021,Acute hemorrhagic cerebrovascular disease,Y,0 Not Applicable,I60 Nontraumatic subarachnoid hemorrhage
+I6052,Nontraumatic subarachnoid hemorrhage from l verteb art,CIR021,Acute hemorrhagic cerebrovascular disease,Y,0 Not Applicable,I60 Nontraumatic subarachnoid hemorrhage
+I606,Nontraumatic subarachnoid hemorrhage from oth intracran art,CIR021,Acute hemorrhagic cerebrovascular disease,Y,0 Not Applicable,I60 Nontraumatic subarachnoid hemorrhage
+I607,Nontraumatic subarachnoid hemorrhage from unsp intracran art,CIR021,Acute hemorrhagic cerebrovascular disease,Y,0 Not Applicable,I60 Nontraumatic subarachnoid hemorrhage
+I608,Other nontraumatic subarachnoid hemorrhage,CIR021,Acute hemorrhagic cerebrovascular disease,Y,0 Not Applicable,I60 Nontraumatic subarachnoid hemorrhage
+I609,"Nontraumatic subarachnoid hemorrhage, unspecified",CIR021,Acute hemorrhagic cerebrovascular disease,Y,0 Not Applicable,I60 Nontraumatic subarachnoid hemorrhage
+I610,"Nontraumatic intcrbl hemorrhage in hemisphere, subcortical",CIR021,Acute hemorrhagic cerebrovascular disease,Y,0 Not Applicable,I61 Nontraumatic intracerebral hemorrhage
+I611,"Nontraumatic intcrbl hemorrhage in hemisphere, cortical",CIR021,Acute hemorrhagic cerebrovascular disease,Y,0 Not Applicable,I61 Nontraumatic intracerebral hemorrhage
+I612,"Nontraumatic intracerebral hemorrhage in hemisphere, unsp",CIR021,Acute hemorrhagic cerebrovascular disease,Y,0 Not Applicable,I61 Nontraumatic intracerebral hemorrhage
+I613,Nontraumatic intracerebral hemorrhage in brain stem,CIR021,Acute hemorrhagic cerebrovascular disease,Y,0 Not Applicable,I61 Nontraumatic intracerebral hemorrhage
+I614,Nontraumatic intracerebral hemorrhage in cerebellum,CIR021,Acute hemorrhagic cerebrovascular disease,Y,0 Not Applicable,I61 Nontraumatic intracerebral hemorrhage
+I615,"Nontraumatic intracerebral hemorrhage, intraventricular",CIR021,Acute hemorrhagic cerebrovascular disease,Y,0 Not Applicable,I61 Nontraumatic intracerebral hemorrhage
+I616,"Nontraumatic intracerebral hemorrhage, multiple localized",CIR021,Acute hemorrhagic cerebrovascular disease,Y,0 Not Applicable,I61 Nontraumatic intracerebral hemorrhage
+I618,Other nontraumatic intracerebral hemorrhage,CIR021,Acute hemorrhagic cerebrovascular disease,Y,0 Not Applicable,I61 Nontraumatic intracerebral hemorrhage
+I619,"Nontraumatic intracerebral hemorrhage, unspecified",CIR021,Acute hemorrhagic cerebrovascular disease,Y,0 Not Applicable,I61 Nontraumatic intracerebral hemorrhage
+I6200,"Nontraumatic subdural hemorrhage, unspecified",CIR021,Acute hemorrhagic cerebrovascular disease,Y,0 Not Applicable,I62 Other and unspecified nontraumatic intracranial hemorrhage
+I6201,Nontraumatic acute subdural hemorrhage,CIR021,Acute hemorrhagic cerebrovascular disease,Y,0 Not Applicable,I62 Other and unspecified nontraumatic intracranial hemorrhage
+I6202,Nontraumatic subacute subdural hemorrhage,CIR021,Acute hemorrhagic cerebrovascular disease,Y,0 Not Applicable,I62 Other and unspecified nontraumatic intracranial hemorrhage
+I6203,Nontraumatic chronic subdural hemorrhage,CIR021,Acute hemorrhagic cerebrovascular disease,Y,0 Not Applicable,I62 Other and unspecified nontraumatic intracranial hemorrhage
+I621,Nontraumatic extradural hemorrhage,CIR021,Acute hemorrhagic cerebrovascular disease,Y,0 Not Applicable,I62 Other and unspecified nontraumatic intracranial hemorrhage
+I629,"Nontraumatic intracranial hemorrhage, unspecified",CIR021,Acute hemorrhagic cerebrovascular disease,Y,0 Not Applicable,I62 Other and unspecified nontraumatic intracranial hemorrhage
+I6300,Cerebral infarction due to thombos unsp precerebral artery,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63011,Cerebral infarction due to thrombosis of r verteb art,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63012,Cerebral infarction due to thrombosis of l verteb art,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63013,Cerebral infrc due to thrombosis of bilateral verteb art,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63019,Cerebral infarction due to thombos unsp vertebral artery,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I6302,Cerebral infarction due to thrombosis of basilar artery,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63031,Cerebral infrc due to thrombosis of right carotid artery,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63032,Cerebral infarction due to thrombosis of left carotid artery,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63033,Cerebral infrc due to thombos of bilateral carotid arteries,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63039,Cerebral infarction due to thrombosis of unsp carotid artery,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I6309,Cerebral infarction due to thrombosis of precerebral artery,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I6310,Cerebral infarction due to embolism of unsp precerb artery,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63111,Cerebral infarction due to embolism of r verteb art,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63112,Cerebral infarction due to embolism of left vertebral artery,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63113,Cerebral infarction due to embolism of bilateral verteb art,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63119,Cerebral infarction due to embolism of unsp vertebral artery,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I6312,Cerebral infarction due to embolism of basilar artery,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63131,Cerebral infarction due to embolism of right carotid artery,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63132,Cerebral infarction due to embolism of left carotid artery,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63133,Cerebral infrc due to embolism of bilateral carotid arteries,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63139,Cerebral infarction due to embolism of unsp carotid artery,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I6319,Cerebral infarction due to embolism of precerebral artery,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I6320,Cereb infrc due to unsp occls or stenos of unsp precerb art,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63211,Cerebral infrc due to unsp occls or stenosis of r verteb art,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63212,Cerebral infrc due to unsp occls or stenosis of l verteb art,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63213,Cereb infrc due to unsp occls or stenosis of bi verteb art,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63219,Cereb infrc due to unsp occls or stenosis of unsp verteb art,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I6322,Cereb infrc due to unsp occls or stenosis of basilar artery,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63231,Cereb infrc due to unsp occls or stenos of right carotid art,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63232,Cereb infrc due to unsp occls or stenos of left carotid art,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63233,Cereb infrc due to unsp occls or stenosis of bi carotid art,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63239,Cereb infrc due to unsp occls or stenos of unsp carotid art,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I6329,Cerebral infrc due to unsp occls or stenosis of precerb art,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I6330,Cerebral infarction due to thombos unsp cerebral artery,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63311,Cereb infrc due to thombos of right middle cerebral artery,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63312,Cerebral infrc due to thombos of left middle cerebral artery,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63313,Cerebral infrc due to thombos of bi middle cerebral arteries,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63319,Cerebral infrc due to thombos unsp middle cerebral artery,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63321,Cerebral infrc due to thombos of right ant cerebral artery,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63322,Cerebral infrc due to thombos of left ant cerebral artery,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63323,Cerebral infrc due to thombos of bi ant cerebral arteries,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63329,Cerebral infrc due to thombos unsp anterior cerebral artery,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63331,Cerebral infrc due to thombos of right post cerebral artery,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63332,Cerebral infrc due to thombos of left post cerebral artery,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63333,Cerebral infrc to thombos of bi posterior cerebral arteries,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63339,Cerebral infrc due to thombos unsp posterior cerebral artery,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63341,Cerebral infrc due to thrombosis of right cereblr artery,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63342,Cerebral infarction due to thrombosis of left cereblr artery,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63343,Cerebral infrc to thrombosis of bilateral cereblr arteries,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63349,Cerebral infarction due to thombos unsp cerebellar artery,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I6339,Cerebral infarction due to thrombosis of oth cerebral artery,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I6340,Cerebral infarction due to embolism of unsp cerebral artery,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63411,Cereb infrc due to embolism of right middle cerebral artery,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63412,Cereb infrc due to embolism of left middle cerebral artery,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63413,Cerebral infrc due to embolism of bi middle cerebral art,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63419,Cereb infrc due to embolism of unsp middle cerebral artery,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63421,Cerebral infrc due to embolism of right ant cerebral artery,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63422,Cerebral infrc due to embolism of left ant cerebral artery,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63423,Cerebral infrc due to embolism of bi ant cerebral arteries,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63429,Cerebral infrc due to embolism of unsp ant cerebral artery,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63431,Cerebral infrc due to embolism of right post cerebral artery,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63432,Cerebral infrc due to embolism of left post cerebral artery,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63433,Cerebral infrc due to embolism of bi post cerebral arteries,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63439,Cerebral infrc due to embolism of unsp post cerebral artery,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63441,Cerebral infarction due to embolism of right cereblr artery,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63442,Cerebral infarction due to embolism of left cereblr artery,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63443,Cerebral infrc due to embolism of bilateral cereblr arteries,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63449,Cerebral infarction due to embolism of unsp cereblr artery,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I6349,Cerebral infarction due to embolism of other cerebral artery,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I6350,Cereb infrc due to unsp occls or stenos of unsp cereb artery,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63511,Cereb infrc d/t unsp occls or stenos of right mid cereb art,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63512,Cereb infrc d/t unsp occls or stenos of left mid cereb art,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63513,Cereb infrc d/t unsp occls or stenos of bi middle cereb art,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63519,Cereb infrc d/t unsp occls or stenos of unsp mid cereb art,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63521,Cereb infrc d/t unsp occls or stenos of right ant cereb art,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63522,Cereb infrc d/t unsp occls or stenos of left ant cereb art,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63523,Cereb infrc due to unsp occls or stenos of bi ant cereb art,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63529,Cereb infrc d/t unsp occls or stenos of unsp ant cereb art,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63531,Cereb infrc d/t unsp occls or stenos of right post cereb art,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63532,Cereb infrc d/t unsp occls or stenos of left post cereb art,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63533,Cereb infrc due to unsp occls or stenos of bi post cereb art,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63539,Cereb infrc d/t unsp occls or stenos of unsp post cereb art,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63541,Cereb infrc due to unsp occls or stenos of right cereblr art,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63542,Cereb infrc due to unsp occls or stenos of left cereblr art,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63543,Cereb infrc due to unsp occls or stenosis of bi cereblr art,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I63549,Cereb infrc due to unsp occls or stenos of unsp cereblr art,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I6359,Cereb infrc due to unsp occls or stenosis of cerebral artery,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I636,"Cerebral infrc due to cerebral venous thombos, nonpyogenic",CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I638,Other cerebral infarction,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I6381,Other cerebral infarction due to occlusion or stenosis of small artery,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I6389,Other cerebral infarction,CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+I639,"Cerebral infarction, unspecified",CIR020,Cerebral infarction,Y,0 Not Applicable,I63 Cerebral infarction
+G459,"Transient cerebral ischemic attack, unspecified",NVS012,Transient cerebral ischemia,Y,0 Not Applicable,G45.9 TIA

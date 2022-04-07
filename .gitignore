@@ -17,3 +17,4 @@ __pycache__/
 *.bundle
 
 !short-list-drug-classes.csv
+!icd*.csv

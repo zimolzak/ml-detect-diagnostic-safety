@@ -1,0 +1,59 @@
+﻿ICD-10-CM Code,ICD-10-CM Code Description,CCSR Category,CCSR Category Description,Default CCSR (Y/N/X),Rationale,ICD10 description,Comment
+R42,Dizziness and giddiness,SYM015,General sensation/perception signs and symptoms,Y,0 Not Applicable,R42 Dizziness and giddiness,Symptomatic diagosis
+H8101,"Menieres disease, right ear",EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H81  Disorders of vestibular function, Conditions associated with dizziness or vertigo
+H8102,"Menieres disease, left ear",EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H81  Disorders of vestibular function, Conditions associated with dizziness or vertigo
+H8103,"Menieres disease, bilateral",EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H81  Disorders of vestibular function, Conditions associated with dizziness or vertigo
+H8109,"Menieres disease, unspecified ear",EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H81  Disorders of vestibular function, Conditions associated with dizziness or vertigo
+H8110,"Benign paroxysmal vertigo, unspecified ear",EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H81  Disorders of vestibular function, Conditions associated with dizziness or vertigo
+H8111,"Benign paroxysmal vertigo, right ear",EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H81  Disorders of vestibular function, Conditions associated with dizziness or vertigo
+H8112,"Benign paroxysmal vertigo, left ear",EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H81  Disorders of vestibular function, Conditions associated with dizziness or vertigo
+H8113,"Benign paroxysmal vertigo, bilateral",EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H81  Disorders of vestibular function, Conditions associated with dizziness or vertigo
+H8120,"Vestibular neuronitis, unspecified ear",EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H81  Disorders of vestibular function, Conditions associated with dizziness or vertigo
+H8121,"Vestibular neuronitis, right ear",EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H81  Disorders of vestibular function, Conditions associated with dizziness or vertigo
+H8122,"Vestibular neuronitis, left ear",EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H81  Disorders of vestibular function, Conditions associated with dizziness or vertigo
+H8123,"Vestibular neuronitis, bilateral",EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H81  Disorders of vestibular function, Conditions associated with dizziness or vertigo
+H81311,"Aural vertigo, right ear",EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H81  Disorders of vestibular function, Conditions associated with dizziness or vertigo
+H81312,"Aural vertigo, left ear",EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H81  Disorders of vestibular function, Conditions associated with dizziness or vertigo
+H81313,"Aural vertigo, bilateral",EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H81  Disorders of vestibular function, Conditions associated with dizziness or vertigo
+H81319,"Aural vertigo, unspecified ear",EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H81  Disorders of vestibular function, Conditions associated with dizziness or vertigo
+H81391,"Other peripheral vertigo, right ear",EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H81  Disorders of vestibular function, Conditions associated with dizziness or vertigo
+H81392,"Other peripheral vertigo, left ear",EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H81  Disorders of vestibular function, Conditions associated with dizziness or vertigo
+H81393,"Other peripheral vertigo, bilateral",EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H81  Disorders of vestibular function, Conditions associated with dizziness or vertigo
+H81399,"Other peripheral vertigo, unspecified ear",EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H81  Disorders of vestibular function, Conditions associated with dizziness or vertigo
+H814,Vertigo of central origin,EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H81  Disorders of vestibular function, Conditions associated with dizziness or vertigo
+H8141,"Vertigo of central origin, right ear",EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H81  Disorders of vestibular function, Conditions associated with dizziness or vertigo
+H8142,"Vertigo of central origin, left ear",EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H81  Disorders of vestibular function, Conditions associated with dizziness or vertigo
+H8143,"Vertigo of central origin, bilateral",EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H81  Disorders of vestibular function, Conditions associated with dizziness or vertigo
+H8149,"Vertigo of central origin, unspecified ear",EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H81  Disorders of vestibular function, Conditions associated with dizziness or vertigo
+H818X1,"Other disorders of vestibular function, right ear",EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H81  Disorders of vestibular function, Conditions associated with dizziness or vertigo
+H818X2,"Other disorders of vestibular function, left ear",EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H81  Disorders of vestibular function, Conditions associated with dizziness or vertigo
+H818X3,"Other disorders of vestibular function, bilateral",EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H81  Disorders of vestibular function, Conditions associated with dizziness or vertigo
+H818X9,"Other disorders of vestibular function, unspecified ear",EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H81  Disorders of vestibular function, Conditions associated with dizziness or vertigo
+H8190,"Unspecified disorder of vestibular function, unspecified ear",EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H81  Disorders of vestibular function, Conditions associated with dizziness or vertigo
+H8191,"Unspecified disorder of vestibular function, right ear",EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H81  Disorders of vestibular function, Conditions associated with dizziness or vertigo
+H8192,"Unspecified disorder of vestibular function, left ear",EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H81  Disorders of vestibular function, Conditions associated with dizziness or vertigo
+H8193,"Unspecified disorder of vestibular function, bilateral",EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H81  Disorders of vestibular function, Conditions associated with dizziness or vertigo
+H8301,"Labyrinthitis, right ear",EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H83 Other diseases of inner ear, Conditions associated with dizziness or vertigo
+H8302,"Labyrinthitis, left ear",EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H83 Other diseases of inner ear, Conditions associated with dizziness or vertigo
+H8303,"Labyrinthitis, bilateral",EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H83 Other diseases of inner ear, Conditions associated with dizziness or vertigo
+H8309,"Labyrinthitis, unspecified ear",EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H83 Other diseases of inner ear, Conditions associated with dizziness or vertigo
+H8311,"Labyrinthine fistula, right ear",EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H83 Other diseases of inner ear, Conditions associated with dizziness or vertigo
+H8312,"Labyrinthine fistula, left ear",EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H83 Other diseases of inner ear, Conditions associated with dizziness or vertigo
+H8313,"Labyrinthine fistula, bilateral",EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H83 Other diseases of inner ear, Conditions associated with dizziness or vertigo
+H8319,"Labyrinthine fistula, unspecified ear",EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H83 Other diseases of inner ear, Conditions associated with dizziness or vertigo
+H832X1,"Labyrinthine dysfunction, right ear",EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H83 Other diseases of inner ear, Conditions associated with dizziness or vertigo
+H832X2,"Labyrinthine dysfunction, left ear",EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H83 Other diseases of inner ear, Conditions associated with dizziness or vertigo
+H832X3,"Labyrinthine dysfunction, bilateral",EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H83 Other diseases of inner ear, Conditions associated with dizziness or vertigo
+H832X9,"Labyrinthine dysfunction, unspecified ear",EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H83 Other diseases of inner ear, Conditions associated with dizziness or vertigo
+H833X1,Noise effects on right inner ear,EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H83 Other diseases of inner ear, Conditions associated with dizziness or vertigo
+H833X2,Noise effects on left inner ear,EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H83 Other diseases of inner ear, Conditions associated with dizziness or vertigo
+H833X3,"Noise effects on inner ear, bilateral",EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H83 Other diseases of inner ear, Conditions associated with dizziness or vertigo
+H833X9,"Noise effects on inner ear, unspecified ear",EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H83 Other diseases of inner ear, Conditions associated with dizziness or vertigo
+H838X1,Other specified diseases of right inner ear,EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H83 Other diseases of inner ear, Conditions associated with dizziness or vertigo
+H838X2,Other specified diseases of left inner ear,EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H83 Other diseases of inner ear, Conditions associated with dizziness or vertigo
+H838X3,"Other specified diseases of inner ear, bilateral",EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H83 Other diseases of inner ear, Conditions associated with dizziness or vertigo
+H838X9,"Other specified diseases of inner ear, unspecified ear",EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H83 Other diseases of inner ear, Conditions associated with dizziness or vertigo
+H8390,"Unspecified disease of inner ear, unspecified ear",EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H83 Other diseases of inner ear, Conditions associated with dizziness or vertigo
+H8391,Unspecified disease of right inner ear,EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H83 Other diseases of inner ear, Conditions associated with dizziness or vertigo
+H8392,Unspecified disease of left inner ear,EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H83 Other diseases of inner ear, Conditions associated with dizziness or vertigo
+H8393,"Unspecified disease of inner ear, bilateral",EAR003,Diseases of inner ear and related conditions,Y,0 Not Applicable,H83 Other diseases of inner ear, Conditions associated with dizziness or vertigo
