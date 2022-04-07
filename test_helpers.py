@@ -60,3 +60,8 @@ def test_repair_icd_exception_dot():
 def test_repair_icd_exception_list():
     with pytest.raises(ValueError):
         dummy = repair_icd([1, 2, 3])
+
+
+def test_repair_icd_exception_short():
+    with pytest.raises(ValueError):
+        dummy = repair_icd(59)
