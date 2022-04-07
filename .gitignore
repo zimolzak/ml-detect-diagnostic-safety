@@ -16,6 +16,9 @@ __pycache__/
 *.png
 *.bundle
 .coverage
+.DS_Store
 
 !short-list-drug-classes.csv
 !icd*.csv
+!tidy-icd9-stroke-risk.csv
+!tidy-icd10-stroke-risk.csv

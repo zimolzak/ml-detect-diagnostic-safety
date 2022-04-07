@@ -1,0 +1,1275 @@
+icd,group
+G43.601,Hx of stroke or TIA
+G43.609,Hx of stroke or TIA
+G43.611,Hx of stroke or TIA
+G43.619,Hx of stroke or TIA
+I60.00,Hx of stroke or TIA
+I60.01,Hx of stroke or TIA
+I60.02,Hx of stroke or TIA
+I60.10,Hx of stroke or TIA
+I60.11,Hx of stroke or TIA
+I60.12,Hx of stroke or TIA
+I60.2,Hx of stroke or TIA
+I60.20,Hx of stroke or TIA
+I60.21,Hx of stroke or TIA
+I60.22,Hx of stroke or TIA
+I60.30,Hx of stroke or TIA
+I60.31,Hx of stroke or TIA
+I60.32,Hx of stroke or TIA
+I60.4,Hx of stroke or TIA
+I60.50,Hx of stroke or TIA
+I60.51,Hx of stroke or TIA
+I60.52,Hx of stroke or TIA
+I60.6,Hx of stroke or TIA
+I60.7,Hx of stroke or TIA
+I60.8,Hx of stroke or TIA
+I60.9,Hx of stroke or TIA
+I61.0,Hx of stroke or TIA
+I61.1,Hx of stroke or TIA
+I61.2,Hx of stroke or TIA
+I61.3,Hx of stroke or TIA
+I61.4,Hx of stroke or TIA
+I61.5,Hx of stroke or TIA
+I61.6,Hx of stroke or TIA
+I61.8,Hx of stroke or TIA
+I61.9,Hx of stroke or TIA
+I62.00,Hx of stroke or TIA
+I62.01,Hx of stroke or TIA
+I62.02,Hx of stroke or TIA
+I62.03,Hx of stroke or TIA
+I62.1,Hx of stroke or TIA
+I62.9,Hx of stroke or TIA
+I63.00,Hx of stroke or TIA
+I63.011,Hx of stroke or TIA
+I63.012,Hx of stroke or TIA
+I63.013,Hx of stroke or TIA
+I63.019,Hx of stroke or TIA
+I63.02,Hx of stroke or TIA
+I63.031,Hx of stroke or TIA
+I63.032,Hx of stroke or TIA
+I63.033,Hx of stroke or TIA
+I63.039,Hx of stroke or TIA
+I63.09,Hx of stroke or TIA
+I63.10,Hx of stroke or TIA
+I63.111,Hx of stroke or TIA
+I63.112,Hx of stroke or TIA
+I63.113,Hx of stroke or TIA
+I63.119,Hx of stroke or TIA
+I63.12,Hx of stroke or TIA
+I63.131,Hx of stroke or TIA
+I63.132,Hx of stroke or TIA
+I63.133,Hx of stroke or TIA
+I63.139,Hx of stroke or TIA
+I63.19,Hx of stroke or TIA
+I63.20,Hx of stroke or TIA
+I63.211,Hx of stroke or TIA
+I63.212,Hx of stroke or TIA
+I63.213,Hx of stroke or TIA
+I63.219,Hx of stroke or TIA
+I63.22,Hx of stroke or TIA
+I63.231,Hx of stroke or TIA
+I63.232,Hx of stroke or TIA
+I63.233,Hx of stroke or TIA
+I63.239,Hx of stroke or TIA
+I63.29,Hx of stroke or TIA
+I63.30,Hx of stroke or TIA
+I63.311,Hx of stroke or TIA
+I63.312,Hx of stroke or TIA
+I63.313,Hx of stroke or TIA
+I63.319,Hx of stroke or TIA
+I63.321,Hx of stroke or TIA
+I63.322,Hx of stroke or TIA
+I63.323,Hx of stroke or TIA
+I63.329,Hx of stroke or TIA
+I63.331,Hx of stroke or TIA
+I63.332,Hx of stroke or TIA
+I63.333,Hx of stroke or TIA
+I63.339,Hx of stroke or TIA
+I63.341,Hx of stroke or TIA
+I63.342,Hx of stroke or TIA
+I63.343,Hx of stroke or TIA
+I63.349,Hx of stroke or TIA
+I63.39,Hx of stroke or TIA
+I63.40,Hx of stroke or TIA
+I63.411,Hx of stroke or TIA
+I63.412,Hx of stroke or TIA
+I63.413,Hx of stroke or TIA
+I63.419,Hx of stroke or TIA
+I63.421,Hx of stroke or TIA
+I63.422,Hx of stroke or TIA
+I63.423,Hx of stroke or TIA
+I63.429,Hx of stroke or TIA
+I63.431,Hx of stroke or TIA
+I63.432,Hx of stroke or TIA
+I63.433,Hx of stroke or TIA
+I63.439,Hx of stroke or TIA
+I63.441,Hx of stroke or TIA
+I63.442,Hx of stroke or TIA
+I63.443,Hx of stroke or TIA
+I63.449,Hx of stroke or TIA
+I63.49,Hx of stroke or TIA
+I63.50,Hx of stroke or TIA
+I63.511,Hx of stroke or TIA
+I63.512,Hx of stroke or TIA
+I63.513,Hx of stroke or TIA
+I63.519,Hx of stroke or TIA
+I63.521,Hx of stroke or TIA
+I63.522,Hx of stroke or TIA
+I63.523,Hx of stroke or TIA
+I63.529,Hx of stroke or TIA
+I63.531,Hx of stroke or TIA
+I63.532,Hx of stroke or TIA
+I63.533,Hx of stroke or TIA
+I63.539,Hx of stroke or TIA
+I63.541,Hx of stroke or TIA
+I63.542,Hx of stroke or TIA
+I63.543,Hx of stroke or TIA
+I63.549,Hx of stroke or TIA
+I63.59,Hx of stroke or TIA
+I63.6,Hx of stroke or TIA
+I63.8,Hx of stroke or TIA
+I63.81,Hx of stroke or TIA
+I63.89,Hx of stroke or TIA
+I63.9,Hx of stroke or TIA
+G45.9,Hx of stroke or TIA
+I10,Hypertension
+O10.011,Hypertension
+O10.012,Hypertension
+O10.013,Hypertension
+O10.019,Hypertension
+O10.02,Hypertension
+O10.03,Hypertension
+O10.911,Hypertension
+O10.912,Hypertension
+O10.913,Hypertension
+O10.919,Hypertension
+O10.92,Hypertension
+O10.93,Hypertension
+O16.1,Hypertension
+O16.2,Hypertension
+O16.3,Hypertension
+O16.4,Hypertension
+O16.5,Hypertension
+O16.9,Hypertension
+I15.0,Hypertension
+I15.1,Hypertension
+I15.2,Hypertension
+I15.8,Hypertension
+I15.9,Hypertension
+O10.411,Hypertension
+O10.412,Hypertension
+O10.413,Hypertension
+O10.419,Hypertension
+O10.42,Hypertension
+O10.43,Hypertension
+O11.1,Hypertension
+O11.2,Hypertension
+O11.3,Hypertension
+O11.4,Hypertension
+O11.5,Hypertension
+O11.9,Hypertension
+O13.1,Hypertension
+O13.2,Hypertension
+O13.3,Hypertension
+O13.4,Hypertension
+O13.5,Hypertension
+O13.9,Hypertension
+E78.0,Hyperlipidemia
+E78.00,Hyperlipidemia
+E78.01,Hyperlipidemia
+E78.1,Hyperlipidemia
+E78.2,Hyperlipidemia
+E78.3,Hyperlipidemia
+E78.4,Hyperlipidemia
+E78.41,Hyperlipidemia
+E78.49,Hyperlipidemia
+E78.5,Hyperlipidemia
+E08.00,Diabetes
+E08.00,Diabetes
+E08.01,Diabetes
+E08.01,Diabetes
+E08.10,Diabetes
+E08.10,Diabetes
+E08.11,Diabetes
+E08.11,Diabetes
+E08.21,Diabetes
+E08.21,Diabetes
+E08.22,Diabetes
+E08.22,Diabetes
+E08.29,Diabetes
+E08.29,Diabetes
+E08.311,Diabetes
+E08.311,Diabetes
+E08.319,Diabetes
+E08.319,Diabetes
+E08.321,Diabetes
+E08.321,Diabetes
+E08.3211,Diabetes
+E08.3211,Diabetes
+E08.3212,Diabetes
+E08.3212,Diabetes
+E08.3213,Diabetes
+E08.3213,Diabetes
+E08.3219,Diabetes
+E08.3219,Diabetes
+E08.329,Diabetes
+E08.329,Diabetes
+E08.3291,Diabetes
+E08.3291,Diabetes
+E08.3292,Diabetes
+E08.3292,Diabetes
+E08.3293,Diabetes
+E08.3293,Diabetes
+E08.3299,Diabetes
+E08.3299,Diabetes
+E08.331,Diabetes
+E08.331,Diabetes
+E08.3311,Diabetes
+E08.3311,Diabetes
+E08.3312,Diabetes
+E08.3312,Diabetes
+E08.3313,Diabetes
+E08.3313,Diabetes
+E08.3319,Diabetes
+E08.3319,Diabetes
+E08.339,Diabetes
+E08.339,Diabetes
+E08.3391,Diabetes
+E08.3391,Diabetes
+E08.3392,Diabetes
+E08.3392,Diabetes
+E08.3393,Diabetes
+E08.3393,Diabetes
+E08.3399,Diabetes
+E08.3399,Diabetes
+E08.341,Diabetes
+E08.341,Diabetes
+E08.3411,Diabetes
+E08.3411,Diabetes
+E08.3412,Diabetes
+E08.3412,Diabetes
+E08.3413,Diabetes
+E08.3413,Diabetes
+E08.3419,Diabetes
+E08.3419,Diabetes
+E08.349,Diabetes
+E08.349,Diabetes
+E08.3491,Diabetes
+E08.3491,Diabetes
+E08.3492,Diabetes
+E08.3492,Diabetes
+E08.3493,Diabetes
+E08.3493,Diabetes
+E08.3499,Diabetes
+E08.3499,Diabetes
+E08.351,Diabetes
+E08.351,Diabetes
+E08.3511,Diabetes
+E08.3511,Diabetes
+E08.3512,Diabetes
+E08.3512,Diabetes
+E08.3513,Diabetes
+E08.3513,Diabetes
+E08.3519,Diabetes
+E08.3519,Diabetes
+E08.3521,Diabetes
+E08.3521,Diabetes
+E08.3522,Diabetes
+E08.3522,Diabetes
+E08.3523,Diabetes
+E08.3523,Diabetes
+E08.3529,Diabetes
+E08.3529,Diabetes
+E08.3531,Diabetes
+E08.3531,Diabetes
+E08.3532,Diabetes
+E08.3532,Diabetes
+E08.3533,Diabetes
+E08.3533,Diabetes
+E08.3539,Diabetes
+E08.3539,Diabetes
+E08.3541,Diabetes
+E08.3541,Diabetes
+E08.3542,Diabetes
+E08.3542,Diabetes
+E08.3543,Diabetes
+E08.3543,Diabetes
+E08.3549,Diabetes
+E08.3549,Diabetes
+E08.3551,Diabetes
+E08.3551,Diabetes
+E08.3552,Diabetes
+E08.3552,Diabetes
+E08.3553,Diabetes
+E08.3553,Diabetes
+E08.3559,Diabetes
+E08.3559,Diabetes
+E08.359,Diabetes
+E08.359,Diabetes
+E08.3591,Diabetes
+E08.3591,Diabetes
+E08.3592,Diabetes
+E08.3592,Diabetes
+E08.3593,Diabetes
+E08.3593,Diabetes
+E08.3599,Diabetes
+E08.3599,Diabetes
+E08.36,Diabetes
+E08.36,Diabetes
+E08.37X1,Diabetes
+E08.37X1,Diabetes
+E08.37X2,Diabetes
+E08.37X2,Diabetes
+E08.37X3,Diabetes
+E08.37X3,Diabetes
+E08.37X9,Diabetes
+E08.37X9,Diabetes
+E08.39,Diabetes
+E08.39,Diabetes
+E08.40,Diabetes
+E08.40,Diabetes
+E08.41,Diabetes
+E08.41,Diabetes
+E08.42,Diabetes
+E08.42,Diabetes
+E08.43,Diabetes
+E08.43,Diabetes
+E08.44,Diabetes
+E08.44,Diabetes
+E08.49,Diabetes
+E08.49,Diabetes
+E08.51,Diabetes
+E08.51,Diabetes
+E08.52,Diabetes
+E08.52,Diabetes
+E08.59,Diabetes
+E08.59,Diabetes
+E08.610,Diabetes
+E08.610,Diabetes
+E08.618,Diabetes
+E08.618,Diabetes
+E08.620,Diabetes
+E08.620,Diabetes
+E08.621,Diabetes
+E08.621,Diabetes
+E08.622,Diabetes
+E08.622,Diabetes
+E08.628,Diabetes
+E08.628,Diabetes
+E08.630,Diabetes
+E08.630,Diabetes
+E08.638,Diabetes
+E08.638,Diabetes
+E08.641,Diabetes
+E08.641,Diabetes
+E08.649,Diabetes
+E08.649,Diabetes
+E08.65,Diabetes
+E08.65,Diabetes
+E08.69,Diabetes
+E08.69,Diabetes
+E08.8,Diabetes
+E08.8,Diabetes
+E08.9,Diabetes
+E08.9,Diabetes
+E09.00,Diabetes
+E09.00,Diabetes
+E09.01,Diabetes
+E09.01,Diabetes
+E09.10,Diabetes
+E09.10,Diabetes
+E09.11,Diabetes
+E09.11,Diabetes
+E09.21,Diabetes
+E09.21,Diabetes
+E09.22,Diabetes
+E09.22,Diabetes
+E09.29,Diabetes
+E09.29,Diabetes
+E09.311,Diabetes
+E09.311,Diabetes
+E09.319,Diabetes
+E09.319,Diabetes
+E09.321,Diabetes
+E09.321,Diabetes
+E09.3211,Diabetes
+E09.3211,Diabetes
+E09.3212,Diabetes
+E09.3212,Diabetes
+E09.3213,Diabetes
+E09.3213,Diabetes
+E09.3219,Diabetes
+E09.3219,Diabetes
+E09.329,Diabetes
+E09.329,Diabetes
+E09.3291,Diabetes
+E09.3291,Diabetes
+E09.3292,Diabetes
+E09.3292,Diabetes
+E09.3293,Diabetes
+E09.3293,Diabetes
+E09.3299,Diabetes
+E09.3299,Diabetes
+E09.331,Diabetes
+E09.331,Diabetes
+E09.3311,Diabetes
+E09.3311,Diabetes
+E09.3312,Diabetes
+E09.3312,Diabetes
+E09.3313,Diabetes
+E09.3313,Diabetes
+E09.3319,Diabetes
+E09.3319,Diabetes
+E09.339,Diabetes
+E09.339,Diabetes
+E09.3391,Diabetes
+E09.3391,Diabetes
+E09.3392,Diabetes
+E09.3392,Diabetes
+E09.3393,Diabetes
+E09.3393,Diabetes
+E09.3399,Diabetes
+E09.3399,Diabetes
+E09.341,Diabetes
+E09.341,Diabetes
+E09.3411,Diabetes
+E09.3411,Diabetes
+E09.3412,Diabetes
+E09.3412,Diabetes
+E09.3413,Diabetes
+E09.3413,Diabetes
+E09.3419,Diabetes
+E09.3419,Diabetes
+E09.349,Diabetes
+E09.349,Diabetes
+E09.3491,Diabetes
+E09.3491,Diabetes
+E09.3492,Diabetes
+E09.3492,Diabetes
+E09.3493,Diabetes
+E09.3493,Diabetes
+E09.3499,Diabetes
+E09.3499,Diabetes
+E09.351,Diabetes
+E09.351,Diabetes
+E09.3511,Diabetes
+E09.3511,Diabetes
+E09.3512,Diabetes
+E09.3512,Diabetes
+E09.3513,Diabetes
+E09.3513,Diabetes
+E09.3519,Diabetes
+E09.3519,Diabetes
+E09.3521,Diabetes
+E09.3521,Diabetes
+E09.3522,Diabetes
+E09.3522,Diabetes
+E09.3523,Diabetes
+E09.3523,Diabetes
+E09.3529,Diabetes
+E09.3529,Diabetes
+E09.3531,Diabetes
+E09.3531,Diabetes
+E09.3532,Diabetes
+E09.3532,Diabetes
+E09.3533,Diabetes
+E09.3533,Diabetes
+E09.3539,Diabetes
+E09.3539,Diabetes
+E09.3541,Diabetes
+E09.3541,Diabetes
+E09.3542,Diabetes
+E09.3542,Diabetes
+E09.3543,Diabetes
+E09.3543,Diabetes
+E09.3549,Diabetes
+E09.3549,Diabetes
+E09.3551,Diabetes
+E09.3551,Diabetes
+E09.3552,Diabetes
+E09.3552,Diabetes
+E09.3553,Diabetes
+E09.3553,Diabetes
+E09.3559,Diabetes
+E09.3559,Diabetes
+E09.359,Diabetes
+E09.359,Diabetes
+E09.3591,Diabetes
+E09.3591,Diabetes
+E09.3592,Diabetes
+E09.3592,Diabetes
+E09.3593,Diabetes
+E09.3593,Diabetes
+E09.3599,Diabetes
+E09.3599,Diabetes
+E09.36,Diabetes
+E09.36,Diabetes
+E09.37X1,Diabetes
+E09.37X1,Diabetes
+E09.37X2,Diabetes
+E09.37X2,Diabetes
+E09.37X3,Diabetes
+E09.37X3,Diabetes
+E09.37X9,Diabetes
+E09.37X9,Diabetes
+E09.39,Diabetes
+E09.39,Diabetes
+E09.40,Diabetes
+E09.40,Diabetes
+E09.41,Diabetes
+E09.41,Diabetes
+E09.42,Diabetes
+E09.42,Diabetes
+E09.43,Diabetes
+E09.43,Diabetes
+E09.44,Diabetes
+E09.44,Diabetes
+E09.49,Diabetes
+E09.49,Diabetes
+E09.51,Diabetes
+E09.51,Diabetes
+E09.52,Diabetes
+E09.52,Diabetes
+E09.59,Diabetes
+E09.59,Diabetes
+E09.610,Diabetes
+E09.610,Diabetes
+E09.618,Diabetes
+E09.618,Diabetes
+E09.620,Diabetes
+E09.620,Diabetes
+E09.621,Diabetes
+E09.621,Diabetes
+E09.622,Diabetes
+E09.622,Diabetes
+E09.628,Diabetes
+E09.628,Diabetes
+E09.630,Diabetes
+E09.630,Diabetes
+E09.638,Diabetes
+E09.638,Diabetes
+E09.641,Diabetes
+E09.641,Diabetes
+E09.649,Diabetes
+E09.649,Diabetes
+E09.65,Diabetes
+E09.65,Diabetes
+E09.69,Diabetes
+E09.69,Diabetes
+E09.8,Diabetes
+E09.8,Diabetes
+E09.9,Diabetes
+E09.9,Diabetes
+E10.10,Diabetes
+E10.10,Diabetes
+E10.11,Diabetes
+E10.11,Diabetes
+E10.21,Diabetes
+E10.21,Diabetes
+E10.22,Diabetes
+E10.22,Diabetes
+E10.29,Diabetes
+E10.29,Diabetes
+E10.311,Diabetes
+E10.311,Diabetes
+E10.319,Diabetes
+E10.319,Diabetes
+E10.321,Diabetes
+E10.321,Diabetes
+E10.3211,Diabetes
+E10.3211,Diabetes
+E10.3212,Diabetes
+E10.3212,Diabetes
+E10.3213,Diabetes
+E10.3213,Diabetes
+E10.3219,Diabetes
+E10.3219,Diabetes
+E10.329,Diabetes
+E10.329,Diabetes
+E10.3291,Diabetes
+E10.3291,Diabetes
+E10.3292,Diabetes
+E10.3292,Diabetes
+E10.3293,Diabetes
+E10.3293,Diabetes
+E10.3299,Diabetes
+E10.3299,Diabetes
+E10.331,Diabetes
+E10.331,Diabetes
+E10.3311,Diabetes
+E10.3311,Diabetes
+E10.3312,Diabetes
+E10.3312,Diabetes
+E10.3313,Diabetes
+E10.3313,Diabetes
+E10.3319,Diabetes
+E10.3319,Diabetes
+E10.339,Diabetes
+E10.339,Diabetes
+E10.3391,Diabetes
+E10.3391,Diabetes
+E10.3392,Diabetes
+E10.3392,Diabetes
+E10.3393,Diabetes
+E10.3393,Diabetes
+E10.3399,Diabetes
+E10.3399,Diabetes
+E10.341,Diabetes
+E10.341,Diabetes
+E10.3411,Diabetes
+E10.3411,Diabetes
+E10.3412,Diabetes
+E10.3412,Diabetes
+E10.3413,Diabetes
+E10.3413,Diabetes
+E10.3419,Diabetes
+E10.3419,Diabetes
+E10.349,Diabetes
+E10.349,Diabetes
+E10.3491,Diabetes
+E10.3491,Diabetes
+E10.3492,Diabetes
+E10.3492,Diabetes
+E10.3493,Diabetes
+E10.3493,Diabetes
+E10.3499,Diabetes
+E10.3499,Diabetes
+E10.351,Diabetes
+E10.351,Diabetes
+E10.3511,Diabetes
+E10.3511,Diabetes
+E10.3512,Diabetes
+E10.3512,Diabetes
+E10.3513,Diabetes
+E10.3513,Diabetes
+E10.3519,Diabetes
+E10.3519,Diabetes
+E10.3521,Diabetes
+E10.3521,Diabetes
+E10.3522,Diabetes
+E10.3522,Diabetes
+E10.3523,Diabetes
+E10.3523,Diabetes
+E10.3529,Diabetes
+E10.3529,Diabetes
+E10.3531,Diabetes
+E10.3531,Diabetes
+E10.3532,Diabetes
+E10.3532,Diabetes
+E10.3533,Diabetes
+E10.3533,Diabetes
+E10.3539,Diabetes
+E10.3539,Diabetes
+E10.3541,Diabetes
+E10.3541,Diabetes
+E10.3542,Diabetes
+E10.3542,Diabetes
+E10.3543,Diabetes
+E10.3543,Diabetes
+E10.3549,Diabetes
+E10.3549,Diabetes
+E10.3551,Diabetes
+E10.3551,Diabetes
+E10.3552,Diabetes
+E10.3552,Diabetes
+E10.3553,Diabetes
+E10.3553,Diabetes
+E10.3559,Diabetes
+E10.3559,Diabetes
+E10.359,Diabetes
+E10.359,Diabetes
+E10.3591,Diabetes
+E10.3591,Diabetes
+E10.3592,Diabetes
+E10.3592,Diabetes
+E10.3593,Diabetes
+E10.3593,Diabetes
+E10.3599,Diabetes
+E10.3599,Diabetes
+E10.36,Diabetes
+E10.36,Diabetes
+E10.37X1,Diabetes
+E10.37X1,Diabetes
+E10.37X2,Diabetes
+E10.37X2,Diabetes
+E10.37X3,Diabetes
+E10.37X3,Diabetes
+E10.37X9,Diabetes
+E10.37X9,Diabetes
+E10.39,Diabetes
+E10.39,Diabetes
+E10.40,Diabetes
+E10.40,Diabetes
+E10.41,Diabetes
+E10.41,Diabetes
+E10.42,Diabetes
+E10.42,Diabetes
+E10.43,Diabetes
+E10.43,Diabetes
+E10.44,Diabetes
+E10.44,Diabetes
+E10.49,Diabetes
+E10.49,Diabetes
+E10.51,Diabetes
+E10.51,Diabetes
+E10.52,Diabetes
+E10.52,Diabetes
+E10.59,Diabetes
+E10.59,Diabetes
+E10.610,Diabetes
+E10.610,Diabetes
+E10.618,Diabetes
+E10.618,Diabetes
+E10.620,Diabetes
+E10.620,Diabetes
+E10.621,Diabetes
+E10.621,Diabetes
+E10.622,Diabetes
+E10.622,Diabetes
+E10.628,Diabetes
+E10.628,Diabetes
+E10.630,Diabetes
+E10.630,Diabetes
+E10.638,Diabetes
+E10.638,Diabetes
+E10.641,Diabetes
+E10.641,Diabetes
+E10.649,Diabetes
+E10.649,Diabetes
+E10.65,Diabetes
+E10.65,Diabetes
+E10.69,Diabetes
+E10.69,Diabetes
+E10.8,Diabetes
+E10.8,Diabetes
+E10.9,Diabetes
+E10.9,Diabetes
+E11.00,Diabetes
+E11.00,Diabetes
+E11.01,Diabetes
+E11.01,Diabetes
+E11.10,Diabetes
+E11.10,Diabetes
+E11.11,Diabetes
+E11.11,Diabetes
+E11.21,Diabetes
+E11.21,Diabetes
+E11.22,Diabetes
+E11.22,Diabetes
+E11.29,Diabetes
+E11.29,Diabetes
+E11.311,Diabetes
+E11.311,Diabetes
+E11.319,Diabetes
+E11.319,Diabetes
+E11.321,Diabetes
+E11.321,Diabetes
+E11.3211,Diabetes
+E11.3211,Diabetes
+E11.3212,Diabetes
+E11.3212,Diabetes
+E11.3213,Diabetes
+E11.3213,Diabetes
+E11.3219,Diabetes
+E11.3219,Diabetes
+E11.329,Diabetes
+E11.329,Diabetes
+E11.3291,Diabetes
+E11.3291,Diabetes
+E11.3292,Diabetes
+E11.3292,Diabetes
+E11.3293,Diabetes
+E11.3293,Diabetes
+E11.3299,Diabetes
+E11.3299,Diabetes
+E11.331,Diabetes
+E11.331,Diabetes
+E11.3311,Diabetes
+E11.3311,Diabetes
+E11.3312,Diabetes
+E11.3312,Diabetes
+E11.3313,Diabetes
+E11.3313,Diabetes
+E11.3319,Diabetes
+E11.3319,Diabetes
+E11.339,Diabetes
+E11.339,Diabetes
+E11.3391,Diabetes
+E11.3391,Diabetes
+E11.3392,Diabetes
+E11.3392,Diabetes
+E11.3393,Diabetes
+E11.3393,Diabetes
+E11.3399,Diabetes
+E11.3399,Diabetes
+E11.341,Diabetes
+E11.341,Diabetes
+E11.3411,Diabetes
+E11.3411,Diabetes
+E11.3412,Diabetes
+E11.3412,Diabetes
+E11.3413,Diabetes
+E11.3413,Diabetes
+E11.3419,Diabetes
+E11.3419,Diabetes
+E11.349,Diabetes
+E11.349,Diabetes
+E11.3491,Diabetes
+E11.3491,Diabetes
+E11.3492,Diabetes
+E11.3492,Diabetes
+E11.3493,Diabetes
+E11.3493,Diabetes
+E11.3499,Diabetes
+E11.3499,Diabetes
+E11.351,Diabetes
+E11.351,Diabetes
+E11.3511,Diabetes
+E11.3511,Diabetes
+E11.3512,Diabetes
+E11.3512,Diabetes
+E11.3513,Diabetes
+E11.3513,Diabetes
+E11.3519,Diabetes
+E11.3519,Diabetes
+E11.3521,Diabetes
+E11.3521,Diabetes
+E11.3522,Diabetes
+E11.3522,Diabetes
+E11.3523,Diabetes
+E11.3523,Diabetes
+E11.3529,Diabetes
+E11.3529,Diabetes
+E11.3531,Diabetes
+E11.3531,Diabetes
+E11.3532,Diabetes
+E11.3532,Diabetes
+E11.3533,Diabetes
+E11.3533,Diabetes
+E11.3539,Diabetes
+E11.3539,Diabetes
+E11.3541,Diabetes
+E11.3541,Diabetes
+E11.3542,Diabetes
+E11.3542,Diabetes
+E11.3543,Diabetes
+E11.3543,Diabetes
+E11.3549,Diabetes
+E11.3549,Diabetes
+E11.3551,Diabetes
+E11.3551,Diabetes
+E11.3552,Diabetes
+E11.3552,Diabetes
+E11.3553,Diabetes
+E11.3553,Diabetes
+E11.3559,Diabetes
+E11.3559,Diabetes
+E11.359,Diabetes
+E11.359,Diabetes
+E11.3591,Diabetes
+E11.3591,Diabetes
+E11.3592,Diabetes
+E11.3592,Diabetes
+E11.3593,Diabetes
+E11.3593,Diabetes
+E11.3599,Diabetes
+E11.3599,Diabetes
+E11.36,Diabetes
+E11.36,Diabetes
+E11.37X1,Diabetes
+E11.37X1,Diabetes
+E11.37X2,Diabetes
+E11.37X2,Diabetes
+E11.37X3,Diabetes
+E11.37X3,Diabetes
+E11.37X9,Diabetes
+E11.37X9,Diabetes
+E11.39,Diabetes
+E11.39,Diabetes
+E11.40,Diabetes
+E11.40,Diabetes
+E11.41,Diabetes
+E11.41,Diabetes
+E11.42,Diabetes
+E11.42,Diabetes
+E11.43,Diabetes
+E11.43,Diabetes
+E11.44,Diabetes
+E11.44,Diabetes
+E11.49,Diabetes
+E11.49,Diabetes
+E11.51,Diabetes
+E11.51,Diabetes
+E11.52,Diabetes
+E11.52,Diabetes
+E11.59,Diabetes
+E11.59,Diabetes
+E11.610,Diabetes
+E11.610,Diabetes
+E11.618,Diabetes
+E11.618,Diabetes
+E11.620,Diabetes
+E11.620,Diabetes
+E11.621,Diabetes
+E11.621,Diabetes
+E11.622,Diabetes
+E11.622,Diabetes
+E11.628,Diabetes
+E11.628,Diabetes
+E11.630,Diabetes
+E11.630,Diabetes
+E11.638,Diabetes
+E11.638,Diabetes
+E11.641,Diabetes
+E11.641,Diabetes
+E11.649,Diabetes
+E11.649,Diabetes
+E11.65,Diabetes
+E11.65,Diabetes
+E11.69,Diabetes
+E11.69,Diabetes
+E11.8,Diabetes
+E11.8,Diabetes
+E11.9,Diabetes
+E11.9,Diabetes
+E13.00,Diabetes
+E13.00,Diabetes
+E13.01,Diabetes
+E13.01,Diabetes
+E13.10,Diabetes
+E13.10,Diabetes
+E13.11,Diabetes
+E13.11,Diabetes
+E13.21,Diabetes
+E13.21,Diabetes
+E13.22,Diabetes
+E13.22,Diabetes
+E13.29,Diabetes
+E13.29,Diabetes
+E13.311,Diabetes
+E13.311,Diabetes
+E13.319,Diabetes
+E13.319,Diabetes
+E13.321,Diabetes
+E13.321,Diabetes
+E13.3211,Diabetes
+E13.3211,Diabetes
+E13.3212,Diabetes
+E13.3212,Diabetes
+E13.3213,Diabetes
+E13.3213,Diabetes
+E13.3219,Diabetes
+E13.3219,Diabetes
+E13.329,Diabetes
+E13.329,Diabetes
+E13.3291,Diabetes
+E13.3291,Diabetes
+E13.3292,Diabetes
+E13.3292,Diabetes
+E13.3293,Diabetes
+E13.3293,Diabetes
+E13.3299,Diabetes
+E13.3299,Diabetes
+E13.331,Diabetes
+E13.331,Diabetes
+E13.3311,Diabetes
+E13.3311,Diabetes
+E13.3312,Diabetes
+E13.3312,Diabetes
+E13.3313,Diabetes
+E13.3313,Diabetes
+E13.3319,Diabetes
+E13.3319,Diabetes
+E13.339,Diabetes
+E13.339,Diabetes
+E13.3391,Diabetes
+E13.3391,Diabetes
+E13.3392,Diabetes
+E13.3392,Diabetes
+E13.3393,Diabetes
+E13.3393,Diabetes
+E13.3399,Diabetes
+E13.3399,Diabetes
+E13.341,Diabetes
+E13.341,Diabetes
+E13.3411,Diabetes
+E13.3411,Diabetes
+E13.3412,Diabetes
+E13.3412,Diabetes
+E13.3413,Diabetes
+E13.3413,Diabetes
+E13.3419,Diabetes
+E13.3419,Diabetes
+E13.349,Diabetes
+E13.349,Diabetes
+E13.3491,Diabetes
+E13.3491,Diabetes
+E13.3492,Diabetes
+E13.3492,Diabetes
+E13.3493,Diabetes
+E13.3493,Diabetes
+E13.3499,Diabetes
+E13.3499,Diabetes
+E13.351,Diabetes
+E13.351,Diabetes
+E13.3511,Diabetes
+E13.3511,Diabetes
+E13.3512,Diabetes
+E13.3512,Diabetes
+E13.3513,Diabetes
+E13.3513,Diabetes
+E13.3519,Diabetes
+E13.3519,Diabetes
+E13.3521,Diabetes
+E13.3521,Diabetes
+E13.3522,Diabetes
+E13.3522,Diabetes
+E13.3523,Diabetes
+E13.3523,Diabetes
+E13.3529,Diabetes
+E13.3529,Diabetes
+E13.3531,Diabetes
+E13.3531,Diabetes
+E13.3532,Diabetes
+E13.3532,Diabetes
+E13.3533,Diabetes
+E13.3533,Diabetes
+E13.3539,Diabetes
+E13.3539,Diabetes
+E13.3541,Diabetes
+E13.3541,Diabetes
+E13.3542,Diabetes
+E13.3542,Diabetes
+E13.3543,Diabetes
+E13.3543,Diabetes
+E13.3549,Diabetes
+E13.3549,Diabetes
+E13.3551,Diabetes
+E13.3551,Diabetes
+E13.3552,Diabetes
+E13.3552,Diabetes
+E13.3553,Diabetes
+E13.3553,Diabetes
+E13.3559,Diabetes
+E13.3559,Diabetes
+E13.359,Diabetes
+E13.359,Diabetes
+E13.3591,Diabetes
+E13.3591,Diabetes
+E13.3592,Diabetes
+E13.3592,Diabetes
+E13.3593,Diabetes
+E13.3593,Diabetes
+E13.3599,Diabetes
+E13.3599,Diabetes
+E13.36,Diabetes
+E13.36,Diabetes
+E13.37X1,Diabetes
+E13.37X2,Diabetes
+E13.37X3,Diabetes
+E13.37X9,Diabetes
+E13.39,Diabetes
+E13.39,Diabetes
+E13.40,Diabetes
+E13.40,Diabetes
+E13.41,Diabetes
+E13.41,Diabetes
+E13.42,Diabetes
+E13.42,Diabetes
+E13.43,Diabetes
+E13.43,Diabetes
+E13.44,Diabetes
+E13.44,Diabetes
+E13.49,Diabetes
+E13.49,Diabetes
+E13.51,Diabetes
+E13.51,Diabetes
+E13.52,Diabetes
+E13.52,Diabetes
+E13.59,Diabetes
+E13.59,Diabetes
+E13.610,Diabetes
+E13.610,Diabetes
+E13.618,Diabetes
+E13.618,Diabetes
+E13.620,Diabetes
+E13.620,Diabetes
+E13.621,Diabetes
+E13.621,Diabetes
+E13.622,Diabetes
+E13.622,Diabetes
+E13.628,Diabetes
+E13.628,Diabetes
+E13.630,Diabetes
+E13.630,Diabetes
+E13.638,Diabetes
+E13.638,Diabetes
+E13.641,Diabetes
+E13.641,Diabetes
+E13.649,Diabetes
+E13.649,Diabetes
+E13.65,Diabetes
+E13.65,Diabetes
+E13.69,Diabetes
+E13.69,Diabetes
+E13.8,Diabetes
+E13.8,Diabetes
+E13.9,Diabetes
+E13.9,Diabetes
+F17.200,Smoking
+F17.203,Smoking
+F17.208,Smoking
+F17.209,Smoking
+F17.210,Smoking
+F17.213,Smoking
+F17.218,Smoking
+F17.219,Smoking
+F17.220,Smoking
+F17.223,Smoking
+F17.228,Smoking
+F17.229,Smoking
+F17.290,Smoking
+F17.293,Smoking
+F17.298,Smoking
+F17.299,Smoking
+O99.330,Smoking
+O99.331,Smoking
+O99.332,Smoking
+O99.333,Smoking
+O99.334,Smoking
+O99.335,Smoking
+I48.0,Atrial fibrillation
+I48.1,Atrial fibrillation
+I48.11,Atrial fibrillation
+I48.19,Atrial fibrillation
+I48.2,Atrial fibrillation
+I48.20,Atrial fibrillation
+I48.21,Atrial fibrillation
+I48.91,Atrial fibrillation
+I65.01,Occlusion/Stenosis of cerebral or precerebral artery
+I65.02,Occlusion/Stenosis of cerebral or precerebral artery
+I65.03,Occlusion/Stenosis of cerebral or precerebral artery
+I65.09,Occlusion/Stenosis of cerebral or precerebral artery
+I65.1,Occlusion/Stenosis of cerebral or precerebral artery
+I65.21,Occlusion/Stenosis of cerebral or precerebral artery
+I65.22,Occlusion/Stenosis of cerebral or precerebral artery
+I65.23,Occlusion/Stenosis of cerebral or precerebral artery
+I65.29,Occlusion/Stenosis of cerebral or precerebral artery
+I65.8,Occlusion/Stenosis of cerebral or precerebral artery
+I65.9,Occlusion/Stenosis of cerebral or precerebral artery
+I66.01,Occlusion/Stenosis of cerebral or precerebral artery
+I66.02,Occlusion/Stenosis of cerebral or precerebral artery
+I66.03,Occlusion/Stenosis of cerebral or precerebral artery
+I66.09,Occlusion/Stenosis of cerebral or precerebral artery
+I66.11,Occlusion/Stenosis of cerebral or precerebral artery
+I66.12,Occlusion/Stenosis of cerebral or precerebral artery
+I66.13,Occlusion/Stenosis of cerebral or precerebral artery
+I66.19,Occlusion/Stenosis of cerebral or precerebral artery
+I66.21,Occlusion/Stenosis of cerebral or precerebral artery
+I66.22,Occlusion/Stenosis of cerebral or precerebral artery
+I66.23,Occlusion/Stenosis of cerebral or precerebral artery
+I66.29,Occlusion/Stenosis of cerebral or precerebral artery
+I66.3,Occlusion/Stenosis of cerebral or precerebral artery
+I66.8,Occlusion/Stenosis of cerebral or precerebral artery
+I66.9,Occlusion/Stenosis of cerebral or precerebral artery
+I20.0,Coronary artery disease (CAD)
+I20.1,Coronary artery disease (CAD)
+I20.8,Coronary artery disease (CAD)
+I20.9,Coronary artery disease (CAD)
+I21.01,Coronary artery disease (CAD)
+I21.02,Coronary artery disease (CAD)
+I21.09,Coronary artery disease (CAD)
+I21.11,Coronary artery disease (CAD)
+I21.19,Coronary artery disease (CAD)
+I21.21,Coronary artery disease (CAD)
+I21.29,Coronary artery disease (CAD)
+I21.3,Coronary artery disease (CAD)
+I21.4,Coronary artery disease (CAD)
+I21.9,Coronary artery disease (CAD)
+I21.A1,Coronary artery disease (CAD)
+I21.A9,Coronary artery disease (CAD)
+I22.0,Coronary artery disease (CAD)
+I22.1,Coronary artery disease (CAD)
+I22.2,Coronary artery disease (CAD)
+I22.8,Coronary artery disease (CAD)
+I22.9,Coronary artery disease (CAD)
+I23.0,Coronary artery disease (CAD)
+I23.1,Coronary artery disease (CAD)
+I23.2,Coronary artery disease (CAD)
+I23.3,Coronary artery disease (CAD)
+I23.4,Coronary artery disease (CAD)
+I23.5,Coronary artery disease (CAD)
+I23.6,Coronary artery disease (CAD)
+I23.7,Coronary artery disease (CAD)
+I23.8,Coronary artery disease (CAD)
+I24.0,Coronary artery disease (CAD)
+I24.1,Coronary artery disease (CAD)
+I24.8,Coronary artery disease (CAD)
+I24.9,Coronary artery disease (CAD)
+I25.10,Coronary artery disease (CAD)
+I25.110,Coronary artery disease (CAD)
+I25.111,Coronary artery disease (CAD)
+I25.118,Coronary artery disease (CAD)
+I25.119,Coronary artery disease (CAD)
+I25.2,Coronary artery disease (CAD)
+I25.3,Coronary artery disease (CAD)
+I25.41,Coronary artery disease (CAD)
+I25.42,Coronary artery disease (CAD)
+I25.5,Coronary artery disease (CAD)
+I25.5,Coronary artery disease (CAD)
+I25.6,Coronary artery disease (CAD)
+I25.700,Coronary artery disease (CAD)
+I25.701,Coronary artery disease (CAD)
+I25.708,Coronary artery disease (CAD)
+I25.709,Coronary artery disease (CAD)
+I25.710,Coronary artery disease (CAD)
+I25.711,Coronary artery disease (CAD)
+I25.718,Coronary artery disease (CAD)
+I25.719,Coronary artery disease (CAD)
+I25.720,Coronary artery disease (CAD)
+I25.721,Coronary artery disease (CAD)
+I25.728,Coronary artery disease (CAD)
+I25.729,Coronary artery disease (CAD)
+I25.730,Coronary artery disease (CAD)
+I25.731,Coronary artery disease (CAD)
+I25.738,Coronary artery disease (CAD)
+I25.739,Coronary artery disease (CAD)
+I25.750,Coronary artery disease (CAD)
+I25.751,Coronary artery disease (CAD)
+I25.758,Coronary artery disease (CAD)
+I25.759,Coronary artery disease (CAD)
+I25.760,Coronary artery disease (CAD)
+I25.761,Coronary artery disease (CAD)
+I25.768,Coronary artery disease (CAD)
+I25.769,Coronary artery disease (CAD)
+I25.790,Coronary artery disease (CAD)
+I25.791,Coronary artery disease (CAD)
+I25.798,Coronary artery disease (CAD)
+I25.799,Coronary artery disease (CAD)
+I25.810,Coronary artery disease (CAD)
+I25.811,Coronary artery disease (CAD)
+I25.812,Coronary artery disease (CAD)
+I25.82,Coronary artery disease (CAD)
+I25.83,Coronary artery disease (CAD)
+I25.84,Coronary artery disease (CAD)
+I25.89,Coronary artery disease (CAD)
+I25.9,Coronary artery disease (CAD)
+I67.4,Hx aneurysm
+I67.3,Hx aneurysm
+I67.4,Hx aneurysm
+I67.1,Hx aneurysm
+I67.2,Hx aneurysm
+I67.3,Hx aneurysm
+I67.5,Hx aneurysm
+I67.6,Hx aneurysm
+I67.7,Hx aneurysm
+I67.81,Hx aneurysm
+I67.82,Hx aneurysm
+I67.83,Hx aneurysm
+I67.841,Hx aneurysm
+I67.848,Hx aneurysm
+I67.850,Hx aneurysm
+I67.858,Hx aneurysm
+I67.89,Hx aneurysm
+I67.9,Hx aneurysm
+I67.0,Hx aneurysm

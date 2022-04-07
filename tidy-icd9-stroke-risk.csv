@@ -1,0 +1,255 @@
+icd,group
+401.0,Hypertension
+402.00,Hypertension
+402.01,Hypertension
+402.10,Hypertension
+402.11,Hypertension
+402.90,Hypertension
+402.91,Hypertension
+403.0,Hypertension
+403.00,Hypertension
+403.01,Hypertension
+403.1,Hypertension
+403.10,Hypertension
+403.11,Hypertension
+403.9,Hypertension
+403.90,Hypertension
+403.91,Hypertension
+404.0,Hypertension
+404.00,Hypertension
+404.01,Hypertension
+404.02,Hypertension
+404.03,Hypertension
+404.1,Hypertension
+404.10,Hypertension
+404.11,Hypertension
+404.12,Hypertension
+404.13,Hypertension
+404.9,Hypertension
+404.90,Hypertension
+404.91,Hypertension
+404.92,Hypertension
+404.93,Hypertension
+405.01,Hypertension
+405.09,Hypertension
+405.11,Hypertension
+405.19,Hypertension
+405.91,Hypertension
+405.99,Hypertension
+437.2,Hypertension
+401.1,Hypertension
+401.9,Hypertension
+272.0,Hyperlipdemia
+272.1,Hyperlipdemia
+272.2,Hyperlipdemia
+272.3,Hyperlipdemia
+272.4,Hyperlipdemia
+249.00,Diabetes
+250.00,Diabetes
+250.01,Diabetes
+790.2,Diabetes
+790.21,Diabetes
+790.22,Diabetes
+790.29,Diabetes
+791.5,Diabetes
+791.6,Diabetes
+249.01,Diabetes
+249.10,Diabetes
+249.11,Diabetes
+249.20,Diabetes
+249.21,Diabetes
+249.30,Diabetes
+249.31,Diabetes
+249.40,Diabetes
+249.41,Diabetes
+249.50,Diabetes
+249.51,Diabetes
+249.60,Diabetes
+249.61,Diabetes
+249.70,Diabetes
+249.71,Diabetes
+249.80,Diabetes
+249.81,Diabetes
+249.90,Diabetes
+249.91,Diabetes
+250.02,Diabetes
+250.03,Diabetes
+250.10,Diabetes
+250.11,Diabetes
+250.12,Diabetes
+250.13,Diabetes
+250.20,Diabetes
+250.21,Diabetes
+250.22,Diabetes
+250.23,Diabetes
+250.30,Diabetes
+250.31,Diabetes
+250.32,Diabetes
+250.33,Diabetes
+250.40,Diabetes
+250.41,Diabetes
+250.42,Diabetes
+250.43,Diabetes
+250.50,Diabetes
+250.51,Diabetes
+250.52,Diabetes
+250.53,Diabetes
+250.60,Diabetes
+250.61,Diabetes
+250.62,Diabetes
+250.63,Diabetes
+250.70,Diabetes
+250.71,Diabetes
+250.72,Diabetes
+250.73,Diabetes
+250.80,Diabetes
+250.81,Diabetes
+250.82,Diabetes
+250.83,Diabetes
+250.90,Diabetes
+250.91,Diabetes
+250.92,Diabetes
+250.93,Diabetes
+253.5,Diabetes
+648.00,Diabetes
+648.01,Diabetes
+648.02,Diabetes
+648.03,Diabetes
+648.04,Diabetes
+648.80,Diabetes
+648.81,Diabetes
+648.82,Diabetes
+648.83,Diabetes
+648.84,Diabetes
+346.60,Hx of stroke/TIA
+346.61,Hx of stroke/TIA
+346.62,Hx of stroke/TIA
+346.63,Hx of stroke/TIA
+430,Hx of stroke/TIA
+431,Hx of stroke/TIA
+432.0,Hx of stroke/TIA
+432.1,Hx of stroke/TIA
+432.9,Hx of stroke/TIA
+433.01,Hx of stroke/TIA
+433.11,Hx of stroke/TIA
+433.21,Hx of stroke/TIA
+433.31,Hx of stroke/TIA
+433.81,Hx of stroke/TIA
+433.91,Hx of stroke/TIA
+434.0,Hx of stroke/TIA
+434.00,Hx of stroke/TIA
+434.01,Hx of stroke/TIA
+434.1,Hx of stroke/TIA
+434.10,Hx of stroke/TIA
+434.11,Hx of stroke/TIA
+434.9,Hx of stroke/TIA
+434.90,Hx of stroke/TIA
+434.91,Hx of stroke/TIA
+436,Hx of stroke/TIA
+435.0,Hx of stroke/TIA
+435.1,Hx of stroke/TIA
+435.2,Hx of stroke/TIA
+435.3,Hx of stroke/TIA
+435.8,Hx of stroke/TIA
+435.9,Hx of stroke/TIA
+427.31, Hx of atrial fibrillation
+427.32, Hx of atrial fibrillation
+433.0,Occlusion/Stenosis of cerebral or precerebral artery
+433.00,Occlusion/Stenosis of cerebral or precerebral artery
+433.1,Occlusion/Stenosis of cerebral or precerebral artery
+433.10,Occlusion/Stenosis of cerebral or precerebral artery
+433.2,Occlusion/Stenosis of cerebral or precerebral artery
+433.20,Occlusion/Stenosis of cerebral or precerebral artery
+433.3,Occlusion/Stenosis of cerebral or precerebral artery
+433.30,Occlusion/Stenosis of cerebral or precerebral artery
+433.8,Occlusion/Stenosis of cerebral or precerebral artery
+433.80,Occlusion/Stenosis of cerebral or precerebral artery
+433.9,Occlusion/Stenosis of cerebral or precerebral artery
+433.90,Occlusion/Stenosis of cerebral or precerebral artery
+434.0,Occlusion/Stenosis of cerebral or precerebral artery
+434.00,Occlusion/Stenosis of cerebral or precerebral artery
+434.01,Occlusion/Stenosis of cerebral or precerebral artery
+434.1,Occlusion/Stenosis of cerebral or precerebral artery
+434.10,Occlusion/Stenosis of cerebral or precerebral artery
+434.11,Occlusion/Stenosis of cerebral or precerebral artery
+434.9,Occlusion/Stenosis of cerebral or precerebral artery
+434.90,Occlusion/Stenosis of cerebral or precerebral artery
+434.91,Occlusion/Stenosis of cerebral or precerebral artery
+411.0,Coronary artery disease (CAD)
+411.1,Coronary artery disease (CAD)
+411.8,Coronary artery disease (CAD)
+411.81,Coronary artery disease (CAD)
+411.89,Coronary artery disease (CAD)
+412,Coronary artery disease (CAD)
+413.0,Coronary artery disease (CAD)
+413.1,Coronary artery disease (CAD)
+413.9,Coronary artery disease (CAD)
+414.0,Coronary artery disease (CAD)
+414.00,Coronary artery disease (CAD)
+414.01,Coronary artery disease (CAD)
+414.06,Coronary artery disease (CAD)
+414.2,Coronary artery disease (CAD)
+414.3,Coronary artery disease (CAD)
+414.4,Coronary artery disease (CAD)
+414.8,Coronary artery disease (CAD)
+414.9,Coronary artery disease (CAD)
+410.0,Coronary artery disease (CAD)
+410.00,Coronary artery disease (CAD)
+410.01,Coronary artery disease (CAD)
+410.02,Coronary artery disease (CAD)
+410.1,Coronary artery disease (CAD)
+410.10,Coronary artery disease (CAD)
+410.11,Coronary artery disease (CAD)
+410.12,Coronary artery disease (CAD)
+410.2,Coronary artery disease (CAD)
+410.20,Coronary artery disease (CAD)
+410.21,Coronary artery disease (CAD)
+410.22,Coronary artery disease (CAD)
+410.3,Coronary artery disease (CAD)
+410.30,Coronary artery disease (CAD)
+410.31,Coronary artery disease (CAD)
+410.32,Coronary artery disease (CAD)
+410.4,Coronary artery disease (CAD)
+410.40,Coronary artery disease (CAD)
+410.41,Coronary artery disease (CAD)
+410.42,Coronary artery disease (CAD)
+410.5,Coronary artery disease (CAD)
+410.50,Coronary artery disease (CAD)
+410.51,Coronary artery disease (CAD)
+410.52,Coronary artery disease (CAD)
+410.6,Coronary artery disease (CAD)
+410.60,Coronary artery disease (CAD)
+410.61,Coronary artery disease (CAD)
+410.62,Coronary artery disease (CAD)
+410.7,Coronary artery disease (CAD)
+410.70,Coronary artery disease (CAD)
+410.71,Coronary artery disease (CAD)
+410.72,Coronary artery disease (CAD)
+410.8,Coronary artery disease (CAD)
+410.80,Coronary artery disease (CAD)
+410.81,Coronary artery disease (CAD)
+410.82,Coronary artery disease (CAD)
+410.9,Coronary artery disease (CAD)
+410.90,Coronary artery disease (CAD)
+410.91,Coronary artery disease (CAD)
+410.92,Coronary artery disease (CAD)
+305.1,Smoking
+305.10,Smoking
+305.11,Smoking
+305.12,Smoking
+305.13,Smoking
+649.00,Smoking
+649.01,Smoking
+649.02,Smoking
+649.03,Smoking
+649.04,Smoking
+437.2,Hx of cerebral aneurysm
+437.0,Hx of cerebral aneurysm
+437.1,Hx of cerebral aneurysm
+437.3,Hx of cerebral aneurysm
+437.4,Hx of cerebral aneurysm
+437.5,Hx of cerebral aneurysm
+437.6,Hx of cerebral aneurysm
+437.7,Hx of cerebral aneurysm
+437.8,Hx of cerebral aneurysm
+437.9,Hx of cerebral aneurysm
