@@ -23,12 +23,14 @@ def points_near(point_of_interest: np.ndarray, point_array: np.ndarray, k: int =
     :param point_array: Numpy array of points (x is column 0, y is column 1).
     :param k: How many nearest points we want.
     :return: Array of indices of the nearest points.
+
+    :raises: ValueError if point_array has wrong num of axes, or if dimensions don't match in the 2 params.
     """
 
     if point_array.ndim != 2:
-        raise ValueError("point_array is %i dimensional, not 2-dimensional" % point_array.ndim)
+        raise ValueError("point_array has %i axes. Should have exactly 2." % point_array.ndim)
     if point_array.shape[1] != point_of_interest.shape[-1]:
-        raise ValueError("point_array has %i dimensional points vs point_of_interest %i" %
+        raise ValueError("Mismatch: point_array has %i dimensional points vs point_of_interest %i" %
                          (point_array.shape[1], point_of_interest.shape[-1]))
 
     poi_repeated = np.broadcast_to(point_of_interest, point_array.shape)
