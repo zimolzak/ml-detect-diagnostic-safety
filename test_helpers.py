@@ -45,3 +45,18 @@ ICD_EXPECTED = {4010: '401.0',
 def test_repair_icd():
     for k, v in ICD_EXPECTED.items():
         assert repair_icd(k) == v
+
+
+def test_repair_icd_exception_float():
+    with pytest.raises(ValueError):
+        dummy = repair_icd(456.456)
+
+
+def test_repair_icd_exception_dot():
+    with pytest.raises(ValueError):
+        dummy = repair_icd('456.456')
+
+
+def test_repair_icd_exception_list():
+    with pytest.raises(ValueError):
+        dummy = repair_icd([1,2,3])
