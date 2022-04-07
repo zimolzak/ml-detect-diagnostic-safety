@@ -7,9 +7,15 @@ def repair_icd(icd) -> str:
 
     :param icd: An ICD code without a dot, like 4011. Allow int or str.
     :return: Properly dotted ICD code like 401.1 or H81.01
-    """
 
-    return icd
+    :raises: ValueError if icd param isn't an int or str, or if it already contains dots.
+    """
+    if type(icd) != int and type(icd) != str:
+        raise ValueError("Parameter icd has wrong type: %s" % type(icd))
+    icd_str = str(icd)
+    if '.' in icd_str:
+        raise ValueError("There is already a dot '.' in icd: %s" % icd_str)
+    return icd_str[0:3] + '.' + icd_str[3:]
 
 
 def points_near(point_of_interest: np.ndarray, point_array: np.ndarray, k: int = 10) -> np.ndarray:
