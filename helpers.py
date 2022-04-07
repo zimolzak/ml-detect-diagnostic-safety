@@ -2,7 +2,7 @@ import numpy as np
 
 
 def repair_icd(icd) -> str:
-    """Take a "funny" ICD code composed of only numbers.
+    """Take a "funny" ICD code composed of numbers, possibly letters, but no dot.
     Return a string w/ the dot in the proper place, given some assumptions
 
     :param icd: An ICD code without a dot, like 4011. Allow int or str.
