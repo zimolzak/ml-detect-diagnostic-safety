@@ -18,6 +18,6 @@ if __name__ == '__main__':
         df = pd.read_csv(name)
         if df.columns[0] == 'ICD-10-CM Code':
             df['icd-repaired'] = df['ICD-10-CM Code'].apply(repair_icd)
-        elif '9' in df.columns[0]:
-            pass
+        elif df.columns[0] == 'ICD-9-CM CODE':
+            df['icd-repaired'] = df['ICD-9-CM CODE'].apply(repair_icd)
         df.to_csv('tidy-' + name)
