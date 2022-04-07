@@ -15,7 +15,10 @@ def repair_icd(icd) -> str:
     icd_str = str(icd)
     if '.' in icd_str:
         raise ValueError("There is already a dot '.' in icd: %s" % icd_str)
-    return icd_str[0:3] + '.' + icd_str[3:]
+    if len(icd_str) > 3:
+        return icd_str[0:3] + '.' + icd_str[3:]
+    else:
+        return icd_str
 
 
 def points_near(point_of_interest: np.ndarray, point_array: np.ndarray, k: int = 10) -> np.ndarray:

@@ -15,6 +15,7 @@ __pycache__/
 *.joblib
 *.png
 *.bundle
+.coverage
 
 !short-list-drug-classes.csv
 !icd*.csv
