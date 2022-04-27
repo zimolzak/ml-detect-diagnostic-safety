@@ -17,6 +17,8 @@ __pycache__/
 *.bundle
 .coverage
 .DS_Store
+*.aux
+*.log
 
 !short-list-drug-classes.csv
 !icd*.csv
