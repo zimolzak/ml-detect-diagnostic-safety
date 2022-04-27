@@ -12,6 +12,8 @@ The set of embeddings of each CUI is the matrix $V$. Each row $V_w$ is
 a dense word vector. So for the whole matrix, $V \in \mathbb{R}^{n
   \times 100}$.
 
+An example to visualize $V$:
+
 \begin{equation}
   V = \left[
       \begin{array}{ccccc}
@@ -22,25 +24,23 @@ a dense word vector. So for the whole matrix, $V \in \mathbb{R}^{n
 
 The set of documents with embeddings assigned is the tensor $M$. Here,
 each \emph{element} $M_{dc}$ is a dense word vector. So for the whole
-tensor, $M \in \mathbb{R}^{m \times n \times 100}$. There are a
-variable number of CUIs per document. We set $M_{dc} = 0$ if.
+tensor, $M \in \mathbb{R}^{m \times n \times 100}$. One row per
+document, one column per CUI. There are a variable number of CUIs per
+document. We set $M_{dc} = 0^{100}$ if CUI $c$ is not mentioned in
+document $d$. Otherwise, we set $M_{dc} = V_c$.
+
+An example to visualize $M$:
 
 \begin{equation}
   M = \left[
       \begin{array}{ccccccccc}
         V_1 & V_2 & V_3 & \ldots & V_{20} & \ldots & 0 & 0 & 0 \\
-        V_1 & V_2 & V_3 & \ldots & V_{20} & \ldots & 0 & 0 & 0 \\
-        V_1 & V_2 & V_3 & \ldots & V_{20} & \ldots & 0 & 0 & 0 \\
-        \vdots
+        V_1 & V_2 & 0   & \ldots & 0      & \ldots & 0 & 0 & 0 \\
+        V_1 & 0   & V_3 & \ldots & 0      & \ldots & 0 & 0 & 0 \\
+        \vdots & \vdots & \vdots & \ddots & \vdots & \ddots & \vdots & \vdots & \vdots
       \end{array} \right]
 \end{equation}
 
-Rm, it, normal, and frak:
-
-\begin{equation}
-  \mathrm{0} + \mathit{0} + \mathnormal{0} + \mathfrak{0}
-\end{equation}
-
-
+Here, ``0'' is shorthand for the vector of zeros $0^{100}$.
 
 \end{document}
