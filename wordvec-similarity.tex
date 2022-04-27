@@ -1,14 +1,38 @@
 \documentclass{article}
 \usepackage{amsfonts}
-\title{Notation for CUI embeddings (stroke discharge summaries)}
+\title{Notation for CUI embedding similarity (Stroke discharge summaries)}
 \author{Andrew Zimolzak}
 \begin{document}
 
 \maketitle
 
-Documents are indexed by $d$ from 1 to $m$. Words or CUIs are indexed
-by $w$ or $c$, from 1 to $n$. Assume we are embedding $n$ CUIs in
-100-dimensional space, so $n > 100$.
+We want to answer the following question:
+
+\begin{quote}
+  How close is this \emph{whole discharge summary} to the single
+  concept of \emph{cerebellar stroke?}
+\end{quote}
+
+Really, it's not only about cerebellar stroke. We want to substitute
+several different concepts for cerebellar stroke, and see what notes
+may or may not be ``close'' to them. We will measure ``closeness'' by
+learning vector embeddings of many clinical concepts.
+
+\paragraph{Preprocessing:} We retrieved a set of hospital admissions with
+stroke among their discharge diagnoses (defined by a group of curated
+ICD codes). For each admission, the discharge summary is processed by
+\textsc{clamp}, which outputs a set of CUIs for each note. These CUIs
+are semi-manually filtered down (removing rare CUIs, etc.) and output
+as a json file. Python then reads this in and applies
+\texttt{torch.nn.Embedding()}. See the file Justin /
+Stroke\_Notes\_13OCT21 / word2vecOnClampCUIs.ipynb
+
+\paragraph{Notation:} Documents are indexed by $d$ from 1 to $m$.
+Words (really concepts or CUIs) are indexed by $w$ or $c$, from 1 to
+$n$. We chose to embed the $n$ CUIs in 100-dimensional space, and $n >
+100$. (In practice, the embedding dimension can be other numbers---we
+also tried 50. We selected 100 dimensions somewhat by guessing and
+experimentation.)
 
 The set of embeddings of each CUI is the matrix $V$. Each row $V_w$ is
 a dense word vector. So for the whole matrix, $V \in \mathbb{R}^{n
@@ -40,6 +64,37 @@ visualize $M$:
       \end{array} \right]
 \end{equation}
 
-Here, ``0'' is shorthand for the vector of zeros $0^{100}$.
+Here, ``0'' is shorthand for the vector of zeros, $0^{100}$.
+
+\paragraph{Similarity:} Having learned vector embeddings of CUIs, we
+can now calculate the similarity $S$ between a document $d$ and a
+concept $w$:
+
+\begin{equation}
+  S_{dw} = \mathrm{cosim}(\sum_{c=1}^n M_{dc}, V_w)
+\end{equation}
+
+Here, $\sum_{c=1}^n M_{dc}$ takes one row of tensor $M$, for the
+document of interest $d$. It then performs a column-wise sum of all
+elements in that row. This results in a simple vector
+$\in \mathbb{R}^{100}$, which adds up all CUI vectors in the document.
+This vector is compared to one row of $V$ for the concept of interest $w$,
+which is also $\in \mathbb{R}^{100}$.
+
+I use the notation $\mathrm{cosim}(a, b)$ for the cosine similarity between two
+vectors: $\mathrm{cosim}(a,b) = \frac{a \cdot b}{\|a\| \|b\|}$. For
+orthogonal vectors with no similarity, $\mathrm{cosim}(a,b) =
+\mathrm{cos}(\pi / 2) = 0$, and for identical (or parallel) vectors,
+$\mathrm{cosim}(a,a) = \mathrm{cos}(0) = 1$. Also, $ \| a \| $ denotes
+the $\ell_2$ or Euclidean norm (or ``length'') of vector $a$. In other
+words, $ \| a \| = \sqrt{a \cdot a}$.
+
+Lastly, note that computing the sum and not the average can
+potentially result in a ``long'' vector with high values relative to
+the values of $V_w$. In other words, it disregards whether there are 1
+or many CUIs in a document. This should not matter, however, because
+we are measuring only the angle between document $d$ and concept $w$.
+Cosine similarity already ``automatically'' normalizes by the
+magnitude of the vectors, or it ``doesn't care'' how long they are in space.
 
 \end{document}
