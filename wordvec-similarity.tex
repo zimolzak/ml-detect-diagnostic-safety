@@ -6,6 +6,8 @@
 
 \maketitle
 
+\section*{Motivation}
+
 We want to answer the following question:
 
 \begin{quote}
@@ -18,25 +20,29 @@ several different concepts for cerebellar stroke, and see what notes
 may or may not be ``close'' to them. We will measure ``closeness'' by
 learning vector embeddings of many clinical concepts.
 
-\paragraph{Preprocessing:} We retrieved a set of hospital admissions with
-stroke among their discharge diagnoses (defined by a group of curated
-ICD codes). For each admission, the discharge summary is processed by
-\textsc{clamp}, which outputs a set of CUIs for each note. These CUIs
-are semi-manually filtered down (removing rare CUIs, etc.) and output
-as a json file. Python then reads this in and applies
+\section*{Processing}
+
+We retrieved a set of hospital admissions with stroke among their
+discharge diagnoses (defined by a group of curated ICD codes). For
+each admission, the discharge summary is processed by \textsc{clamp},
+which outputs a set of CUIs for each note. These CUIs are
+semi-manually filtered down (removing rare CUIs, etc.) and output as a
+json file. Python then reads this in and applies
 \texttt{torch.nn.Embedding()}. See the file Justin /
 Stroke\_Notes\_13OCT21 / word2vecOnClampCUIs.ipynb
 
-\paragraph{Notation:} Documents are indexed by $d$ from 1 to $m$.
-Words (really concepts or CUIs) are indexed by $w$ or $c$, from 1 to
-$n$. We chose to embed the $n$ CUIs in 100-dimensional space, and $n >
-100$. (In practice, the embedding dimension can be other numbers---we
-also tried 50. We selected 100 dimensions somewhat by guessing and
-experimentation.)
+\section*{Notation}
 
-The set of embeddings of each CUI is the matrix $V$. Each row $V_w$ is
-a dense word vector. So for the whole matrix, $V \in \mathbb{R}^{n
-  \times 100}$. An example to visualize $V$:
+Documents are indexed by $d$ from 1 to $m$. Words (really concepts or
+CUIs) are indexed by $w$ or $c$, from 1 to $n$. We chose to embed the
+$n$ CUIs in 100-dimensional space, and $n > 100$. (In practice, the
+embedding dimension can be other numbers---we also tried 50. We
+selected 100 dimensions somewhat by guessing and experimentation.)
+
+The set of embeddings of each CUI is the matrix $V$, which is the main
+output of the embedding algorithm. Each row $V_w$ is a dense
+100-dimensional word vector. So for the whole matrix, $V \in
+\mathbb{R}^{n \times 100}$. An example to visualize $V$:
 
 \begin{equation}
   V = \left[
@@ -46,12 +52,14 @@ a dense word vector. So for the whole matrix, $V \in \mathbb{R}^{n
       \end{array} \right]
 \end{equation}
 
-The set of documents with embeddings assigned is the tensor $M$. Here,
-each \emph{element} $M_{dc}$ is a dense word vector. So for the whole
-tensor, $M \in \mathbb{R}^{m \times n \times 100}$. One row per
-document, one column per CUI. There are a variable number of CUIs per
-document. We set $M_{dc} = 0^{100}$ if CUI $c$ is not mentioned in
-document $d$. Otherwise, we set $M_{dc} = V_c$. An example to
+The set of documents with embeddings assigned is the tensor $M$.
+Intuitively, $M$ combines the output of the \textsc{clamp} algorithm
+with the output of the embedding algorithm. Here, each \emph{element}
+(not row) $M_{dc}$ is a dense word vector. So for the whole tensor, $M
+\in \mathbb{R}^{m \times n \times 100}$. There is one row per
+document, and one column per CUI. There are a variable number of CUIs
+per document, so we set $M_{dc} = 0^{100}$ if CUI $c$ is not mentioned
+in document $d$. Otherwise, we set $M_{dc} = V_c$. An example to
 visualize $M$:
 
 \begin{equation}
@@ -66,9 +74,11 @@ visualize $M$:
 
 Here, ``0'' is shorthand for the vector of zeros, $0^{100}$.
 
-\paragraph{Similarity:} Having learned vector embeddings of CUIs, we
-can now calculate the similarity $S$ between a document $d$ and a
-concept $w$:
+\section*{Similarity}
+
+Having learned vector embeddings of CUIs, (embeddings which are stored
+in matrix $V$,) we can finally calculate the similarity $S$ between a
+document $d$ and a concept $w$:
 
 \begin{equation}
   S_{dw} = \mathrm{cosim}(\sum_{c=1}^n M_{dc}, V_w)
@@ -81,6 +91,8 @@ $\in \mathbb{R}^{100}$, which adds up all CUI vectors in the document.
 This vector is compared to one row of $V$ for the concept of interest $w$,
 which is also $\in \mathbb{R}^{100}$.
 
+\subsection*{Notation for the similarity equation above}
+
 I use the notation $\mathrm{cosim}(a, b)$ for the cosine similarity between two
 vectors: $\mathrm{cosim}(a,b) = \frac{a \cdot b}{\|a\| \|b\|}$. For
 orthogonal vectors with no similarity, $\mathrm{cosim}(a,b) =
@@ -91,10 +103,11 @@ words, $ \| a \| = \sqrt{a \cdot a}$.
 
 Lastly, note that computing the sum and not the average can
 potentially result in a ``long'' vector with high values relative to
-the values of $V_w$. In other words, it disregards whether there are 1
-or many CUIs in a document. This should not matter, however, because
-we are measuring only the angle between document $d$ and concept $w$.
-Cosine similarity already ``automatically'' normalizes by the
-magnitude of the vectors, or it ``doesn't care'' how long they are in space.
+the values of $V_w$. In other words, summation disregards whether
+there are 1 or many CUIs in a document. This should not matter,
+however, because we are measuring only the angle between document $d$
+and concept $w$. Cosine similarity already ``automatically''
+normalizes by the magnitude of the vectors, or it ``doesn't care'' how
+long they are in space.
 
 \end{document}
