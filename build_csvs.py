@@ -1,5 +1,5 @@
 import pandas as pd
-from helpers import repair_icd
+from AndyZimolzak.helpers import repair_icd
 
 LS = """icd10-dizzy.csv
 icd10-headache.csv
