@@ -8,17 +8,14 @@
 
 \section*{Motivation}
 
-We want to answer the following question:
-
-\begin{quote}
-  How close is this \emph{whole discharge summary} to the single
-  concept of \emph{cerebellar stroke?}
-\end{quote}
-
-Really, it's not only about cerebellar stroke. We want to substitute
-several different concepts for cerebellar stroke, and see what notes
-may or may not be ``close'' to them. We will measure ``closeness'' by
-learning vector embeddings of many clinical concepts.
+We want to answer the question ``How close is this \emph{whole
+discharge summary} to the single concept of \emph{cerebellar
+stroke?}'' Really, it's not only about cerebellar stroke. We may
+substitute several different concepts for cerebellar stroke, and see
+what notes may or may not be ``close'' to them. We will measure
+``closeness'' by learning vector embeddings of many clinical concepts.
+This will also allow us to plot discharge summaries relative to
+\emph{each other}, possibly (re-)discovering stroke subtypes.
 
 \section*{Processing}
 
@@ -91,7 +88,7 @@ $\in \mathbb{R}^{100}$, which adds up all CUI vectors in the document.
 This vector is compared to one row of $V$ for the concept of interest $w$,
 which is also $\in \mathbb{R}^{100}$.
 
-\subsection*{Notation for the similarity equation above}
+\subsection*{Further notation for the similarity equation above}
 
 I use the notation $\mathrm{cosim}(a, b)$ for the cosine similarity between two
 vectors: $\mathrm{cosim}(a,b) = \frac{a \cdot b}{\|a\| \|b\|}$. For
@@ -111,3 +108,5 @@ normalizes by the magnitude of the vectors, or it ``doesn't care'' how
 long they are in space.
 
 \end{document}
+
+% LocalWords:  subtypes json vecOnClampCUIs ccccc ccccccccc dw cosim
