@@ -2,6 +2,7 @@ import pyodbc
 import pandas as pd  # sure takes a long time
 import numpy as np
 from collections import defaultdict
+from IPython.display import display
 
 # deprecated: prioritize using precise ICD codes
 # def extractICDFeature(icd_df, name, case=False, verbose=True):
