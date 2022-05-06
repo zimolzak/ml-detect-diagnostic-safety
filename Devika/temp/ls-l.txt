@@ -1,0 +1,7 @@
+total 20800
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257 17078215 Oct 26  2021 llvmlite-0.37.0-py39ha0cd8c8_0.tar.bz2
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257        0 Apr 29 15:24 ls-l.txt
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257  3885985 Oct 26  2021 numba-0.54.1-py39hb8cd55e_0.tar.bz2
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257    45245 Oct 26  2021 pynndescent-0.5.5-pyh6c4a22f_0.tar.bz2
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257   152234 Oct 26  2021 tbb-2021.4.0-h2d74725_0.tar.bz2
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257   126094 Oct 26  2021 umap-learn-0.5.1-py39hcbf5309_1.tar.bz2

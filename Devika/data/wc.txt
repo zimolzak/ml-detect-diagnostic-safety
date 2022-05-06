@@ -1,0 +1,14 @@
+   206909   1689661  32072843 allmeds.csv
+      306      1913     46757 cohort_data.csv
+    29523    208863   4166528 consults.csv
+      281      1957     24949 demographics_data.csv
+   275188   1728711  38729924 healthfactors.csv
+   160248    814874  11439534 icds.csv
+   418784   1427195  50072967 labtests.csv
+    37042    289019   5462228 medications.csv
+   169821   1400368  24742322 meds_bcma.csv
+       46       274      5934 meds_nonva.csv
+   235351  74396429 574436977 notes.csv
+       10        41      1234 test_results.csv
+   252648    592281  25699698 vitals.csv
+  1786157  82551586 766901895 total
