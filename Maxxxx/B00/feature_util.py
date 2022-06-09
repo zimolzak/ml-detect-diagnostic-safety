@@ -1,8 +1,10 @@
 import pyodbc
 import pandas as pd  # sure takes a long time
+from pandas.tseries.holiday import USFederalHolidayCalendar as calendar
 import numpy as np
 from collections import defaultdict
 from IPython.display import display
+from sklearn.preprocessing import StandardScaler, MinMaxScaler
 
 # deprecated: prioritize using precise ICD codes
 # def extractICDFeature(icd_df, name, case=False, verbose=True):
@@ -17,8 +19,14 @@ from IPython.display import display
 #     return df
 
 
+def displayAll(df):
+    pd.set_option('display.max_rows', len(df))
+    display(df)
+    pd.reset_option('display.max_rows')
+
+
 # extracts all datasets from database with selected prefix
-def extractDataset(prefix):
+def extractDataset(prefix, excludeSet):
     conn = pyodbc.connect("DRIVER={SQL Server};SERVER=VHACDWRB03;DATABASE=ORD_Singh_201911038D")
 
     info_df = pd.read_sql(sql="select * from information_schema.tables where table_name like '%{}%'".format(prefix), con=conn)
@@ -26,11 +34,32 @@ def extractDataset(prefix):
     # read all the tables into pandas tables
     tables = {}
     for tname in info_df.TABLE_NAME:
+        if tname.split('_')[-1] in excludeSet:
+            continue
         query_str = "select * from  " + str("Dflt.")+ str(tname)
         table_df = pd.read_sql(sql=query_str,con=conn)
         tables[tname.split('_')[-1]] = table_df
     print(tables.keys())
     return tables
+
+def getPrimaryKeys(dataset):
+    pkeys = dict()
+    for k, v in dataset.items():
+        pkeys[k] = list(v.columns)[[c.lower() for c in v.columns].index("patientssn")]
+    return pkeys
+
+def extractAndStandarizeCohort(dataset, subsetName):
+    pkeys = getPrimaryKeys(dataset)
+    cohort_key = pkeys["cohort"]
+    cohort_subset = dataset["cohort"][dataset["cohort"]["TriggerType"] == subsetName]
+    ids = pd.DataFrame({cohort_key: cohort_subset[cohort_key].unique()})
+    datasubset = dict()
+    for table, df in dataset.items():
+        datasubset[table] = ids.merge(df, how="inner", left_on=cohort_key, right_on=pkeys[table])
+        if pkeys[table] != cohort_key:
+            datasubset[table] = datasubset[table].drop([cohort_key], axis=1)
+        datasubset[table][pkeys[table]] = datasubset[table][pkeys[table]].astype(int)
+    return datasubset
 
 
 def filterDFByCodeSet(df, colName, codes):
@@ -54,20 +83,44 @@ def filterDFByTimes(df, idColName, tsColName, tsUpperBounds, tsLowerBounds=None)
     return df[cond]
     
 
-def mergeFeatures(feature_dict):
-    feature_vec = None
-    feature_key = None
-    for k, v in feature_dict.items():
-        if feature_vec is None:
-            feature_key = k
-            feature_vec = v
+
+
+def normalizeFeatures(df, features):
+    norm = df.copy()
+    norm[features] = StandardScaler().fit_transform(df[features])
+    return norm
+
+
+class Feature:        
+    # override when necessary
+    def normalize(self, vec):
+        return vec
+    
+    def __init__(self, vec, key="PatientSSN"):
+        self.key = key
+        self.vec = vec.copy()
+        self.norm_vec = self.normalize(vec)
+        
+    def merge(self, feature, normalize=True):
+        if normalize:
+            feature_vec = self.norm_vec.merge(feature.norm_vec, how="outer", left_on=self.key, right_on=feature.key)
         else:
-            feature_vec = feature_vec.merge(v, how="outer", left_on=feature_key, right_on=k)
-            feature_vec.fillna(0, inplace=True)
-    return feature_vec
+            feature_vec = self.vec.merge(feature.vec, how="outer", left_on=self.key, right_on=feature.key)
+        if self.key != feature.key:
+            feature_vec = feature_vec.drop([feature.key], axis=1)
+        feature_vec.fillna(0, inplace=True)
+        return Feature(feature_vec, self.key)
 
 
-
+def mergeFeatures(features, normalize=True):
+    """
+    returns a pandas dataframe of feature vectors
+    """
+    feature = features[0]
+    for i in range(1, len(features)):
+        feature = feature.merge(features[i], normalize)
+    return feature.vec
+    
 ##########################################################################################################
 ###########################################    Cohort     ################################################
 ##########################################################################################################
@@ -89,11 +142,9 @@ def extractLastVisitIndexDatetime(cohort_df):
     
     return indexes
 
-def extractFirstVisitIndexDatetime(cohort_df):
-    convertDatetime(cohort_df, COHORT_DATE_FIELDS)
-    
+def extractFirstDatetime(cohort_df, col_name):
     indexes = dict()
-    for patientId, dt in zip(cohort_df["patientSSN"], cohort_df["EDStartDateTime"]):
+    for patientId, dt in zip(cohort_df["patientSSN"], cohort_df[col_name]):
         if patientId in indexes:
             # TODO: revise
             indexes[patientId] = min(indexes[patientId], dt)
@@ -102,149 +153,103 @@ def extractFirstVisitIndexDatetime(cohort_df):
     
     return indexes
 
+def extractFirstVisitIndexDatetime(cohort_df):
+    convertDatetime(cohort_df, COHORT_DATE_FIELDS)
+    return extractFirstDatetime(cohort_df, "EDStartDateTime")
 
+def convertIdDictToDF(index_datetime, colName):
+    df = pd.DataFrame.from_dict(index_datetime, orient="index", columns=[colName])
+    df.reset_index(inplace=True)
+    df = df.rename(columns={'index':'PatientSSN'})
+    return df
 
-##########################################################################################################
-###########################################    ICDs     ##################################################
-##########################################################################################################
+def convertIndexToDF(index_datetime):
+    return convertIdDictToDF('IndexDate')
 
-ICD9_FILEPATH = "P:\ORD_Singh_201911038D\Maxxxx\ICD\p_Refined_SPADE_RiskFactors_riskfactor_ICD9codes.csv"
-ICD10_FILEPATH = "P:\ORD_Singh_201911038D\Maxxxx\ICD\p_Refined_SPADE_RiskFactors_riskfactor_ICD10codes.csv"
+def makeIndexVec(cohort_df):
+    start_df = convertIdDictToDF(extractFirstDatetime(cohort_df, "EDStartDateTime"), "EDStartDateTime")
+    end_df = convertIdDictToDF(extractFirstDatetime(cohort_df, "EDEndDateTime"), "EDEndDateTime")
+    admit_df = convertIdDictToDF(extractFirstDatetime(cohort_df, "AdmitDateTime"), "AdmitDateTime")
+    time_df = start_df.merge(end_df.merge(admit_df))
+    # in minutes
+    time_df["ed_duration"] = (time_df["EDEndDateTime"] - time_df["EDStartDateTime"]).dt.total_seconds() / 60
+    # in days
+    time_df["ed_inp_delta"] = (time_df["AdmitDateTime"] - time_df["EDEndDateTime"]).dt.total_seconds() / (60 * 60 * 24)
+    time_df["ed_inp_delta"] = time_df["ed_inp_delta"].clip(upper=30)
+    time_df = time_df[["PatientSSN", "ed_duration", "ed_inp_delta"]]
+    return time_df
 
-# Supported features:
-HYPERTENSION = 'Hypertension'
-HYPERLIPDEMIA = 'Hyperlipidemia'
-DIABETES = 'Diabetes'
-HX_STROKE_TIA = 'Hx of stroke or TIA'
-HX_ATRIAL_FIBRILLATION = 'Atrial fibrillation'
-CAD = 'Coronary artery disease (CAD)'
-SMOKING = 'Smoking'
-HX_ANEURYSM = 'Hx aneurysm'
-OCCULSION_STENOSIS = 'Occlusion/Stenosis of cerebral or precerebral artery'
+class IndexFeature(Feature):
+    def __init__(self, vec):
+        Feature.__init__(self, vec, "PatientSSN")
+        
+    def normalize(self, vec):
+        vec.iloc[:,1:] = MinMaxScaler().fit_transform(vec.iloc[:,1:])
+        return vec
 
-NORM_MAP = {
-    ' Hx of atrial fibrillation' : HX_ANEURYSM,
-    'Coronary artery disease (CAD)' : CAD,
-    'Diabetes' : DIABETES,
-    'Hx of cerebral aneurysm' : HX_ANEURYSM,
-    'Hx of stroke/TIA' : HX_STROKE_TIA,
-    'Hyperlipdemia' : HYPERLIPDEMIA,
-    'Hypertension' : HYPERTENSION,
-    'Occlusion/Stenosis of cerebral or precerebral artery' : OCCULSION_STENOSIS,
-    'Smoking' : SMOKING}
-
-
-ICD_PATIENT_ID = "PatientSSN"
-
-
-def getICDCodes():
-    codes = defaultdict(list)
+# TODO: clean up
+class NormalIndexFeature(Feature):
+    def __init__(self, vec):
+        Feature.__init__(self, vec, "PatientSSN")
+        
+    def normalize(self, vec):
+        vec["ed_duration"] = StandardScaler().fit_transform(vec["ed_duration"].values.reshape(-1,1))
+        vec["ed_inp_delta"] = MinMaxScaler().fit_transform(vec["ed_duration"].values.reshape(-1,1))
+        return vec
     
-    icd9s = pd.read_csv(ICD9_FILEPATH)
-    # assert set(icd9s["Description"]) == set(NORM_MAP.keys())
-    
-    for code, name in zip(icd9s["ICD-9-CM CODE"], icd9s["Description"]):
-        codes[NORM_MAP[name]].append(code)
-    
-    icd10s = pd.read_csv(ICD10_FILEPATH)
-    # assert set(icd10s["Risk factors description"]) == set(NORM_MAP.values())
-    
-    for code, name in zip(icd10s["ICD-10-CM Code"], icd10s["Risk factors description"]):
-        codes[name].append(code)
-    
-    return codes
-
-
-def extractICDDataFrames(icd_df):
-    icds = getICDCodes()
-    dfs = dict()
-    for name, codes in icds.items():
-        dfs[name] = filterDFByCodeSet(icd_df, "ICD", codes)
-    return dfs
-
-
-def makeICDFeatureVector(icd_df):
-    dfs = extractICDDataFrames(icd_df)
-    vec = pd.DataFrame({ICD_PATIENT_ID:icd_df[ICD_PATIENT_ID].unique()})
-    for name, df in dfs.items():
-        temp = df.copy()
-        temp.drop(temp.columns.difference([ICD_PATIENT_ID, "ICD"]), 1, inplace=True)
-        temp.rename(columns={ICD_PATIENT_ID:ICD_PATIENT_ID, "ICD":name}, inplace=True)
-        vec = vec.merge(temp.groupby(ICD_PATIENT_ID).count(), how="outer", left_on=ICD_PATIENT_ID, right_on=ICD_PATIENT_ID)
-    vec = vec.fillna(0)
-    return vec
-    
-
-
-##########################################################################################################
-###########################################    Meds     ##################################################
-##########################################################################################################
-
-# TODO: read from csv instead?
-
-# va_drug_classes = ['BL110','BL115','BL117','CV000','CV100','CV150','CV200','CV350','CV400','CV490','CV500',
-#                   'CV701','CV702','CV704','CV709','CV800','CV805','CV806','HS500','HS501','HS502','HS503','HS509']
-# va_super_category = ['anticoagulant','lytic','antiplatelet']+ ['antihypertensive']*4 +\
-#                     ['cholesterol'] + ['antihypertensive']*10+['diabetes']*5
-
-# DRUG_DF = pd.DataFrame(columns=['DrugClass','SuperCategory'])
-# DRUG_DF['DrugClass'] = np.array(va_drug_classes)
-# DRUG_DF['SuperCategory'] = np.array(va_super_category)
-
-DRUG_FILEPATH = "P:\ORD_Singh_201911038D\ml-detect-diagnostic-safety-git-repo\short-list-drug-classes.csv"
-
-DRUG_PATIENT_ID = "PatientSSN"
-
-def getDrugCodesBySuperCategory():
-    codes = defaultdict(list)
-    drugs = pd.read_csv(DRUG_FILEPATH)
-    for code, classname in zip(drugs["VA Class"], drugs["super category"]):
-        codes[classname].append(code)
-    return codes
-
-def extractRxOutpatDataFrames(outpat_df):
-    drug_codes = getDrugCodesBySuperCategory()
-    dfs = dict()
-    for category, codes in drug_codes.items():
-        dfs[category] = filterDFByCodeSet(outpat_df, "DrugClassCode", codes)
-    return dfs
-
-
-def makeRxOutpatFeatureVector(outpat_df):
-    dfs = extractRxOutpatDataFrames(outpat_df)
-    vec = pd.DataFrame({DRUG_PATIENT_ID:outpat_df[DRUG_PATIENT_ID].unique()})
-    for name, df in dfs.items():
-        temp = df.copy()
-        temp.drop(temp.columns.difference([DRUG_PATIENT_ID, "DrugClassCode"]), 1, inplace=True)
-        temp.rename(columns={DRUG_PATIENT_ID:DRUG_PATIENT_ID, "DrugClassCode":name}, inplace=True)
-        vec = vec.merge(temp.groupby(DRUG_PATIENT_ID).count(), how="outer", left_on=DRUG_PATIENT_ID, right_on=DRUG_PATIENT_ID)
-    vec.fillna(0, inplace=True)
-    return vec
-
-def calcWindowDaysSupply(datediff, days_supply, considered_window):
-    if datediff - considered_window < 0:
-        return min(days_supply, datediff)
+def makeIndexFeature(cohort_df, uniform=True):
+    if uniform:
+        return IndexFeature(makeIndexVec(cohort_df))
     else:
-        return max(days_supply - (datediff - considered_window), 0)
+        return NormalIndexFeature(makeIndexVec(cohort_df))
+    
 
+def makeAgeVec(demo_df):
+    df = demo_df.copy()
+    df["Age"] = ((pd.to_datetime(demo_df["IndexDateTime"]) - pd.to_datetime(demo_df["DOB"])).dt.days / 365.25).astype(int)
+    df = df[["patientSSN", "Age"]]
+    df = df.rename(columns={'patientSSN':'PatientSSN'})
+    return df
 
-def makeRxOutpatTimeWindowVec(outpat_df, index_times, considered_window=180):
-    """
-    outpat_df: the filtered data frame of RxOutpat events prior to the index times
-    index_time: dictionary of times keyed by patient ids
-    considered_window: size of window in days
-    """
-    dfs = extractRxOutpatDataFrames(outpat_df)
-    vec = pd.DataFrame({DRUG_PATIENT_ID:outpat_df[DRUG_PATIENT_ID].unique()})
-    for name, df in dfs.items():
-        temp = df.copy()
-        temp["index_time"] = temp.apply(lambda r: index_times[r[DRUG_PATIENT_ID]], axis=1)
-        temp["temp"] = (temp["index_time"] - temp["DispensedDate"]).dt.days
-        temp[name] = temp.apply(lambda r: calcWindowDaysSupply(r["temp"], r["DaysSupply"], considered_window), axis=1)
-        temp.drop(temp.columns.difference([DRUG_PATIENT_ID, name]), 1, inplace=True)
-        vec = vec.merge(temp.groupby(DRUG_PATIENT_ID).sum(), how="outer", left_on=DRUG_PATIENT_ID, right_on=DRUG_PATIENT_ID)
-    vec.fillna(0, inplace=True)
-    return vec
+class AgeFeature(Feature):
+    def __init__(self, vec):
+        Feature.__init__(self, vec, "PatientSSN")
+        
+    def normalize(self, vec):
+        vec.iloc[:,1:] = MinMaxScaler().fit_transform(vec.iloc[:,1:])
+        return vec
 
+class NormalAgeFeature(Feature):
+    def __init__(self, vec):
+        Feature.__init__(self, vec, "PatientSSN")
+        
+    def normalize(self, vec):
+        vec.iloc[:,1:] = StandardScaler().fit_transform(vec.iloc[:,1:])
+        return vec
+    
+def makeAgeFeature(demo_df, uniform=True):
+    if uniform:
+        return AgeFeature(makeAgeVec(demo_df))
+    else:
+        return NormalAgeFeature(makeAgeVec(demo_df))
+    
+##########################################################################################################
+#######################################    Special Dates     #############################################
+##########################################################################################################
 
+def makeHolidayVec(index_datetime):
+    index_df = convertIndexToDF(index_datetime)
+    cal = calendar()
+    holidays = cal.holidays(start=index_df['IndexDate'].min(), end=index_df['IndexDate'].max())
+    index_df['Holiday'] = index_df['IndexDate'].isin(holidays).astype(int)
+    return index_df
+    
+def makeWeekendVec(index_datetime):
+    index_df = convertIndexToDF(index_datetime)
+    index_df['IsWeekend'] = np.where((index_df['IndexDate'].dt.dayofweek) < 5, 0, 1)
+    index_df = index_df.drop('IndexDate', 1)
+    return index_df
+
+def makeWeekendFeature(index_datetime):
+    return Feature(makeWeekendVec(index_datetime))
     

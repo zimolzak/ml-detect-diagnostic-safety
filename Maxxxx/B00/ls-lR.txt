@@ -1,0 +1,241 @@
+.:
+total 5264
+drwxr-xr-x 1 VHA16+VHAHOUZimolA 4266656257       0 Jun  6 20:12 __pycache__/
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257 2609912 Apr  5 19:46 Analysis_A00.ipynb
+drwxr-xr-x 1 VHA16+VHAHOUZimolA 4266656257       0 Jun  2 23:39 backup/
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257    4313 May 26 22:18 cluster_umap.py
+drwxr-xr-x 1 VHA16+VHAHOUZimolA 4266656257       0 Apr  5 21:41 data/
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257  360455 Jun  2 23:48 DizzinessAnalysis.ipynb
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257 2035957 Jun  6 23:43 DizzinessFeatureExtraction.ipynb
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257   13778 Jun  3 00:05 dizzy_util.py
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257    5329 Jun  6 19:25 eval_util.py
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257   24814 Mar 30 16:30 Explore new structured data 2022-Mar.ipynb
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257    9438 Jun  3 00:06 feature_util.py
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257  284158 May 26 23:14 FeatureExtraction.ipynb
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257    3591 Jun  6 20:12 logreg.py
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257    1764 May 26 22:45 mri_brain.csv
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257    2539 May 26 23:15 rad_diagcode_mri_ct_brain.csv
+drwxr-xr-x 1 VHA16+VHAHOUZimolA 4266656257       0 May 10 07:18 Viral_data/
+
+./__pycache__:
+total 36
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257  2732 May 26 22:18 cluster_umap.cpython-39.pyc
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257 11551 Jun  3 00:05 dizzy_util.cpython-39.pyc
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257  3828 Jun  6 19:26 eval_util.cpython-39.pyc
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257  8989 Jun  3 00:06 feature_util.cpython-39.pyc
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257  3516 Jun  6 20:12 logreg.cpython-39.pyc
+
+./backup:
+total 2444
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257  809206 May 16 23:23 DizzinessFeatureExtraction-backup-5-16-2022.ipynb
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257 1441773 May 24 00:02 DizzinessFeatureExtraction-backup-5-24-2022.ipynb
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257  248894 Apr 13 15:51 FeatureExtraction-umap-backup-4-13-2022.ipynb
+drwxr-xr-x 1 VHA16+VHAHOUZimolA 4266656257       0 May 28 21:05 paarth/
+
+./backup/paarth:
+total 0
+drwxr-xr-x 1 VHA16+VHAHOUZimolA 4266656257 0 May 31 00:05 SPADE_rci_02_03/
+drwxr-xr-x 1 VHA16+VHAHOUZimolA 4266656257 0 May 28 21:15 SPADE_rci_02_03_down/
+
+./backup/paarth/SPADE_rci_02_03:
+total 1721
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257 1662594 May 31 00:05 classifier.ipynb
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257     583 Mar 23  2021 HPE311_ML_Intro.ipynb
+drwxr-xr-x 1 VHA16+VHAHOUZimolA 4266656257       0 May 28 21:05 input/
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257   86241 Mar 23  2021 Li_classifier.ipynb
+drwxr-xr-x 1 VHA16+VHAHOUZimolA 4266656257       0 May 28 21:05 modules/
+drwxr-xr-x 1 VHA16+VHAHOUZimolA 4266656257       0 May 28 21:05 output/
+
+./backup/paarth/SPADE_rci_02_03/input:
+total 65
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257    38 Nov 27  2020 drops.csv
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257  3551 Dec  1  2020 gen_synthetic_data.ipynb
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257 11846 Dec  1  2020 input.csv
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257 27217 Dec  1  2020 input_artificial.csv
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257 19853 Dec  1  2020 input2.csv
+
+./backup/paarth/SPADE_rci_02_03/modules:
+total 16
+drwxr-xr-x 1 VHA16+VHAHOUZimolA 4266656257    0 May 28 21:05 __pycache__/
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257 8543 Sep  6  2020 cm_metrics.py
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257 2469 Sep  6  2020 gendata.py
+
+./backup/paarth/SPADE_rci_02_03/modules/__pycache__:
+total 24
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257 7696 Oct 20  2020 cm_metrics.cpython-37.pyc
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257 7397 Mar 23  2021 cm_metrics.cpython-39.pyc
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257 2774 Oct 20  2020 gendata.cpython-37.pyc
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257 2744 Mar 23  2021 gendata.cpython-39.pyc
+
+./backup/paarth/SPADE_rci_02_03/output:
+total 8
+drwxr-xr-x 1 VHA16+VHAHOUZimolA 4266656257 0 Dec  1  2020 1 - set up/
+drwxr-xr-x 1 VHA16+VHAHOUZimolA 4266656257 0 Dec  1  2020 2 - data input/
+drwxr-xr-x 1 VHA16+VHAHOUZimolA 4266656257 0 Dec  1  2020 3 - human input/
+drwxr-xr-x 1 VHA16+VHAHOUZimolA 4266656257 0 May 28 21:05 4 - exploratory data analysis/
+drwxr-xr-x 1 VHA16+VHAHOUZimolA 4266656257 0 Dec  1  2020 5 - data preparation/
+drwxr-xr-x 1 VHA16+VHAHOUZimolA 4266656257 0 May 28 21:05 6 - modeling and prediction/
+drwxr-xr-x 1 VHA16+VHAHOUZimolA 4266656257 0 May 28 21:05 7 - model evaluation/
+drwxr-xr-x 1 VHA16+VHAHOUZimolA 4266656257 0 May 28 21:05 8 - model analysis and visualization/
+
+./backup/paarth/SPADE_rci_02_03/output/1 - set up:
+total 0
+
+./backup/paarth/SPADE_rci_02_03/output/2 - data input:
+total 0
+
+./backup/paarth/SPADE_rci_02_03/output/3 - human input:
+total 0
+
+./backup/paarth/SPADE_rci_02_03/output/4 - exploratory data analysis:
+total 888
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257  44570 Dec 18  2020 age_val_distributionbylabel.svg
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257  41225 Dec 18  2020 con_flags_distributionbylabel.svg
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257  42227 Dec 18  2020 ed_duration_distributionbylabel.svg
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257  43744 Dec 18  2020 ed_inp_delta_distributionbylabel.svg
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257  42222 Dec 18  2020 elix_score_distributionbylabel.svg
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257 316350 Dec 18  2020 features_blanks - Copy.svg
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257 316350 Mar 23  2021 features_blanks.svg
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257  41549 Dec 18  2020 img_flags_distributionbylabel.svg
+
+./backup/paarth/SPADE_rci_02_03/output/5 - data preparation:
+total 0
+
+./backup/paarth/SPADE_rci_02_03/output/6 - modeling and prediction:
+total 11
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257   88 Dec 18  2020 best_params_log.csv
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257   56 Dec 18  2020 best_params_rf.csv
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257   55 Dec 18  2020 best_params_xgb.csv
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257 4183 Dec 18  2020 prediction_lineup.csv
+
+./backup/paarth/SPADE_rci_02_03/output/7 - model evaluation:
+total 7
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257 1273 Dec 18  2020 cm_metrics.csv
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257   80 Dec 18  2020 confusion_matrix_log.csv
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257   79 Dec 18  2020 confusion_matrix_rf.csv
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257   79 Dec 18  2020 confusion_matrix_xgb.csv
+
+./backup/paarth/SPADE_rci_02_03/output/8 - model analysis and visualization:
+total 192
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257 41420 Dec 18  2020 predictor_strength_20_log.svg
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257 38561 Dec 18  2020 predictor_strength_20_rf.svg
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257 38559 Dec 18  2020 predictor_strength_20_xgb.svg
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257 31076 Dec 18  2020 predictor_strength_all_log.svg
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257 36751 Dec 18  2020 predictor_strength_all_xgb.svg
+
+./backup/paarth/SPADE_rci_02_03_down:
+total 1628
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257 1662417 May 28 21:15 classifier.ipynb
+drwxr-xr-x 1 VHA16+VHAHOUZimolA 4266656257       0 May 28 21:05 modules/
+drwxr-xr-x 1 VHA16+VHAHOUZimolA 4266656257       0 May 28 21:05 output/
+
+./backup/paarth/SPADE_rci_02_03_down/modules:
+total 16
+drwxr-xr-x 1 VHA16+VHAHOUZimolA 4266656257    0 May 28 21:05 __pycache__/
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257 8543 Sep  6  2020 cm_metrics.py
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257 2469 Sep  6  2020 gendata.py
+
+./backup/paarth/SPADE_rci_02_03_down/modules/__pycache__:
+total 12
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257 7696 Oct 20  2020 cm_metrics.cpython-37.pyc
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257 2774 Oct 20  2020 gendata.cpython-37.pyc
+
+./backup/paarth/SPADE_rci_02_03_down/output:
+total 8
+drwxr-xr-x 1 VHA16+VHAHOUZimolA 4266656257 0 Dec  1  2020 1 - set up/
+drwxr-xr-x 1 VHA16+VHAHOUZimolA 4266656257 0 Dec  1  2020 2 - data input/
+drwxr-xr-x 1 VHA16+VHAHOUZimolA 4266656257 0 Dec  1  2020 3 - human input/
+drwxr-xr-x 1 VHA16+VHAHOUZimolA 4266656257 0 May 28 21:05 4 - exploratory data analysis/
+drwxr-xr-x 1 VHA16+VHAHOUZimolA 4266656257 0 Dec  1  2020 5 - data preparation/
+drwxr-xr-x 1 VHA16+VHAHOUZimolA 4266656257 0 May 28 21:05 6 - modeling and prediction/
+drwxr-xr-x 1 VHA16+VHAHOUZimolA 4266656257 0 May 28 21:05 7 - model evaluation/
+drwxr-xr-x 1 VHA16+VHAHOUZimolA 4266656257 0 May 28 21:05 8 - model analysis and visualization/
+
+./backup/paarth/SPADE_rci_02_03_down/output/1 - set up:
+total 0
+
+./backup/paarth/SPADE_rci_02_03_down/output/2 - data input:
+total 0
+
+./backup/paarth/SPADE_rci_02_03_down/output/3 - human input:
+total 0
+
+./backup/paarth/SPADE_rci_02_03_down/output/4 - exploratory data analysis:
+total 576
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257  44570 Dec  3  2020 age_val_distributionbylabel.svg
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257  41225 Dec  3  2020 con_flags_distributionbylabel.svg
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257  42227 Dec  3  2020 ed_duration_distributionbylabel.svg
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257  43744 Dec  3  2020 ed_inp_delta_distributionbylabel.svg
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257  42222 Dec  3  2020 elix_score_distributionbylabel.svg
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257 316350 Dec  3  2020 features_blanks.svg
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257  41549 Dec  3  2020 img_flags_distributionbylabel.svg
+
+./backup/paarth/SPADE_rci_02_03_down/output/5 - data preparation:
+total 0
+
+./backup/paarth/SPADE_rci_02_03_down/output/6 - modeling and prediction:
+total 11
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257   88 Dec  3  2020 best_params_log.csv
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257   56 Dec  3  2020 best_params_rf.csv
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257   55 Dec  3  2020 best_params_xgb.csv
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257 4183 Dec  3  2020 prediction_lineup.csv
+
+./backup/paarth/SPADE_rci_02_03_down/output/7 - model evaluation:
+total 7
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257 1273 Dec  3  2020 cm_metrics.csv
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257   80 Dec  3  2020 confusion_matrix_log.csv
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257   79 Dec  3  2020 confusion_matrix_rf.csv
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257   79 Dec  3  2020 confusion_matrix_xgb.csv
+
+./backup/paarth/SPADE_rci_02_03_down/output/8 - model analysis and visualization:
+total 192
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257 41420 Dec  3  2020 predictor_strength_20_log.svg
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257 38561 Dec  3  2020 predictor_strength_20_rf.svg
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257 38559 Dec  3  2020 predictor_strength_20_xgb.svg
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257 31076 Dec  3  2020 predictor_strength_all_log.svg
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257 36751 Dec  3  2020 predictor_strength_all_xgb.svg
+
+./data:
+total 7320
+drwxr-xr-x 1 VHA16+VHAHOUZimolA 4266656257       0 Apr 13 16:20 AbdominalPain-Validation review/
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257  105500 Apr  5 21:41 IndexER Visit.csv
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257 7289529 Apr  5 21:29 IndexER Visit.txt
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257   96107 Apr  5 21:30 IndexER Visit.xlsx
+
+./data/AbdominalPain-Validation review:
+total 7484
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257 1503232 Apr  5 21:22 Ashish_HighRiskAbdominalPain_ValidationForm_Sep2021 .accdb
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257 6160384 Apr 13 16:20 Ashish_HighRiskAbdominalPain_ValidationForm_Sep2021 _Backup.accdb
+drwxr-xr-x 1 VHA16+VHAHOUZimolA 4266656257       0 Apr  5 21:18 Backup data/
+drwxr-xr-x 1 VHA16+VHAHOUZimolA 4266656257       0 Apr  5 21:18 Exported data/
+
+./data/AbdominalPain-Validation review/Backup data:
+total 6016
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257 6160384 Jan 26 08:42 Ashish_HighRiskAbdominalPain_ValidationForm_Sep2021 .accdb
+
+./data/AbdominalPain-Validation review/Exported data:
+total 28
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257 27610 Jan 26 07:23 HighRiskAbdominalPain_IndexER Visit.xlsx
+
+./Viral_data:
+total 0
+drwxr-xr-x 1 VHA16+VHAHOUZimolA 4266656257 0 May 11 18:38 ML4_HighRisk_AbdominalPain/
+drwxr-xr-x 1 VHA16+VHAHOUZimolA 4266656257 0 May 11 18:38 ML4_HighRisk_Dizziness/
+
+./Viral_data/ML4_HighRisk_AbdominalPain:
+total 348
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257  70737 May 10 06:53 Ashish_HighRiskAbdominalPain_05102022_Export(n=100)_VV1.xlsx
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257  17188 May 10 06:28 HighRiskAbdominalPain_ValidationForm_Sep2021_DD.xlsx
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257  50562 May 10 06:28 HighRiskAbdominalPain_ValidationForm_Sep2021_Final.docx
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257 106868 May 11 18:37 labels-AbdominalPain.csv
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257  71176 May 11 04:08 labels-AbdominalPain.xlsx
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257  20647 May 10 07:10 Li_VV_Validation_AbdominalPain(n=100).xlsx
+
+./Viral_data/ML4_HighRisk_Dizziness:
+total 396
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257  87281 May 10 07:05 Ashish_HighRiskDizziness_ValidationForm_Sep2021(n=100)_v2_VV1.xlsx
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257  18258 May 10 06:28 HighRiskDizziness_ValidationForm_Sep2021_Final_DD.xlsx
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257  44408 May 10 06:28 HighRiskDizziness_ValidationFrom_Sep2021_Final.docx
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257  87942 May 11 04:14 label-Dizziness.xlsx
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257 134673 May 11 18:37 labels-Dizziness.csv
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257  20665 May 10 07:14 Li_VV_Validation_Dizziness(n=100)_Charts.xlsx
