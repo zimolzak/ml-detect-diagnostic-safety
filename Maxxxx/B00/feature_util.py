@@ -19,12 +19,20 @@ from sklearn.preprocessing import StandardScaler, MinMaxScaler
 #     return df
 
 
-def displayAll(df):
-    pd.set_option('display.max_rows', len(df))
+def displayAll(df, max_rows=None):
+    if max_rows is None:
+        pd.set_option('display.max_rows', len(df))
+    else:
+        pd.set_option('display.max_rows', max_rows)
     display(df)
     pd.reset_option('display.max_rows')
 
 
+def dfExcludeKey(df, key="PatientSSN"):
+    columns = list(df.columns)
+    columns.remove(key)
+    return df[columns]
+    
 # extracts all datasets from database with selected prefix
 def extractDataset(prefix, excludeSet):
     conn = pyodbc.connect("DRIVER={SQL Server};SERVER=VHACDWRB03;DATABASE=ORD_Singh_201911038D")
@@ -164,7 +172,18 @@ def convertIdDictToDF(index_datetime, colName):
     return df
 
 def convertIndexToDF(index_datetime):
-    return convertIdDictToDF('IndexDate')
+    return convertIdDictToDF(index_datetime, 'IndexDate')
+
+
+def makeReadmitDelta(cohort_df):
+    start_df = convertIdDictToDF(extractFirstDatetime(cohort_df, "EDStartDateTime"), "EDStartDateTime")
+    admit_df = convertIdDictToDF(extractFirstDatetime(cohort_df, "AdmitDateTime"), "AdmitDateTime")
+    time_df = start_df.merge(admit_df)
+    time_df["readmit_delta"] = (time_df["AdmitDateTime"] - time_df["EDStartDateTime"]).dt.total_seconds() / (60 * 60)
+    time_df = time_df[["PatientSSN", "readmit_delta"]]
+#     display(time_df)
+    return time_df
+
 
 def makeIndexVec(cohort_df):
     start_df = convertIdDictToDF(extractFirstDatetime(cohort_df, "EDStartDateTime"), "EDStartDateTime")
@@ -178,6 +197,7 @@ def makeIndexVec(cohort_df):
     time_df["ed_inp_delta"] = time_df["ed_inp_delta"].clip(upper=30)
     time_df = time_df[["PatientSSN", "ed_duration", "ed_inp_delta"]]
     return time_df
+
 
 class IndexFeature(Feature):
     def __init__(self, vec):
@@ -252,4 +272,19 @@ def makeWeekendVec(index_datetime):
 
 def makeWeekendFeature(index_datetime):
     return Feature(makeWeekendVec(index_datetime))
-    
+
+
+##########################################################################################################
+############################################    ICDs     #################################################
+##########################################################################################################
+
+def findERDiagnosis(icd_df, cohort_df):
+    start_ts = extractFirstDatetime(cohort_df, "EDStartDateTime")
+    end_ts = extractFirstDatetime(cohort_df, "EDEndDateTime")
+    return filterDFByTimes(icd_df, "PatientSSN", "DiagDateTime", end_ts, start_ts)
+
+
+def findReadmitDiagnosis(icd_df, cohort_df):
+    start_ts = extractFirstDatetime(cohort_df, "AdmitDateTime")
+    end_ts = extractFirstDatetime(cohort_df, "B")
+    return filterDFByTimes(icd_df, "PatientSSN", "DiagDateTime", end_ts, start_ts)
