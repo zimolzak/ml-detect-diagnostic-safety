@@ -25,6 +25,12 @@ VANetwork -> welcome [label = 1]
 
 acos -> dart [label = 0]
 supervisorRSOP -> acos [label = 32]
+
+supervisorRSOP -> EdP [label = "2*"]  // note second woc not 1st
+EdP -> RebD [label = "16*"]  // note second woc not 1st
+RebD -> fingerprint
+RebD -> acos
+
 start -> initialForms [label = 1]
 initialForms -> trainings [label = 5]
 trainings -> fingerprint [label = 24]
