@@ -1,0 +1,23 @@
+// dot -Tpng -o trigger-flow.png trigger-flow.dot
+
+digraph {
+
+cdw [label="All ER visits\n(billions)"]
+trigPos [label="Trigger positive\n(~500)"]
+sample [label="Charts to review\n(100)"]
+truePos [label="True MODs\n(40)"]
+
+cdw -> trigPos [label="SQL"]
+
+trigPos -> sample [label="random"]
+
+sample -> truePos [label="human"]
+
+MLSees [label="Charts for ML\n(500)"]
+MLFlags [label="Very likely MOD\n(220)"]
+
+trigPos -> MLSees [label="All"]
+
+MLSees -> MLFlags [label="ML"]
+
+}
