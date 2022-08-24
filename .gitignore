@@ -1,24 +1,42 @@
-*~
-.ipynb_checkpoints/
-*.pdf
-.idea/
-__pycache__/
+#### Plain text but big or sensitive
+
 *.csv
-*.xlsx
 *.json
+*.xmi
+*.RRF
+
+#### Binaries
+
+*.pdf
+*.xlsx
 *.exe
 *.zip
-*.xmi
 *.pkl
-*.RRF
 *.xls
 *.joblib
-*.png
 *.bundle
+
+#### Residues of various apps
+
 .coverage
 .DS_Store
+*~
+.ipynb_checkpoints/
+.idea/
+__pycache__/
+
+#### LaTeX intermediates
+
 *.aux
 *.log
+*.out
+*.toc
+
+#### Specific outputs
+
+trigger-flow.png
+
+#### Don't exclude certain plain text
 
 !short-list-drug-classes.csv
 !icd*.csv
