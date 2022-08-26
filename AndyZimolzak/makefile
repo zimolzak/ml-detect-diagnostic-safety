@@ -1,17 +1,18 @@
 .PHONY: all clean
-files = pert.pdf wordvec-similarity.pdf vinci_technical.pdf
+files = pert.pdf wordvec-similarity.pdf vinci_technical.pdf handoff_doc.pdf trigger-flow.png
 
 all: $(files)
 
-vinci_technical.pdf: vinci_technical.tex
+%.pdf: %.tex
+# technically wordvec-similarity only needs pdflatex once
 	pdflatex $<
 	pdflatex $<
 
-wordvec-similarity.pdf: wordvec-similarity.tex
-	pdflatex $<
-
-%.pdf: %.dot
+pert.pdf: pert.dot
 	dot -Tpdf -o $@ $<
+
+trigger-flow.png: trigger-flow.dot
+	dot -Tpng -o $@ $<
 
 clean:
 	rm -f $(files)

@@ -1,0 +1,251 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+%\usepackage[ngerman]{babel}
+%\usepackage[utopia,sfscaled]{mathdesign}
+%\usepackage[lf,minionint]{MinionPro}
+%\renewcommand{\sfdefault}{phv}
+%\usepackage[lf]{MyriadPro}
+\usepackage{multicol, array}
+\newcolumntype{C}{>{$}c<{$}} % math-mode version of "c" column type
+\newcolumntype{L}{>{$}l<{$}} % math-mode version of "l" column type
+%\usepackage[top=1cm,bottom=1in,left=1cm,right=1cm]{geometry}
+\usepackage[margin=1in]{geometry} 
+
+%\usepackage{hyperref}
+\usepackage{lipsum}
+\usepackage[framemethod=tikz]{mdframed}
+%\usepackage{fancyhdr} ---> ???
+\usepackage{microtype}
+\usepackage{amsmath,amsthm,amssymb, mathrsfs} % for math
+
+\usepackage{dirtree} % for directory trees
+
+\usepackage{graphicx} % Allows including images
+% \graphicspath{ {image/} }
+%\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\C}{\mathbb{C}}
+
+\newcommand{\B}{\mathbb{B}}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Md}{(M,d(x,y))}
+
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\e}{\varepsilon}
+
+
+\theoremstyle{definition}
+\newtheorem{definition}{Defn}
+%\newtheorem{theorem}{Thm}[section]
+\newtheorem{theorem}{Thm}
+\newtheorem{corollary}{Cor}[theorem]
+\newtheorem{lemma}{Lemma}
+\newtheorem{prop}{Prop}
+\newtheorem{example}{Example}
+
+\newenvironment{solution}
+  {\begin{proof}[Solution.]}
+  {\end{proof}}
+\newenvironment{Definition}[1]
+  {\begin{definition}{\textbf{#1}: }}
+  {\end{definition}}
+\newenvironment{Function}[1]
+  {\begin{function}{\texttt{#1}: }}
+  {\end{function}}
+
+\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+\SetKw{Continue}{continue}
+\SetKw{DownTo}{downto}
+\include{pythonlisting}
+
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+% Script r from Griffiths
+\def\rcurs{{\mbox{$\resizebox{.09in}{.08in}{\includegraphics[trim= 1em 0 14em 0,clip]{ScriptR}}$}}}
+\def\brcurs{{\mbox{$\resizebox{.09in}{.08in}{\includegraphics[trim= 1em 0 14em 0,clip]{BoldR}}$}}}
+\def\hrcurs{{\mbox{$\hat \brcurs$}}}
+
+% define different joins
+\def\ojoin{\setbox0=\hbox{$\Join$}%
+  \rule[-.02ex]{.25em}{.4pt}\llap{\rule[1.10ex]{.25em}{.4pt}}}
+\def\leftouterjoin{\mathbin{\ojoin\mkern-8.5mu\Join}}
+\def\rightouterjoin{\mathbin{\Join\mkern-8.5mu\ojoin}}
+\def\fullouterjoin{\mathbin{\ojoin\mkern-8.5mu\Join\mkern-8.5mu\ojoin}}
+
+\renewcommand{\baselinestretch}{1}
+%\pagestyle{empty}
+
+
+% \newcommand{\header}{
+% \begin{mdframed}[style=header]
+% \footnotesize
+% Some Text Inside\\
+% Page~\thepage~of~6
+% \end{mdframed}
+% }
+
+
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\usepackage{setspace}
+
+
+
+\begin{document}
+ 
+\title{Handoff Report}
+\author{Max Yu}
+\date{}
+\maketitle
+
+% \setcounter{tocdepth}{2} % display subsubsections as well
+% \setcounter{section}{-1}
+\textbf{NOTICE: for all Jupyter Notebooks I left behind, would highly recommend copy pasting them to your own folder to view.}
+
+\tableofcontents
+
+\newpage
+
+\section{File Overview}
+
+Here's an overview of all the files in my directory. \textbf{The underlined ones are directories, the ones with `!!' in front are the most important files, and the ones with `IGNORE' in the comments are ones that are close to useless.}
+\dirtree{%
+.1 \underline{Maxxxx}.
+    .2 \underline{B00} \DTcomment{Folder containing the ML4A related work}.
+        .3 \underline{backup} \DTcomment{These are all backups of various notebooks at the specified date}.
+        .3 \underline{data} \DTcomment{IGNORE: Should be label files I experimented with}.
+        .3 \underline{StrokeDataForLi} \DTcomment{IGNORE: data for Li}.
+        .3 \underline{Viral\_data} \DTcomment{Folder full of ML4 labels}.
+            .4 ML4\_HighRisk\_Dizziness\textbackslash label-Dizziness$.$csv\DTcomment{ML4A labels}.
+            .4 ML4\_HighRisk\_AbdominalPain\textbackslash label-AbdominalPain$.$csv \DTcomment{ML4B labels}.
+        .3 !!DizzinessAnalysis$.$ipynb \DTcomment{Notebook I used for EDA related things}.
+        .3 !!DizzinessNeuralNet$.$ipynb \DTcomment{most recent notebook used for training}.
+        .3 !!feature\_util$.$py \DTcomment{Utility file for general feature extraction}.
+        .3 !!dizzy\_util$.$py \DTcomment{Utility file extending feature util, for extracting ML4A specific features}.
+        .3 !!eval\_util$.$py \DTcomment{Utility file for evaluating features, training \& evaluating models}.
+        .3 !!eval\_util\_tf$.$py \DTcomment{eval\_util that depends on TensorFlow}.
+        .3 pseudo\_label$.$py \DTcomment{Interface for different (Probablistic) Pseudo Labeler implementations}.
+        .3 cluster\_umap$.$py \DTcomment{functions for running KMeans on UMAP, includes a pseudo labeler impl using KMeans+UMAP}.
+        .3 cluster$.$py \DTcomment{KNN+UMAP classifiers}.
+        .3 log\_reg$.$py \DTcomment{IGNORE: Custom implementation of weighted logistic regression. unnecessary since sklearn has `balanced' logistic regression}.
+        .3 DizzinessFeatureExtraction$.$ipynb \DTcomment{Earlier notebook for feature extraction.}.
+        .3 FeatureExtraction$.$ipynb \DTcomment{IGNORE: first attempt at feature extraction}.
+        .3 Analysis\_A00$.$ipynb \DTcomment{IGNORE: copied Paarth's A00 cohort notebook for reference }.
+        .3 Explore new structured data 2022-Mar$.$ipynb \DTcomment{IGNORE: early stage notebook filled with notes}.
+    .2 \underline{ICD} \DTcomment{Folder of Stroke Risk Factor ICDs}.
+    .2 UMAP$*.$ipynb\DTcomment{All notebooks of this format are related to UMAP plotting embedded CUI vectors}.
+    .2 word2vec$*.$ipynb\DTcomment{Notebooks tweeking Justin's word2vec process}.
+    .2 CUIPreprocessing$.$ipynb\DTcomment{CUI vector related preprocessing}.
+}
+
+
+\section{What We Did and Tried}
+So most of what I did is already explained during the presentation. Ask Usman for the recording if needed.
+
+Here's a recount of the more technical aspects that were omitted during the presentation.
+
+\subsection{Word2Vec}
+Had a bit of fun in the beginning continuing Justin's work. Improved Justin's Word2Vec model based on clamp by fixing issues, such as factoring in present vs absent.
+
+Didn't show much promise. The work is under the base Maxxx folder. All my remaining work is done on the ML4A: Dizziness trigger.
+
+\subsection{Neural Networks}
+While our dataset is way too small to use Neural Networks, we thought it'd make sense to give it a try, since the umap plot of our feature vectors seemed non-linear. While Neural Networks gave better results sometimes, it have a larger variance, and the average was about the same as Logistic Regression.
+
+\subsection{PMOD}
+We ended up dropping all PMOD points since they were much trickier to classify. Often times even the human reviewer wouldn't be able to say if it was MOD or NoMOD, only that ``it might be MOD''.
+
+\subsection{Normalization}
+Most features we extract end up with their own range of values. In order for \textbf{UMAP to work properly}, we needed to normalize the values. 
+
+Also note that since most of these features don't have an obvious distribution, we manually scaled these features.
+
+Here's a list of how we normalize each feature to the range $[0,1]$:
+\begin{itemize}
+    \item[Age] Uniform min-max scaling.
+    \item[RF Presence] If there are more than 1 case, value 1. If only one instance of the risk factor ICD, value 0.5. Otherwise 0.
+    \item[RF Total Count] Sum of individual counts divided by 9.
+    \item[CT/MRI] Boolean 0 or 1.
+    \item[Neuro Consult] Boolean 0 or 1.  
+    \item[ED Duration] Divide hours by 24. (This is technically uncapped. )
+    \item[ED Inpatient Delta] number of readmission days capped at 30, then divide by 30.
+    \item[HasStrokeDiag] Boolean 0 1. 
+\end{itemize}
+
+\subsection{KMeans Pseudo Labeling}
+Due to the small data size, we wanted to work with more data, and so we tried pseudo-labeling the unlabeled data points. 
+
+The specific method we chose was by doing KMeans clustering on the UMAP embeddings. For example, after we transform both the training points and the unlabeled points onto the same 2d space, we run kmeans that groups these points. Then for each cluster, we would assign probabilistic labels to the unlabeled points in that cluster, calculated from the labeled points in that cluster. Say we have 2 MOD and 8 NoMOD in a cluster, then each unlabeled points will be pseudo labeled as $20\%$.
+
+\subsection{Training on Probabilistic Labels}
+Probabilistic labels makes sense for situations that we weren't entirely sure about, such as with pseudo labeled data. We found 2 ways to train on probabilistic data: 
+\begin{enumerate}
+    \item Logistic Regression: for each training datapoint, duplicate so that each point has both a 0 and a 1 labeled entry. Then when training, include the probability of that point being 0 or 1 as the training weight.
+    \item Neural Network: train as a multiclass classification problem, and use KLDivergence as the loss function.
+\end{enumerate}
+
+
+\subsection{KNN}
+We also tried building a KNN classifier that would operate alongside UMAP. This was because a lot of the UMAP clusters seemed promising, and were predominantly 1 label. (There were also a few big clusters that were mixed. )
+
+However, the results were middling and slightly worse than Logistic Regression / Neural Networks. 
+
+One KNN variation tried was a KNN+logistic classifier, where if the KNN wasn't confident enough, would differ the classification to the logistic regression. This also had the same accuracy. \textbf{This experiment heavily implied that the scenarios that KNN failed at were the same as logistic regression. }
+
+\subsection{Results \& Quality of Features}
+As such, we currently have multiple models sitting around the $0.6$ accuracy line. We measure these numbers by \textbf{running 5-fold train test splits across 20 random seeds, so 100 train test splits}.
+
+Along with the KNN+logistic results, these all point towards there isn't much we can improve by the model training process, and the issue lies in the quality of of our features. At the same time, we basically ran out of ideas for structured fields, so we most likely need to look at unstructured data (notes).
+
+Most of the models we have also have a decently high variance, often times with std around $0.10$. This is most likely caused by our very small training set size. With a test set of size 13, having $0.1$ more accuracy basically means the model got 1 more point right. At the same time, because we're working with around 80 points total, often times if we get unlucky, significant points of certain types will all end up in the train or test set, and this will further vary the accuracies.
+
+The precise numbers can be found in the DizzinessNeuralNet notebook near the bottom. And since most places uses fixed random seeds, the results should be reproducible.
+
+
+\section{What's Next}
+This is what we \textbf{currently} envision can be done next.
+
+\subsection{Readmission Prediction}
+An idea I came up with over the summer was to use Trigger Negative patients to predict whether the patient will be readmitted within 30 days, and then include this prediction as a feature in our feature vector representation.
+
+The intuition is that if we can predict that they will be readmitted within 30 days after their first ER visit, they shouldn't have left ER in the first place. 
+
+This seemed promising to me, since we have significantly more Trigger negative data to work with. \textbf{By Trigger Negative, I am referring to close negatives, where these patients meet all trigger inclusion criterions except `readmitted within 30 days'}.
+
+One of the major challenges for readmission predictions is the current infrastructure I set up. Currently the code reads all relevant tables into memory (Jupyter Notebook). However, the Trigger Negative set is about 60 times larger, and will crash the dev workspace if not careful. \textbf{So far with only the tables needed for our current feature vector, we are fine, but if we want to train on notes, labs, or vitals, some major refactoring is needed}.
+
+One current idea for refactoring is to read in tables on demand. Whenever we finish using a table, we delete it from memory using python's \texttt{del} command.
+
+\subsection{Note Processing}
+Up to this point we've only been extracting information from structured data. However, when meeting with Ashish, especially in later feature review cycles, more and more patients could only be separated by information from the doctor notes.
+
+Devika is planning on using Transformers with pretrained models to try processing these notes, and push us further.
+
+Other than some of the complex analysis Ashish pulled off, there were 2 common things he would look for.
+
+\subsubsection{Physical Exam}
+The biggest difference between us and Ashish is that Ashish pays a lot of attention to whether the doctor did a sufficient physical examination. This is often more of a feel thing, and Ashish reviews under \textbf{the assumption that the level of details in the doctor notes indicate how thorough the doctor was}.
+
+Ask Andy for more info, but my understanding is that a thorough physical examination is very important as a basic check, and if anything shows up they'll order CT/MRI/Neuro Consult.
+
+\subsubsection{AMA}
+The other was \textbf{AMA} patients. If the patient left against medical advice, most likely it was a mistake but the patient's own fault. However, while there were some structured fields indicating AMA, they weren't reliable, and had to be extracted from notes.
+
+And extracting this information from notes is also non-trivial. Often times doctors would summarize patient history, such as `patient left AMA during visit two weeks ago'. So simple methods like keyword searching will definitely not work.
+
+\subsection{ML4B}
+Another option is to move on to ML4B AbdominalPain Trigger, and see how much of the current lessons we can apply. However, this isn't very recommended, since AbdominalPain has a more diverse set of problems, and if we our methods can't work well enough on ML4A it probably won't either on ML4B. That being said, it might still be worth it to test our luck.
+
+
+
+
+\end{document}
