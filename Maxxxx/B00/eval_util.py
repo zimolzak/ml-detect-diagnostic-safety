@@ -25,6 +25,43 @@ TEST_SIZE = 0.15
 LOGISTIC_REGRESSION_ITER = 10000
 
 
+import copy
+import json
+def aggregateListDict(l):
+    agg_d = dict()
+    for k in l[0].keys():
+        agg_d[k] = []
+        
+    for d in l:
+        for k, v in d.items():
+            agg_d[k].append(v)
+    
+    for k, v in agg_d.items():
+        if isinstance(v[0], dict):
+            agg_d[k] = aggregateListDict(v)
+    return agg_d
+
+def mapDictList(d, f):
+    d = copy.deepcopy(d)
+    for k, v in d.items():
+        if isinstance(v, dict):
+            d[k] = mapDictList(v, f)
+        else:
+            d[k] = f(v)
+    return d
+
+def calcMeanStdMinMax(x):
+    X = np.array(x)
+    return (np.mean(X), np.sqrt(np.var(X)), float(np.min(X)), float(np.max(X)))
+
+def prettyPrintMeanStdMinMax(results):
+    results_agg = aggregateListDict(results)
+    results_agg.pop("best_params")
+    print("(Averages, Std, Min, Max):")
+    print(json.dumps(mapDictList(results_agg, calcMeanStdMinMax), indent=4))
+
+
+
 
 def eval_model(model, X, y):
     predictions = model.predict(X)
@@ -57,26 +94,7 @@ def runGridSearchWithDataset(estimator, hyper_params, X_train, X_test, y_train, 
 def runGridSearch(estimator, hyper_params, labeled_df, X_cols, y_col):
     X_train, X_test, y_train, y_test = train_test_split(labeled_df[X_cols], labeled_df[y_col], test_size=TEST_SIZE, random_state=RANDOM_STATE_SEED)
     return runGridSearchWithDataset(estimator, hyper_params, X_train, X_test, y_train, y_test)
-    
-#     # determine best parameters to fit model ti training data
-#     grid_search = GridSearchCV(
-#         estimator = estimator
-#         ,param_grid = hyper_params
-#         ,scoring = None
-#         ,n_jobs = 1
-#         ,cv = 5
-#         ,verbose = 0
-#         ,return_train_score = False
-#     )
 
-#     best_model = grid_search.fit(X_train, y_train)
-    
-#     for k in hyper_params.keys():
-#         print('Best ' + k + ':', best_model.best_estimator_.get_params()[k])
-
-#     eval_model(best_model, X_test, y_test)
-#     eval_model(best_model, X_train, y_train)
-#     return best_model
 
 def showLogRegResults(best_model_log, X_cols):
     log_coefs = pd.DataFrame(data=best_model_log.best_estimator_.coef_.T, columns=['Coef'], index=X_cols)
