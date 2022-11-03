@@ -1,0 +1,67 @@
+# HPI synonyms (HIGH VALUE)
+
+Hpi
+history
+chief complaint
+cc
+clinical history
+history of present illness
+clinical history
+
+
+# Past history and related
+
+medications
+medical history
+current medications
+pmh
+family history
+social history
+current problems
+past medical history
+problem list
+allergies
+pmhx
+active medications
+
+
+# physical exam (HIGH VALUE)
+
+vital signs
+physical exam
+neuro
+pe
+
+
+# Test
+
+radiology
+studies
+labs
+echo
+imaging
+
+
+# Assessment synonyms (HIGH VALUE)
+
+impression
+assessment
+impression and plan
+final diagnosis
+secondary diagnosis
+assessment/plan
+clinical impression
+
+
+
+# Other and unsure
+
+education
+patient education
+service
+findings
+comments
+discharge medications
+discharge instructions
+technique
+procedure note
