@@ -14,6 +14,16 @@ import math
 
 
 def retrieveLabels():
+    """
+    retrieves labels for the ML4 Dizziness trigger
+    
+    Returns
+    --------
+    dataframe
+        dataframe of detailed review entries
+    dict
+        converted label dictionary mapping ssn to label
+    """
     dizziness_df = pd.read_csv(open("Viral_data/ML4_HighRisk_Dizziness/labels-Dizziness.csv", 'r', errors="ignore"))
     dizziness_df.dropna(subset=["DxErrorER", "PtSSN"], inplace=True)
     dizziness_df = dizziness_df.astype("object")
@@ -27,12 +37,38 @@ def retrieveLabels():
     return dizziness_df, label_map
 
 def convertLabelMap(label_map):
+    """
+    converts label dict into a dataframe keyed by 'PatientSSN'
+    
+    Parameters
+    --------
+    label_map : dict
+        map of ssn to label
+    
+    Returns
+    --------
+    dataframe
+        dataframe converted from label map
+    """
     df = pd.DataFrame.from_dict(label_map, orient="index", columns=['Label'])
     df.reset_index(inplace=True)
     df = df.rename(columns={'index':'PatientSSN'})
     return df
 
 def convertBinaryLabel(label_df):
+    """
+    converts label df into a binary labeled df (with the exception of CodingError as 2)
+    
+    Parameters
+    --------
+    label_df : dataframe
+        df of labels
+    
+    Returns
+    --------
+    dataframe
+        df where MOD and PMOD are merged
+    """
 #     label_dict = {"MOD": 1, "PMOD": 1, "NoMOD": 0, "CodingEr": None}
     label_dict = {"MOD": 1, "PMOD": 1, "NoMOD": 0, "CodingEr": 2}
     df = label_df.copy()
@@ -40,6 +76,29 @@ def convertBinaryLabel(label_df):
     return df
 
 def makeDataset(feature_vec, label_df, key="PatientSSN"):
+    """
+    Makes a dataset by combining feature vectors with labels
+    
+    Parameters
+    --------
+    feature_vec : dataframe
+        dataframe of feature vectors
+    label_df : dataframe
+        df of labels
+    key : str
+        key of feature_vec to exclude
+    
+    Returns
+    --------
+    dataframe
+        df of the labeled set
+    dataframe
+        df of the unlabeled set
+    list
+        list of column names for the X set
+    str
+        name of label column name
+    """
     df = feature_vec.merge(convertBinaryLabel(label_df), how="outer", left_on=key, right_on=key)
     # labeled_df = labeled_df.fillna("Unlabeled")
     labeled_df = df[~pd.isnull(df['Label'])].copy()
@@ -52,16 +111,29 @@ def makeDataset(feature_vec, label_df, key="PatientSSN"):
     return labeled_df, unlabeled_df, X_cols, y_col
 
 def colorUMAPwithLabels(label_map, ids, embedding):
+    """
+    Plots the UMAP embedding colored with labels. A legend will describe what each color represents
+    
+    Parameters
+    --------
+    label_map : dict
+        map of id to label
+    ids : list
+        df of labels
+    embedding : np array
+        umap embedding to plot
+    """
 #     color_map = {"MOD": "red","PMOD":"purple", "NoMOD":"blue", "CodingEr":"green"}
 #     colors = [ color_map[label_map[id]] if id in label_map else "white" for id in ids]
 #     fig = plt.figure(figsize=(12,8), dpi=100)
 #     plt.style.use("dark_background")
 #     plt.scatter(embedding[:, 0], embedding[:, 1], c=colors, alpha=0.5)
 #     plt.show()
-    classes = ["MOD", "PMOD", "NoMOD", "CodingEr", "Unkown"]
-    color_map = ["red", "purple", "blue", "green", "white"]
-    class_map = {"MOD": 0, "PMOD": 1, "NoMOD": 2, "CodingEr": 3, "Unkown": 4}
+    classes = ["MOD", "NoMOD", "PMOD", "CodingEr", "Unkown"]
+    color_map = ["red", "blue", "purple", "green", "white"]
+    class_map = {"MOD": 0, "NoMOD": 1, "PMOD": 2, "CodingEr": 3, "Unkown": 4}
     colors = [ class_map[label_map[id]] if id in label_map else 4 for id in ids]
+    print(colors)
     fig = plt.figure(figsize=(12,8), dpi=100)
     plt.style.use("dark_background")
     scatter = plt.scatter(embedding[:, 0], embedding[:, 1], c=colors, cmap=ListedColormap(color_map), alpha=0.5)
@@ -72,6 +144,23 @@ def colorUMAPwithLabels(label_map, ids, embedding):
     plt.show()
 
 def UMAPPlot(reducer, feature_vec, label_map):
+    """
+    Plots the feature vector using UMAP and fits the pasted in reducer. 
+    
+    Parameters
+    --------
+    reducer: UMAP reducer
+        umap reducer used to fit and transform
+    feature_vec: dataframe
+        data points we want to plot
+    label_map : dict
+        map of id to label
+    
+    Returns
+    --------
+    np array
+        umap embedding reduced from the feature vectors
+    """
     X_cols = list(feature_vec.columns)
     X_cols.remove("PatientSSN")
     embedding = reducer.fit_transform(feature_vec[X_cols])
@@ -79,9 +168,44 @@ def UMAPPlot(reducer, feature_vec, label_map):
     colorUMAPwithLabels(label_map, feature_vec.PatientSSN, embedding)
     return embedding
 
+def UMAPPlotNoFit(reducer, feature_vec, label_map):
+    """
+    Plots the feature vector using UMAP but doesn't fit the reducer. 
+    
+    Parameters
+    --------
+    reducer: UMAP reducer
+        umap reducer used to fit and transform
+    feature_vec: dataframe
+        data points we want to plot
+    label_map : dict
+        map of id to label
+    
+    Returns
+    --------
+    np array
+        umap embedding reduced from the feature vectors
+    """
+    X_cols = list(feature_vec.columns)
+    X_cols.remove("PatientSSN")
+    embedding = reducer.transform(feature_vec[X_cols])
+    
+    colorUMAPwithLabels(label_map, feature_vec.PatientSSN, embedding)
+    return embedding
+
 def UMAPClosestPairs(feature_vec, embedding, n_closest=5):
     """
-    feature_vec here is of the shape LAST column is label
+    find the n closest pairs of disagreeing feature vectors
+    feature_vec MUST have LAST column as label
+    
+    Parameters
+    --------
+    feature_vec: dataframe
+        feature vector data points
+    embedding : np 2d array
+        embedding of feature vectors
+    n_closest : int
+        the n pairs of closest
     """
     dizziness_df, _ = retrieveLabels()
     
@@ -315,33 +439,20 @@ def makeOutpatWindowFeatures(outpat_df, index_times, considered_window=180):
 NEURO_CONSULT_CODES = [315.0, 325.0]
 CONSULT_ID = "PatientSSN"
 
-# deprecated
-# def makeConsultVec(consult_df, index_times, window=36):
-#     neuro_df = filterDFByCodeSet(consult_df, "ConStopCode", NEURO_CONSULT_CODES).copy()
-#     convertDatetime(neuro_df, ["requestDateTime"])
-#     vec = pd.DataFrame({CONSULT_ID:neuro_df[CONSULT_ID]})
+# def makeNewConsultVec(consult_df, cohort_df, index_times, window=36):
+#     index_time_df = convertIndexToDF(index_times)
+#     index_vec = makeReadmitDelta(cohort_df)
     
-#     neuro_df["index_time"] = neuro_df.apply(lambda r: index_times[r[CONSULT_ID]], axis=1)
-#     neuro_df["temp"] = (neuro_df["index_time"] - neuro_df["requestDateTime"]).dt.total_seconds() / 3600
-#     vec["HasConsult"] = neuro_df.apply(lambda r: 1 if abs(r["temp"]) < window else 0, axis=1)
-#     consult_vec = vec.groupby(CONSULT_ID).sum()
-#     consult_vec.HasConsult = consult_vec.HasConsult.clip(upper=1)
+#     df = filterDFByCodeSet(consult_df, "ConStopCode", NEURO_CONSULT_CODES).copy()
+#     convertDatetime(df, ["requestDateTime"])
+    
+#     df = df.merge(index_time_df, how="inner").merge(index_vec, how="inner")
+#     df["temp"] = ((df["requestDateTime"] - df["IndexDate"]).dt.total_seconds() / 3600)
+# #     vec[col_name] = df.apply(lambda r: 1 if r["temp"] >= 0 and r["temp"] <= min([r["readmit_delta"], window]) else 0, axis=1)
+#     df["HasConsult"] = df.apply(lambda r: 1 if r["temp"] >= 0 and r["temp"] <= min(r["readmit_delta"], window) else 0, axis=1)
+#     consult_vec = df[[CONSULT_ID, "HasConsult"]].groupby(CONSULT_ID).sum()
+#     consult_vec["HasConsult"] = consult_vec[["HasConsult"]].clip(upper=1)
 #     return consult_vec
-
-def makeNewConsultVec(consult_df, cohort_df, index_times, window=36):
-    index_time_df = convertIndexToDF(index_times)
-    index_vec = makeReadmitDelta(cohort_df)
-    
-    df = filterDFByCodeSet(consult_df, "ConStopCode", NEURO_CONSULT_CODES).copy()
-    convertDatetime(df, ["requestDateTime"])
-    
-    df = df.merge(index_time_df, how="inner").merge(index_vec, how="inner")
-    df["temp"] = ((df["requestDateTime"] - df["IndexDate"]).dt.total_seconds() / 3600)
-#     vec[col_name] = df.apply(lambda r: 1 if r["temp"] >= 0 and r["temp"] <= min([r["readmit_delta"], window]) else 0, axis=1)
-    df["HasConsult"] = df.apply(lambda r: 1 if r["temp"] >= 0 and r["temp"] <= min(r["readmit_delta"], window) else 0, axis=1)
-    consult_vec = df[[CONSULT_ID, "HasConsult"]].groupby(CONSULT_ID).sum()
-    consult_vec["HasConsult"] = consult_vec[["HasConsult"]].clip(upper=1)
-    return consult_vec
 
 
 def makeNewConsultVec2(consult_df, cohort_df, index_times, window=36):
@@ -376,62 +487,29 @@ MRI_CPT_CODES = ['70550', '70551', '70552', '70553']
 
 RAD_PATIENT_ID = "PatientSSN"
 
-# deprecated
-# def makeRadCTVec(rad_df, index_times, window=36):
-#     ct_df = filterDFByCodeSet(rad_df, "CPTCode", CT_CPT_CODES).copy()
-#     convertDatetime(ct_df, ["ExamDateTime"])
-#     vec = pd.DataFrame({CONSULT_ID:ct_df[RAD_PATIENT_ID]})
-    
-#     ct_df["index_time"] = ct_df.apply(lambda r: index_times[r[RAD_PATIENT_ID]], axis=1)
-#     ct_df["temp"] = (ct_df["index_time"] - ct_df["ExamDateTime"]).dt.total_seconds() / 3600
-#     vec["HasCT"] = ct_df.apply(lambda r: 1 if abs(r["temp"]) < window else 0, axis=1)
-#     ct_vec = vec.groupby(RAD_PATIENT_ID).sum()
-#     ct_vec.HasCT = ct_vec.HasCT.clip(upper=1)
-#     return ct_vec
 
-# def makeRadMRIVec(rad_df, index_times, window=36):
-#     mri_df = filterDFByCodeSet(rad_df, "CPTCode", MRI_CPT_CODES).copy()
-#     convertDatetime(mri_df, ["ExamDateTime"])
-#     vec = pd.DataFrame({CONSULT_ID:mri_df[RAD_PATIENT_ID]})
+# def makeRadComponentVec(rad_df, codeset, col_name, index_vec, index_time_df, window=36):
+#     df = filterDFByCodeSet(rad_df, "CPTCode", codeset).copy()
+#     convertDatetime(df, ["ExamDateTime"])
+# #     vec = pd.DataFrame({CONSULT_ID:df[RAD_PATIENT_ID]})
     
-#     mri_df["index_time"] = mri_df.apply(lambda r: index_times[r[RAD_PATIENT_ID]], axis=1)
-#     mri_df["temp"] = (mri_df["index_time"] - mri_df["ExamDateTime"]).dt.total_seconds() / 3600
-#     vec["HasMRI"] = mri_df.apply(lambda r: 1 if abs(r["temp"]) < window else 0, axis=1)
-#     mri_vec = vec.groupby(RAD_PATIENT_ID).sum()
-#     mri_vec.HasMRI = mri_vec.HasMRI.clip(upper=1)
-#     return mri_vec
+#     df = df.merge(index_time_df, how="inner").merge(index_vec, how="inner")
+#     df["temp"] = ((df["ExamDateTime"] - df["IndexDate"]).dt.total_seconds() / 3600)
+# #     vec[col_name] = df.apply(lambda r: 1 if r["temp"] >= 0 and r["temp"] <= min([r["readmit_delta"], window]) else 0, axis=1)
+#     df[col_name] = df.apply(lambda r: 1 if r["temp"] >= 0 and r["temp"] <= min(r["readmit_delta"], window) else 0, axis=1)
+#     comp_vec = df[[RAD_PATIENT_ID, col_name]].groupby(RAD_PATIENT_ID).sum()
+#     comp_vec[col_name] = comp_vec[[col_name]].clip(upper=1)
+#     return comp_vec
 
-# def makeRadVec(rad_df, index_times, window=36):
-#     ct_vec = makeRadCTVec(rad_df, index_times, window)
-#     mri_vec = makeRadMRIVec(rad_df, index_times, window)
+# def makeNewRadVec(rad_df, cohort_df, index_times, window=36):
+#     index_time_df = convertIndexToDF(index_times)
+#     index_vec = makeReadmitDelta(cohort_df)
+    
+#     ct_vec = makeRadComponentVec(rad_df, CT_CPT_CODES, "HasCT", index_vec, index_time_df, window)
+#     mri_vec = makeRadComponentVec(rad_df, MRI_CPT_CODES, "HasMRI", index_vec, index_time_df, window)
 #     vec = ct_vec.merge(mri_vec, how="outer", left_on=RAD_PATIENT_ID, right_on=RAD_PATIENT_ID)
 #     vec = vec.fillna(0)
 #     return vec
-
-
-
-def makeRadComponentVec(rad_df, codeset, col_name, index_vec, index_time_df, window=36):
-    df = filterDFByCodeSet(rad_df, "CPTCode", codeset).copy()
-    convertDatetime(df, ["ExamDateTime"])
-#     vec = pd.DataFrame({CONSULT_ID:df[RAD_PATIENT_ID]})
-    
-    df = df.merge(index_time_df, how="inner").merge(index_vec, how="inner")
-    df["temp"] = ((df["ExamDateTime"] - df["IndexDate"]).dt.total_seconds() / 3600)
-#     vec[col_name] = df.apply(lambda r: 1 if r["temp"] >= 0 and r["temp"] <= min([r["readmit_delta"], window]) else 0, axis=1)
-    df[col_name] = df.apply(lambda r: 1 if r["temp"] >= 0 and r["temp"] <= min(r["readmit_delta"], window) else 0, axis=1)
-    comp_vec = df[[RAD_PATIENT_ID, col_name]].groupby(RAD_PATIENT_ID).sum()
-    comp_vec[col_name] = comp_vec[[col_name]].clip(upper=1)
-    return comp_vec
-
-def makeNewRadVec(rad_df, cohort_df, index_times, window=36):
-    index_time_df = convertIndexToDF(index_times)
-    index_vec = makeReadmitDelta(cohort_df)
-    
-    ct_vec = makeRadComponentVec(rad_df, CT_CPT_CODES, "HasCT", index_vec, index_time_df, window)
-    mri_vec = makeRadComponentVec(rad_df, MRI_CPT_CODES, "HasMRI", index_vec, index_time_df, window)
-    vec = ct_vec.merge(mri_vec, how="outer", left_on=RAD_PATIENT_ID, right_on=RAD_PATIENT_ID)
-    vec = vec.fillna(0)
-    return vec
 
 
 def makeRadComponentVec2(rad_df, codeset, col_name, index_vec, index_time_df, window=36):

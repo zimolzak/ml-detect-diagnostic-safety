@@ -1,0 +1,95 @@
+,ICD-10-CM Code,ICD-10-CM Code Description,CCSR Category,CCSR Category Description,Default CCSR (Y/N/X),Rationale,ICD10 description
+0,R51.,Headache,SYM010,Nervous system signs and symptoms,N,1 Not Applicable,R51 Headache symptom
+1,G43.001,"Migraine w/o aura, not intractable, with status migrainosus",NVS010,Headache; including migraine,Y,0 Not Applicable,G43  Migraine (Include all the codes)
+2,G43.009,"Migraine w/o aura, not intractable, w/o status migrainosus",NVS010,Headache; including migraine,Y,0 Not Applicable,G43  Migraine (Include all the codes)
+3,G43.011,"Migraine without aura, intractable, with status migrainosus",NVS010,Headache; including migraine,Y,0 Not Applicable,G43  Migraine (Include all the codes)
+4,G43.019,"Migraine w/o aura, intractable, without status migrainosus",NVS010,Headache; including migraine,Y,0 Not Applicable,G43  Migraine (Include all the codes)
+5,G43.101,"Migraine with aura, not intractable, with status migrainosus",NVS010,Headache; including migraine,Y,0 Not Applicable,G43  Migraine (Include all the codes)
+6,G43.109,"Migraine with aura, not intractable, w/o status migrainosus",NVS010,Headache; including migraine,Y,0 Not Applicable,G43  Migraine (Include all the codes)
+7,G43.111,"Migraine with aura, intractable, with status migrainosus",NVS010,Headache; including migraine,Y,0 Not Applicable,G43  Migraine (Include all the codes)
+8,G43.119,"Migraine with aura, intractable, without status migrainosus",NVS010,Headache; including migraine,Y,0 Not Applicable,G43  Migraine (Include all the codes)
+9,G43.401,"Hemiplegic migraine, not intractable, w status migrainosus",NVS010,Headache; including migraine,Y,0 Not Applicable,G43  Migraine (Include all the codes)
+10,G43.409,"Hemiplegic migraine, not intractable, w/o status migrainosus",NVS010,Headache; including migraine,Y,0 Not Applicable,G43  Migraine (Include all the codes)
+11,G43.411,"Hemiplegic migraine, intractable, with status migrainosus",NVS010,Headache; including migraine,Y,0 Not Applicable,G43  Migraine (Include all the codes)
+12,G43.419,"Hemiplegic migraine, intractable, without status migrainosus",NVS010,Headache; including migraine,Y,0 Not Applicable,G43  Migraine (Include all the codes)
+13,G43.501,"Perst migraine aura w/o cereb infrc, not ntrct, w stat migr",NVS010,Headache; including migraine,Y,0 Not Applicable,G43  Migraine (Include all the codes)
+14,G43.509,"Perst migrn aura w/o cereb infrc, not ntrct, w/o stat migr",NVS010,Headache; including migraine,Y,0 Not Applicable,G43  Migraine (Include all the codes)
+15,G43.511,"Perst migraine aura w/o cerebral infrc, ntrct, w stat migr",NVS010,Headache; including migraine,Y,0 Not Applicable,G43  Migraine (Include all the codes)
+16,G43.519,"Perst migraine aura w/o cerebral infrc, ntrct, w/o stat migr",NVS010,Headache; including migraine,Y,0 Not Applicable,G43  Migraine (Include all the codes)
+17,G43.601,"Persistent migraine aura with cerebral infarction, not intractable, with status migrainosus",NVS010,Headache; including migraine,N,05 Exception to condition AA with condition BB,G43  Migraine (Include all the codes)
+18,G43.609,"Persistent migraine aura with cerebral infarction, not intractable, without status migrainosus",NVS010,Headache; including migraine,N,05 Exception to condition AA with condition BB,G43  Migraine (Include all the codes)
+19,G43.611,"Persistent migraine aura with cerebral infarction, intractable, with status migrainosus",NVS010,Headache; including migraine,N,05 Exception to condition AA with condition BB,G43  Migraine (Include all the codes)
+20,G43.619,"Persistent migraine aura with cerebral infarction, intractable, without status migrainosus",NVS010,Headache; including migraine,N,05 Exception to condition AA with condition BB,G43  Migraine (Include all the codes)
+21,G43.701,"Chronic migraine w/o aura, not intractable, w stat migr",NVS010,Headache; including migraine,Y,0 Not Applicable,G43  Migraine (Include all the codes)
+22,G43.709,"Chronic migraine w/o aura, not intractable, w/o stat migr",NVS010,Headache; including migraine,Y,0 Not Applicable,G43  Migraine (Include all the codes)
+23,G43.711,"Chronic migraine w/o aura, intractable, w status migrainosus",NVS010,Headache; including migraine,Y,0 Not Applicable,G43  Migraine (Include all the codes)
+24,G43.719,"Chronic migraine w/o aura, intractable, w/o stat migr",NVS010,Headache; including migraine,Y,0 Not Applicable,G43  Migraine (Include all the codes)
+25,G43.801,"Other migraine, not intractable, with status migrainosus",NVS010,Headache; including migraine,Y,0 Not Applicable,G43  Migraine (Include all the codes)
+26,G43.809,"Other migraine, not intractable, without status migrainosus",NVS010,Headache; including migraine,Y,0 Not Applicable,G43  Migraine (Include all the codes)
+27,G43.811,"Other migraine, intractable, with status migrainosus",NVS010,Headache; including migraine,Y,0 Not Applicable,G43  Migraine (Include all the codes)
+28,G43.819,"Other migraine, intractable, without status migrainosus",NVS010,Headache; including migraine,Y,0 Not Applicable,G43  Migraine (Include all the codes)
+29,G43.821,"Menstrual migraine, not intractable, with status migrainosus",NVS010,Headache; including migraine,Y,0 Not Applicable,G43  Migraine (Include all the codes)
+30,G43.829,"Menstrual migraine, not intractable, w/o status migrainosus",NVS010,Headache; including migraine,Y,0 Not Applicable,G43  Migraine (Include all the codes)
+31,G43.831,"Menstrual migraine, intractable, with status migrainosus",NVS010,Headache; including migraine,Y,0 Not Applicable,G43  Migraine (Include all the codes)
+32,G43.839,"Menstrual migraine, intractable, without status migrainosus",NVS010,Headache; including migraine,Y,0 Not Applicable,G43  Migraine (Include all the codes)
+33,G43.901,"Migraine, unsp, not intractable, with status migrainosus",NVS010,Headache; including migraine,Y,0 Not Applicable,G43  Migraine (Include all the codes)
+34,G43.909,"Migraine, unsp, not intractable, without status migrainosus",NVS010,Headache; including migraine,Y,0 Not Applicable,G43  Migraine (Include all the codes)
+35,G43.911,"Migraine, unspecified, intractable, with status migrainosus",NVS010,Headache; including migraine,Y,0 Not Applicable,G43  Migraine (Include all the codes)
+36,G43.919,"Migraine, unsp, intractable, without status migrainosus",NVS010,Headache; including migraine,Y,0 Not Applicable,G43  Migraine (Include all the codes)
+37,G43.A0,"Cyclical vomiting, not intractable",NVS010,Headache; including migraine,Y,07 Signs/symptoms and factors influencing health status,G43  Migraine (Include all the codes)
+38,G43.A0,"Cyclical vomiting, not intractable",SYM004,Nausea and vomiting,N,07 Signs/symptoms and factors influencing health status,G43  Migraine (Include all the codes)
+39,G43.A1,"Cyclical vomiting, intractable",NVS010,Headache; including migraine,Y,07 Signs/symptoms and factors influencing health status,G43  Migraine (Include all the codes)
+40,G43.A1,"Cyclical vomiting, intractable",SYM004,Nausea and vomiting,N,07 Signs/symptoms and factors influencing health status,G43  Migraine (Include all the codes)
+41,G43.B0,"Ophthalmoplegic migraine, not intractable",NVS010,Headache; including migraine,Y,0 Not Applicable,G43  Migraine (Include all the codes)
+42,G43.B1,"Ophthalmoplegic migraine, intractable",NVS010,Headache; including migraine,Y,0 Not Applicable,G43  Migraine (Include all the codes)
+43,G43.C0,"Periodic headache syndromes in chld/adlt, not intractable",NVS010,Headache; including migraine,Y,0 Not Applicable,G43  Migraine (Include all the codes)
+44,G43.C1,"Periodic headache syndromes in child or adult, intractable",NVS010,Headache; including migraine,Y,0 Not Applicable,G43  Migraine (Include all the codes)
+45,G43.D0,"Abdominal migraine, not intractable",NVS010,Headache; including migraine,Y,07 Signs/symptoms and factors influencing health status,G43  Migraine (Include all the codes)
+46,G43.D0,"Abdominal migraine, not intractable",SYM006,Abdominal pain and other digestive/abdomen signs and symptoms,N,07 Signs/symptoms and factors influencing health status,G43  Migraine (Include all the codes)
+47,G43.D1,"Abdominal migraine, intractable",NVS010,Headache; including migraine,Y,07 Signs/symptoms and factors influencing health status,G43  Migraine (Include all the codes)
+48,G43.D1,"Abdominal migraine, intractable",SYM006,Abdominal pain and other digestive/abdomen signs and symptoms,N,07 Signs/symptoms and factors influencing health status,G43  Migraine (Include all the codes)
+49,G43.601,"Persistent migraine aura with cerebral infarction, not intractable, with status migrainosus",CIR020,Cerebral infarction,Y,05 Exception to condition AA with condition BB,G43  Migraine (Include all the codes)
+50,G43.609,"Persistent migraine aura with cerebral infarction, not intractable, without status migrainosus",CIR020,Cerebral infarction,Y,05 Exception to condition AA with condition BB,G43  Migraine (Include all the codes)
+51,G43.611,"Persistent migraine aura with cerebral infarction, intractable, with status migrainosus",CIR020,Cerebral infarction,Y,05 Exception to condition AA with condition BB,G43  Migraine (Include all the codes)
+52,G43.619,"Persistent migraine aura with cerebral infarction, intractable, without status migrainosus",CIR020,Cerebral infarction,Y,05 Exception to condition AA with condition BB,G43  Migraine (Include all the codes)
+53,G44.001,"Cluster headache syndrome, unspecified, intractable",NVS010,Headache; including migraine,Y,0 Not Applicable,G44  Other headache syndromes
+54,G44.009,"Cluster headache syndrome, unspecified, not intractable",NVS010,Headache; including migraine,Y,0 Not Applicable,G44  Other headache syndromes
+55,G44.011,"Episodic cluster headache, intractable",NVS010,Headache; including migraine,Y,0 Not Applicable,G44  Other headache syndromes
+56,G44.019,"Episodic cluster headache, not intractable",NVS010,Headache; including migraine,Y,0 Not Applicable,G44  Other headache syndromes
+57,G44.021,"Chronic cluster headache, intractable",NVS010,Headache; including migraine,Y,0 Not Applicable,G44  Other headache syndromes
+58,G44.029,"Chronic cluster headache, not intractable",NVS010,Headache; including migraine,Y,0 Not Applicable,G44  Other headache syndromes
+59,G44.031,"Episodic paroxysmal hemicrania, intractable",NVS010,Headache; including migraine,Y,0 Not Applicable,G44  Other headache syndromes
+60,G44.039,"Episodic paroxysmal hemicrania, not intractable",NVS010,Headache; including migraine,Y,0 Not Applicable,G44  Other headache syndromes
+61,G44.041,"Chronic paroxysmal hemicrania, intractable",NVS010,Headache; including migraine,Y,0 Not Applicable,G44  Other headache syndromes
+62,G44.049,"Chronic paroxysmal hemicrania, not intractable",NVS010,Headache; including migraine,Y,0 Not Applicable,G44  Other headache syndromes
+63,G44.051,"Shrt lst unil nerlgif hdache w cnjnct inject/tear, ntrct",NVS010,Headache; including migraine,Y,0 Not Applicable,G44  Other headache syndromes
+64,G44.059,"Shrt lst unil nerlgif hdache w cnjnct inject/tear, not ntrct",NVS010,Headache; including migraine,Y,0 Not Applicable,G44  Other headache syndromes
+65,G44.091,"Other trigeminal autonomic cephalgias (TAC), intractable",NVS010,Headache; including migraine,Y,0 Not Applicable,G44  Other headache syndromes
+66,G44.099,"Other trigeminal autonomic cephalgias (TAC), not intractable",NVS010,Headache; including migraine,Y,0 Not Applicable,G44  Other headache syndromes
+67,G44.1,"Vascular headache, not elsewhere classified",NVS010,Headache; including migraine,Y,0 Not Applicable,G44  Other headache syndromes
+68,G44.201,"Tension-type headache, unspecified, intractable",NVS010,Headache; including migraine,Y,0 Not Applicable,G44  Other headache syndromes
+69,G44.209,"Tension-type headache, unspecified, not intractable",NVS010,Headache; including migraine,Y,0 Not Applicable,G44  Other headache syndromes
+70,G44.211,"Episodic tension-type headache, intractable",NVS010,Headache; including migraine,Y,0 Not Applicable,G44  Other headache syndromes
+71,G44.219,"Episodic tension-type headache, not intractable",NVS010,Headache; including migraine,Y,0 Not Applicable,G44  Other headache syndromes
+72,G44.221,"Chronic tension-type headache, intractable",NVS010,Headache; including migraine,Y,0 Not Applicable,G44  Other headache syndromes
+73,G44.229,"Chronic tension-type headache, not intractable",NVS010,Headache; including migraine,Y,0 Not Applicable,G44  Other headache syndromes
+74,G44.301,"Post-traumatic headache, unspecified, intractable",NVS010,Headache; including migraine,Y,0 Not Applicable,G44  Other headache syndromes
+75,G44.309,"Post-traumatic headache, unspecified, not intractable",NVS010,Headache; including migraine,Y,0 Not Applicable,G44  Other headache syndromes
+76,G44.311,"Acute post-traumatic headache, intractable",NVS010,Headache; including migraine,Y,0 Not Applicable,G44  Other headache syndromes
+77,G44.319,"Acute post-traumatic headache, not intractable",NVS010,Headache; including migraine,Y,0 Not Applicable,G44  Other headache syndromes
+78,G44.321,"Chronic post-traumatic headache, intractable",NVS010,Headache; including migraine,Y,0 Not Applicable,G44  Other headache syndromes
+79,G44.329,"Chronic post-traumatic headache, not intractable",NVS010,Headache; including migraine,Y,0 Not Applicable,G44  Other headache syndromes
+80,G44.40,"Drug-induced headache, not elsewhere classified, not intractable",NVS010,Headache; including migraine,N,11 Condition XX due to underlying cause YY,G44  Other headache syndromes
+81,G44.41,"Drug-induced headache, not elsewhere classified, intractable",NVS010,Headache; including migraine,N,11 Condition XX due to underlying cause YY,G44  Other headache syndromes
+82,G44.51,Hemicrania continua,NVS010,Headache; including migraine,Y,0 Not Applicable,G44  Other headache syndromes
+83,G44.52,New daily persistent headache (NDPH),NVS010,Headache; including migraine,Y,0 Not Applicable,G44  Other headache syndromes
+84,G44.53,Primary thunderclap headache,NVS010,Headache; including migraine,Y,0 Not Applicable,G44  Other headache syndromes
+85,G44.59,Other complicated headache syndrome,NVS010,Headache; including migraine,Y,0 Not Applicable,G44  Other headache syndromes
+86,G44.81,Hypnic headache,NVS010,Headache; including migraine,Y,0 Not Applicable,G44  Other headache syndromes
+87,G44.82,Headache associated with sexual activity,NVS010,Headache; including migraine,Y,0 Not Applicable,G44  Other headache syndromes
+88,G44.83,Primary cough headache,NVS010,Headache; including migraine,Y,0 Not Applicable,G44  Other headache syndromes
+89,G44.84,Primary exertional headache,NVS010,Headache; including migraine,Y,0 Not Applicable,G44  Other headache syndromes
+90,G44.85,Primary stabbing headache,NVS010,Headache; including migraine,Y,0 Not Applicable,G44  Other headache syndromes
+91,G44.89,Other headache syndrome,NVS010,Headache; including migraine,Y,0 Not Applicable,G44  Other headache syndromes
+92,G44.40,"Drug-induced headache, not elsewhere classified, not intractable",INJ030,Drug induced or toxic related condition,Y,11 Condition XX due to underlying cause YY,G44  Other headache syndromes
+93,G44.41,"Drug-induced headache, not elsewhere classified, intractable",INJ030,Drug induced or toxic related condition,Y,11 Condition XX due to underlying cause YY,G44  Other headache syndromes

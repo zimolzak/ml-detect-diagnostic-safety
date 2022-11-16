@@ -20,6 +20,9 @@ from sklearn.preprocessing import StandardScaler, MinMaxScaler
 
 
 def displayAll(df, max_rows=None):
+    """
+    helper function that displays the entirety of a dataframe  
+    """
     if max_rows is None:
         pd.set_option('display.max_rows', len(df))
     else:
@@ -29,6 +32,12 @@ def displayAll(df, max_rows=None):
 
 
 def dfExcludeKey(df, key="PatientSSN"):
+    """
+    Returns
+    --------
+    dataframe view
+        The view of a dataframe excluding one column
+    """
     columns = list(df.columns)
     columns.remove(key)
     return df[columns]
@@ -51,12 +60,40 @@ def extractDataset(prefix, excludeSet):
     return tables
 
 def getPrimaryKeys(dataset):
+    """
+    Retreives the inconsistent upper/lower case variations of PatientSSNs. Probably can replace this function with rename.
+    
+    Parameters
+    --------
+    dataset : dict[str, DataFrame]
+        collection of dataframes/tables keyed by table name
+
+    Returns
+    --------
+    dict
+        tablename->primarykey map
+    """
     pkeys = dict()
     for k, v in dataset.items():
         pkeys[k] = list(v.columns)[[c.lower() for c in v.columns].index("patientssn")]
     return pkeys
 
 def extractAndStandarizeCohort(dataset, subsetName):
+    """
+    Retrieves the subset of the entire dataset where TriggerType==subsetName. In ML4's case, subset name is only Dizziness or Abdominal Pain.
+    
+    Parameters
+    --------
+    dataset : dict[str, DataFrame]
+        collection of dataframes/tables keyed by table name
+    subsetName : str
+        name of the trigger type we're interested in
+        
+    Returns
+    --------
+    dict
+        tablename->dataframe map
+    """
     pkeys = getPrimaryKeys(dataset)
     cohort_key = pkeys["cohort"]
     cohort_subset = dataset["cohort"][dataset["cohort"]["TriggerType"] == subsetName]
@@ -71,13 +108,20 @@ def extractAndStandarizeCohort(dataset, subsetName):
 
 
 def filterDFByCodeSet(df, colName, codes):
+    """
+    filters dataframe by a set of codes.
+    """
     return df[df[colName].isin(codes)]
 
 
 def convertDatetime(df, columns):
+    """
+    mutates the input df and converts specified columns from string to datetime
+    """
     for datef in columns:
         df[datef] = pd.to_datetime(df[datef])
         
+# TODO: refactor, grossly slow
 def filterDFByTimes(df, idColName, tsColName, tsUpperBounds, tsLowerBounds=None):
     convertDatetime(df, [tsColName])
     if tsLowerBounds is None:
@@ -89,8 +133,6 @@ def filterDFByTimes(df, idColName, tsColName, tsUpperBounds, tsLowerBounds=None)
     
     cond = df.apply(filterDTfn, axis=1)
     return df[cond]
-    
-
 
 
 def normalizeFeatures(df, features):

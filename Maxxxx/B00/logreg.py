@@ -99,11 +99,11 @@ class UnbalancedLogisticEnsemble(ClassifierMixin, BaseEstimator):
         
     def predict_log_proba(self, X):
         probs = [est.predict_log_proba(X) for est in self.estimators]
-        log_prob = probs[0]
+        log_proba = probs[0]
         for i in range(1, len(probs)):
-            log_prob = np.logaddexp(log_proba, probs[i])
+            log_proba = np.logaddexp(log_proba, probs[i])
         
         log_proba -= np.log(self.n_estimators)
         
-        
+        return log_proba
         

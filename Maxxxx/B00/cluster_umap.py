@@ -37,7 +37,7 @@ def run_clustering_on_umap(embedding, num_clusters, cdata_df, label_df, key="Pat
     
     labeled_df = pd.concat([cdata_df, clusters], axis=1).merge(label_df, how="outer", left_on=key, right_on=key)
     labeled_df = labeled_df.fillna("Unlabeled")
-    display(labeled_df)
+#     display(labeled_df)
     
     mean_clusters = np.zeros((clust.n_clusters, clusters_data_df.shape[1]-1))
     median_clusters = np.zeros((clust.n_clusters, clusters_data_df.shape[1]-1))
@@ -83,11 +83,22 @@ def run_clustering_on_umap(embedding, num_clusters, cdata_df, label_df, key="Pat
     plt.xticks(ticks=np.arange(median_clusters_df.shape[1]), labels=median_clusters_df.columns, rotation=90)
     plt.colorbar(shrink=0.5)
     plt.yticks(ticks=np.arange(median_clusters_df.shape[0]), labels=["Cluster "+str(i) for i in range(median_clusters_df.shape[0])])
-    return clust
+    return labeled_df
+
 
 
 class UMAPLabeler(pseudo_label.PseudoLabeler):
     def __init__(self, reducer, num_clusters):
+        """
+        The UMAPLabeler is an implementation of PseudoLabeler, which uses KMeans to assign probabilities to unlabeled points based on labeled points in the same cluster
+
+        Parameters
+        --------
+        reducer : UMAP
+            trained umap reducer used to pseudo label data
+        num_clusters : int
+            number of clusters in pretrained reducer
+        """
         self.reducer = reducer
         self.num_clusters = num_clusters
     
