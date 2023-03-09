@@ -1,0 +1,49 @@
+,code,mod,nomod
+Unspecified abdominal pain,R10.9,10,31
+"Lower abdominal pain, unspecified",R10.30,0,20
+Generalized abdominal pain,R10.84,11,12
+Epigastric pain,R10.13,5,12
+Encntr for obs for oth suspected diseases and cond ruled out,Z03.89,4,8
+"Upper abdominal pain, unspecified",R10.10,4,8
+Encounter for screening for cardiovascular disorders,Z13.6,2,7
+Type 2 diabetes mellitus with hyperglycemia,E11.65,0,4
+Oth symptoms and signs involving the circ and resp systems,R09.89,1,4
+"Heart failure, unspecified",I50.9,0,2
+Encounter for other administrative examinations,Z02.89,0,2
+"Retention of urine, unspecified",R33.9,0,2
+"Diarrhea, unspecified",R19.7,0,2
+"Nausea with vomiting, unspecified",R11.2,10,2
+Unspecified hydronephrosis,N13.30,0,1
+"Atrioventricular block, first degree",I44.0,0,1
+"Chest pain, unspecified",R07.9,0,1
+Calculus of GB and bile duct w/o cholecyst w/o obstruction,K80.70,0,1
+Other specified health status,Z78.9,0,1
+Other cholelithiasis without obstruction,K80.80,0,1
+Encounter for therapeutic drug level monitoring,Z51.81,0,1
+Other nonspecific abnormal finding of lung field,R91.8,3,1
+Problem related to unspecified psychosocial circumstances,Z65.9,0,1
+"Infectious gastroenteritis and colitis, unspecified",A09.,0,1
+"Tachycardia, unspecified",R00.0,4,1
+Cough,R05.,2,1
+"Enlarged lymph nodes, unspecified",R59.9,0,1
+Unspecified atrial fibrillation,I48.91,0,1
+Cardiomegaly,I51.7,0,1
+Abnormal results of liver function studies,R94.5,0,1
+Duodenitis without bleeding,K29.80,0,1
+Calculus of bile duct w/o cholangitis or cholecyst w/o obst,K80.50,0,1
+Left lower quadrant pain,R10.32,3,1
+Oth problems related to psychosocial circumstances,Z65.8,0,1
+Dvtrcli of lg int w/o perforation or abscess w/o bleeding,K57.32,0,1
+"Constipation, unspecified",K59.00,0,1
+Right lower quadrant pain,R10.31,6,0
+"Fever, unspecified",R50.9,14,0
+"Hepatomegaly with splenomegaly, not elsewhere classified",R16.2,2,0
+Gastro-esophageal reflux disease with esophagitis,K21.0,1,0
+Encntr for surgical aftcr following surgery on the dgstv sys,Z48.815,1,0
+"Acute pharyngitis, unspecified",J02.9,1,0
+Other specified diseases of pancreas,K86.89,1,0
+Encounter for screening for other viral diseases,Z11.59,1,0
+Palpitations,R00.2,2,0
+Other malaise,R53.81,1,0
+"Urinary tract infection, site not specified",N39.0,1,0
+Dvrtclos of lg int w/o perforation or abscess w/o bleeding,K57.30,1,0
