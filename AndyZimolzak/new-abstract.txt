@@ -30,7 +30,7 @@ Machine learning was iteratively developed by constructing features thought to b
 
 # Results
 
-Chart review showed $p$ positive predictive value (PPV) for the stroke trigger, and $q$ PPV for abdominal pain. Inter-rater reliability was good. For stroke, the best performing ML filter improved PPV to $r$, missing $s$ percent of true cases. For abdominal pain, the best ML improved PPV to %t%, missing $u$ percent of cases.
+Chart review showed $p$ positive predictive value (PPV) for the stroke trigger, and $q$ PPV for abdominal pain. Inter-rater reliability was good. For stroke, the best performing ML filter improved PPV to $r$, missing $s$ percent of true cases. For abdominal pain, the best ML improved PPV to $t$, missing $u$ percent of cases.
 
 Net reclassification index?
 
