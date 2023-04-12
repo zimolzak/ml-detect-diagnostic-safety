@@ -28,7 +28,8 @@ visits of patients with high-risk features at the initial visit,
 return visits with a concerning diagnosis related to initial chief
 concern, and return visits with hospital admission in general.
 
-For this study we focus on stroke with high-risk features, and abdominal pain with high-risk features.
+For this study we focus on stroke with high-risk features, and
+abdominal pain with high-risk features.
 
 Trained clinicians reviewed a random sample of charts for each
 e-trigger and labeled each as MOD or no MOD. Labeled charts were used
@@ -37,7 +38,10 @@ z$ methods. Candidate features were demographics, lab values of $a, b,
 c$, vital signs, medications, and past history based on encounter
 diagnoses, from ER encounter 1 and 2.
 
-Machine learning was iteratively developed by constructing features thought to be of highest clinical value in identifying MODs, followed by inspecting cases misclassified by ML, and the particular features mentioned by chart reviewers as salient to MOD or no MOD.
+Machine learning was iteratively developed by constructing features
+thought to be of highest clinical value in identifying MODs, followed
+by inspecting cases misclassified by ML, and the particular features
+mentioned by chart reviewers as salient to MOD or no MOD.
 
 # Results
 
