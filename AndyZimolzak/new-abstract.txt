@@ -19,43 +19,39 @@ varying degrees of predictive value: sometimes quite low. They are
 often crafted from first principles, rather than based on empiric data
 patterns. Machine learning (ML) is a promising approach to append to a
 rules-based trigger tool, to enhance predictive value for detecting
-MODs. Therefore, we sought to create a ML classifier to emulate human chart reviewers at larger scale,
-separating e-trigger output into true and false MODs.
+MODs. Therefore, we sought to create a ML classifier to emulate human
+chart reviewers at larger scale, separating e-trigger output into true
+and false MODs.
 
-Methods: Based on the input of an expert panel, we designed several
-rules-based electronic triggers to find patterns suggestive of a
-MOD, in the emergency department setting.
-Triggers used in this study were revisit of stroke with high-risk
-features, and abdominal pain with high-risk features. Trained
-clinicians reviewed a random sample of charts for each e-trigger and
-labeled each as MOD or no MOD.
+Methods: Based on the input of an expert panel, we designed two
+rules-based electronic triggers to find possible MOD, in the emergency
+department. Specifically, we examined ER visit with dizziness or
+abdominal pain, with high risk features, and discharge to home,
+followed by subsequent hospital admission. Trained clinicians reviewed
+a random sample of charts for each e-trigger and labeled each as MOD
+or no MOD. Labeled charts were used to train L1-regularized logistic
+regression. Candidate features were demographics, lab values, vital
+signs, medications, and past history based on encounter diagnoses, and
+ER diagnostic orders, from index ER encounter and subsequent
+encounters.
 
-Labeled charts were used to train L1-regularized logistic
-regression, as well as $x, y, z$ methods. Candidate features were
-demographics, lab values of $a, b, c$, vital signs, medications, and
-past history based on encounter diagnoses, from ER encounter 1 and 2.
-ML was iteratively developed by constructing features
-thought to be of highest clinical value in identifying MODs, followed
-by inspecting cases misclassified by ML, and the particular features
-mentioned by chart reviewers as salient to MOD or no MOD.
-
-Results: Chart review showed $p$ positive predictive value (PPV) for
-the stroke trigger, and $q$ PPV for abdominal pain. For stroke, the
-best performing ML filter improved PPV to $r$, missing $s$ percent of
-true cases. For abdominal pain, the best ML improved PPV to $t$,
-missing $u$ percent of cases. Area under the receiver operating
-characteristic curve was $x$, indicating reasonable discrimination
+Results: Chart review showed 00% positive predictive value (PPV) for
+the stroke trigger, and 00% PPV for abdominal pain. For stroke, the
+best performing ML filter improved PPV to 00%, missing 00% percent of
+true cases. For abdominal pain, the best ML improved PPV to 00%,
+missing 00% percent of cases. Area under the receiver operating
+characteristic curve was 0.00, indicating reasonable discrimination
 between MOD and no-MOD cases. If applied at scale, the ML-enhanced
 triggers would flag 1234 cases instead of 4321, where 1000/1234 are
 true MODs, rather than 1111/4321.
 
-Conclusions: We applied ML as a second stage to
-electronic trigger tools for MODs. We found improved
-predictive value while missing relatively few cases of true MOD. This
-technique can be applied to multiple other rules-based e-triggers for
-diagnostic error. Limitations include time-intensive feature
-engineering, and that certain features are more pertinent to
-individual conditions (*e.g.,* numeric labs are more pertinent to
-abdominal pain than to stroke). Next steps can include incorporation
-of data from text notes, and semi-supervised approaches embedding
-known cases of MOD and finding highly similar cases.
+Conclusions: We applied ML as a second stage to electronic trigger
+tools for MODs. We found improved predictive value while missing
+relatively few cases of true MOD. This technique can be applied to
+multiple other rules-based e-triggers for diagnostic error.
+Limitations include time-intensive feature engineering, and that
+certain features are more pertinent to individual conditions (e.g.,
+numeric labs are more pertinent to abdominal pain than to stroke).
+Next steps can include incorporation of data from text notes, and
+semi-supervised approaches embedding known cases of MOD and finding
+highly similar cases.
