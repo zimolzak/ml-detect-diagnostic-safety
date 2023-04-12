@@ -26,12 +26,16 @@ For this study we focus on stroke with high-risk features, and abdominal pain wi
 
 Trained clinicians reviewed a random sample of charts for each e-trigger and labeled each as MOD or no MOD. Labeled charts were used to train $\ell^1$ regularized logistic regression, as well as $x, y, z$ methods. Candidate features were demographics, lab values of $a, b, c$, vital signs, medications, and past history based on encounter diagnoses, from ER encounter 1 and 2.
 
+Machine learning was iteratively developed by constructing features thought to be of highest clinical value in identifying MODs, followed by inspecting cases misclassified by ML, and the particular features mentioned by chart reviewers as salient to MOD or no MOD.
+
 # Results
 
-Vestibulum vitae porttitor enim. Donec eu massa id nunc feugiat molestie eget vitae est. Maecenas consectetur dui non purus tempor, non dapibus leo consectetur. Mauris ut tristique magna, eget sollicitudin nulla. Suspendisse in erat justo. Nulla facilisi. Sed gravida nisi in libero cursus, ut congue arcu accumsan. Aenean eget sem tincidunt justo efficitur accumsan. Duis laoreet lacinia elementum. Nunc vestibulum, urna eu semper fringilla, tellus ante dapibus arcu, vitae laoreet. 
+Chart review showed $p$ positive predictive value (PPV) for the stroke trigger, and $q$ PPV for abdominal pain. Inter-rater reliability was good. For stroke, the best performing ML filter improved PPV to $r$, missing $s$ percent of true cases. For abdominal pain, the best ML improved PPV to %t%, missing $u$ percent of cases.
+
+Net reclassification index?
+
+If applied at scale, the ML-enhanced triggers would flag 1234 cases instead of 4321, where 1000 / 1234 are true MODs, rather than 1111 / 4321.
 
 # Conclusions
 
 We applied machine learning as a second stage to electronic trigger tools for missed opportunities. We found improved predictive value while missing relatively few cases of true MOD. This technique can be applied to multiple other rules-based e-triggers for diagnostic error.
-
-Ut in fringilla purus, eu placerat tellus. Sed sit amet tellus non sem pulvinar volutpat nec ut ligula. Vivamus lacinia velit nec tellus ullamcorper accumsan ut id risus.
