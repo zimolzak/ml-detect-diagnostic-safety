@@ -1,5 +1,5 @@
 .PHONY: all clean
-files = pert.pdf wordvec-similarity.pdf vinci_technical.pdf handoff_doc.pdf trigger-flow.png
+files = pert.pdf wordvec-similarity.pdf vinci_technical.pdf handoff_doc.pdf trigger-flow.png prior-abstract.docx
 
 all: $(files)
 
@@ -7,6 +7,9 @@ all: $(files)
 # technically wordvec-similarity only needs pdflatex once
 	pdflatex $<
 	pdflatex $<
+
+%.docx: %.txt
+	pandoc -o $@ $<
 
 pert.pdf: pert.dot
 	dot -Tpdf -o $@ $<

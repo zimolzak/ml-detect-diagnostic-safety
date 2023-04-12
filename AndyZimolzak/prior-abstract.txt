@@ -1,0 +1,59 @@
+% Development, implementation, and validation of two cancer diagnosis digital quality measures, and association with mortality
+
+Andrew J. Zimolzak, Paarth Kapadia, Daniel R. Murphy, Divvy Upadhyay,
+Umair Mushtaq, Usman Mir, Alexis Offner, Saritha Korukonda, Riyaa
+Murugaesh Rekha, Gary Abel, Georgios Lyratzopoulos, Luke Mounce, Hardeep
+Singh
+
+# Background
+
+In the US, 1/3 of patients with cancer experience a missed or delayed
+diagnosis, and cancer is a leading cause of malpractice claims. However,
+missed opportunities in diagnosis (MODs) that drive these outcomes are
+not easily detected in existing data. The Centers for Medicare &
+Medicaid Services recently emphasized the need for digital quality
+measures (dQMs). Therefore, we developed, implemented, and validated two
+outcome dQMs for cancer diagnosis at two US health systems. dQMs can
+serve as proxy measures of breakdowns in cancer diagnosis and inform
+interventions.
+
+# Methods
+
+We adapted emergency presentation definition used in England, and a
+late-stage (III/IV) definition, while using the Safer Dx Trigger Tools
+Framework for developing electronic safety algorithms. We consulted a
+panel of physicians, quality professionals, system leaders, and
+patients, to establish dQM criteria. We developed two dQMs (cancer
+emergency presentation and late-stage presentation) based on electronic
+health record data. Emergency presentation (EP) was defined as
+*emergency department visit or unplanned inpatient admission, followed
+by first cancer diagnosis within 30 days*. We applied the dQMs to
+patients with lung and colorectal cancer (CRC) at Veterans Affairs (VA)
+and Geisinger during 2016--2020.
+
+Two clinicians reviewed a sample of EP and late-stage records from 2019
+at both sites using standard forms to assess dQM accuracy (e.g., whether
+the emergency visit was truly for cancer symptoms) and for MODs (e.g.,
+whether a past visit for hemoptysis was likely cancer-related). We
+analyzed survival stratified by dQM.
+
+# Results
+
+At VA, EPs were seen in 3,401/14,674 cases (23%) of CRC and 8,039/37,691
+(21%) lung cancers. Late-stage presentations were seen in 36% of CRC and
+46% of lung cancer. Chart review showed dQM accuracy ≥70% across
+measures and MODs in 50--81% of cases. EP of CRC had 1-year all-cause
+mortality of 31.3%, significantly higher than non-EP, with 12.9%.
+Likewise, EP of lung cancer had 56.1% mortality, versus non-EP with
+32.1%.
+
+# Conclusions
+
+We used large data warehouses to implement and validate 2 outcome dQMs
+of cancer diagnosis in 2 US health care systems. Emergency and
+late-stage presentation are common, can be detected at large scale, and
+are associated with MODs and mortality, representing a high signal for
+opportunities for improvement. Health systems can use diagnostic dQMs to
+identify high- or low-performing sites to learn from them, or to track
+performance over time. To our knowledge, these are the first two dQMs to
+focus specifically on diagnostic quality.
