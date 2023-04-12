@@ -1,28 +1,37 @@
-% Title
+% Machine Learning for Enhanced Electronic Trigger Detection of Diagnostic Error in the Emergency Department
 
 Andrew J. Zimolzak, Max Yu, Angela Wu, Li Wei, Devika Subramanian,
-Usman Mir, Ashish Gupta, Viral Vaghani, Hardeep Singh
+Usman Mir, Ashish Gupta, Viral Vaghani, Adel Hassan, Hardeep Singh
 
-# Background 87
+# Background
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vulputate felis ut ipsum ullamcorper euismod. Quisque faucibus volutpat posuere. Etiam congue erat et mattis ultricies. Integer porta et sapien nec vulputate. In justo augue, molestie id viverra semper, lacinia eu leo. Praesent congue urna sapien, sed lobortis orci auctor cursus. Donec erat arcu, tempus aliquam lobortis eget, tristique eget turpis.
+Electronic triggers have been used extensively to identify instances
+of potential diagnostic error, but largely they identify patterns
+suggestive but not definitive. Expert chart review is ordinarily
+required to separate e-trigger outputs into true and false instances
+of missed opportunities. E-triggers have varying degrees of predictive
+value: sometimes quite low. They are often crafted from first
+principles, rather than based on empiric data patterns. Machine
+learning is a promising approach to append to a rules-based trigger
+tool, to enhance predictive value for detecting missed opportunities.
+Therefore, we sought to create a machine learning classifier to
+emulate human chart reviewers at larger scale, separating e-trigger
+output into true and false missed opportunities for diagnosis.
 
-Vivamus eu sollicitudin orci. Donec et sollicitudin lacus, ut interdum eros. Praesent at mollis tellus, quis tincidunt erat. Nunc sit amet pulvinar lacus. Suspendisse id iaculis est. 
+# Methods
 
-# Methods 150
+Based on the input of an expert panel, we designed several rules-based electronic triggers to find patterns suggestive of a missed opportunity in diagnosis, in the emergency department setting. Triggers included missed follow-up on laboratory results, return visits of patients with high-risk features at the initial visit, return visits with a concerning diagnosis related to initial chief concer, and return visits with hospital admission in general.
 
-Etiam tempus sapien eros, et blandit elit ornare vitae. Fusce rhoncus sodales lorem ut hendrerit. Pellentesque ac fermentum dui. Maecenas eleifend lacus sit amet nulla fringilla finibus. Nunc tincidunt eros in ornare consequat. Integer tempus lobortis ex nec auctor. Pellentesque viverra vulputate pharetra.
+For this study we focus on stroke with high-risk features, and abdominal pain with high-risk features.
 
-Maecenas ultricies aliquam ex, ut sagittis nulla faucibus ac. Vestibulum eu euismod felis. Vestibulum pretium lacinia elit, nec gravida massa sagittis sed. Vivamus placerat augue sit amet aliquam rhoncus. Nulla tincidunt lectus massa, eu fermentum risus maximus sit amet. Donec ac viverra est. Nam massa turpis, fringilla vitae eros a, tincidunt viverra risus.
+Trained clinicians reviewed a random sample of charts for each e-trigger and labeled each as MOD or no MOD. Labeled charts were used to train $\ell^1$ regularized logistic regression, as well as $x, y, z$ methods. Candidate features were demographics, lab values of $a, b, c$, vital signs, medications, and past history based on encounter diagnoses, from ER encounter 1 and 2.
 
-Vivamus tempor diam quis convallis sagittis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam vehicula mollis ligula, sed tempus mauris efficitur nec. Nulla facilisi. Mauris iaculis lectus nec metus tincidunt, ut molestie ipsum pharetra. Fusce eget nisi ante. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
-
-# Results 70
+# Results
 
 Vestibulum vitae porttitor enim. Donec eu massa id nunc feugiat molestie eget vitae est. Maecenas consectetur dui non purus tempor, non dapibus leo consectetur. Mauris ut tristique magna, eget sollicitudin nulla. Suspendisse in erat justo. Nulla facilisi. Sed gravida nisi in libero cursus, ut congue arcu accumsan. Aenean eget sem tincidunt justo efficitur accumsan. Duis laoreet lacinia elementum. Nunc vestibulum, urna eu semper fringilla, tellus ante dapibus arcu, vitae laoreet. 
 
-# Conclusions 85
+# Conclusions
 
-Nullam sit amet arcu commodo nisi vestibulum laoreet. Phasellus at odio sollicitudin, cursus purus a, viverra nibh. Sed dictum at ligula quis tincidunt. Integer interdum quam nibh, ut ultricies tortor tincidunt vitae. Ut in fringilla purus, eu placerat tellus. Sed sit amet tellus non sem pulvinar volutpat nec ut ligula. Vivamus lacinia velit nec tellus ullamcorper accumsan ut id risus.
+We applied machine learning as a second stage to electronic trigger tools for missed opportunities. We found improved predictive value while missing relatively few cases of true MOD. This technique can be applied to multiple other rules-based e-triggers for diagnostic error.
 
-Morbi placerat ligula sed scelerisque dignissim. Nulla in felis efficitur, posuere ligula nec, aliquam erat. Praesent sodales libero quis scelerisque semper. Nullam vel sagittis felis. 
+Ut in fringilla purus, eu placerat tellus. Sed sit amet tellus non sem pulvinar volutpat nec ut ligula. Vivamus lacinia velit nec tellus ullamcorper accumsan ut id risus.
