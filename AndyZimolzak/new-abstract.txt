@@ -4,60 +4,57 @@ Andrew J. Zimolzak, Max Yu, Angela Wu, Li Wei, Devika Subramanian,
 Usman Mir, Ashish Gupta, Viral Vaghani, Adel Hassan, Justin Mower,
 Hardeep Singh
 
-# Background
+Due May 2. Sci abstracts 400 words. Really **2800 characters** and
+newline counts as two :( . Title 100 char max. Optional: one figure or
+table (upload) if abstract 350 words. Currently at approx 2886 words.
 
-Electronic triggers have been used extensively to identify instances
-of potential diagnostic error, but largely they identify patterns
-suggestive but not definitive. Expert chart review is ordinarily
-required to separate e-trigger outputs into true and false instances
-of missed opportunities. E-triggers have varying degrees of predictive
-value: sometimes quite low. They are often crafted from first
-principles, rather than based on empiric data patterns. Machine
-learning is a promising approach to append to a rules-based trigger
-tool, to enhance predictive value for detecting missed opportunities.
-Therefore, we sought to create a machine learning classifier to
-emulate human chart reviewers at larger scale, separating e-trigger
-output into true and false missed opportunities for diagnosis.
 
-# Methods
+Background: Electronic triggers have been used extensively to identify
+instances of potential diagnostic error, but largely they identify
+patterns suggestive but not definitive. Expert chart review is
+ordinarily required to separate e-trigger outputs into true and false
+instances of missed opportunities for diagnosis (MOD). E-triggers have
+varying degrees of predictive value: sometimes quite low. They are
+often crafted from first principles, rather than based on empiric data
+patterns. Machine learning (ML) is a promising approach to append to a
+rules-based trigger tool, to enhance predictive value for detecting
+MODs. Therefore, we sought to create a ML classifier to emulate human chart reviewers at larger scale,
+separating e-trigger output into true and false MODs.
 
-Based on the input of an expert panel, we designed several rules-based
-electronic triggers to find patterns suggestive of a missed
-opportunity in diagnosis, in the emergency department setting.
+Methods: Based on the input of an expert panel, we designed several
+rules-based electronic triggers to find patterns suggestive of a
+MOD, in the emergency department setting.
 Triggers used in this study were revisit of stroke with high-risk
 features, and abdominal pain with high-risk features. Trained
 clinicians reviewed a random sample of charts for each e-trigger and
 labeled each as MOD or no MOD.
 
-Labeled charts were used to train $\ell^1$ regularized logistic
+Labeled charts were used to train L1-regularized logistic
 regression, as well as $x, y, z$ methods. Candidate features were
 demographics, lab values of $a, b, c$, vital signs, medications, and
 past history based on encounter diagnoses, from ER encounter 1 and 2.
-Machine learning was iteratively developed by constructing features
+ML was iteratively developed by constructing features
 thought to be of highest clinical value in identifying MODs, followed
 by inspecting cases misclassified by ML, and the particular features
 mentioned by chart reviewers as salient to MOD or no MOD.
 
-# Results
+Results: Chart review showed $p$ positive predictive value (PPV) for
+the stroke trigger, and $q$ PPV for abdominal pain. For stroke, the
+best performing ML filter improved PPV to $r$, missing $s$ percent of
+true cases. For abdominal pain, the best ML improved PPV to $t$,
+missing $u$ percent of cases. Area under the receiver operating
+characteristic curve was $x$, indicating reasonable discrimination
+between MOD and no-MOD cases. If applied at scale, the ML-enhanced
+triggers would flag 1234 cases instead of 4321, where 1000/1234 are
+true MODs, rather than 1111/4321.
 
-Chart review showed $p$ positive predictive value (PPV) for the stroke
-trigger, and $q$ PPV for abdominal pain. Inter-rater reliability was
-good. For stroke, the best performing ML filter improved PPV to $r$,
-missing $s$ percent of true cases. For abdominal pain, the best ML
-improved PPV to $t$, missing $u$ percent of cases. *Net
-reclassification index?* If applied at scale, the ML-enhanced triggers
-would flag 1234 cases instead of 4321, where 1000 / 1234 are true
-MODs, rather than 1111 / 4321.
-
-# Conclusions
-
-We applied machine learning as a second stage to electronic trigger
-tools for missed opportunities. We found improved predictive value
-while missing relatively few cases of true MOD. This technique can be
-applied to multiple other rules-based e-triggers for diagnostic error.
-Limitations include time-intensive feature engineering, and that
-certain features are more pertinent to individual conditions (*e.g.,*
-numeric labs are more pertinent to abdominal pain than to stroke).
-Next steps can include incorporation of data from text notes, and
-semi-supervised approaches embedding known cases of MOD and finding
-highly similar cases.
+Conclusions: We applied ML as a second stage to
+electronic trigger tools for MODs. We found improved
+predictive value while missing relatively few cases of true MOD. This
+technique can be applied to multiple other rules-based e-triggers for
+diagnostic error. Limitations include time-intensive feature
+engineering, and that certain features are more pertinent to
+individual conditions (*e.g.,* numeric labs are more pertinent to
+abdominal pain than to stroke). Next steps can include incorporation
+of data from text notes, and semi-supervised approaches embedding
+known cases of MOD and finding highly similar cases.
