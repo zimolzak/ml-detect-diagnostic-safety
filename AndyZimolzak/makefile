@@ -1,5 +1,5 @@
 .PHONY: all clean
-files = pert.pdf wordvec-similarity.pdf vinci_technical.pdf handoff_doc.pdf trigger-flow.png prior-abstract.docx
+files = pert.pdf wordvec-similarity.pdf vinci_technical.pdf handoff_doc.pdf trigger-flow.png prior-abstract.docx new-abstract.docx
 
 all: $(files)
 
