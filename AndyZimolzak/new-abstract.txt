@@ -8,6 +8,7 @@ Due May 2. Sci abstracts 400 words. Really **2800 characters** and
 newline counts as two :( . Title 100 char max. Optional: one figure or
 table (upload) if abstract 350 words. Currently at approx 2886 words.
 
+# Abstract
 
 Background: Electronic triggers have been used extensively to identify
 instances of potential diagnostic error, but largely they identify
