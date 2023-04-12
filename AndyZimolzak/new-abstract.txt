@@ -26,7 +26,7 @@ opportunity in diagnosis, in the emergency department setting.
 Triggers included missed follow-up on laboratory results, return
 visits of patients with high-risk features at the initial visit,
 return visits with a concerning diagnosis related to initial chief
-concer, and return visits with hospital admission in general.
+concern, and return visits with hospital admission in general.
 
 For this study we focus on stroke with high-risk features, and abdominal pain with high-risk features.
 
