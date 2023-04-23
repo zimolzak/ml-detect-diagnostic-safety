@@ -29,19 +29,20 @@ department. Specifically, we examined ER visit with dizziness or
 abdominal pain, with high risk features, and discharge to home,
 followed by subsequent hospital admission. Trained clinicians reviewed
 a random sample of charts for each e-trigger and labeled each as MOD
-or no MOD. Labeled charts were used to train L1-regularized logistic
-regression. Candidate features were demographics, lab values, vital
+or no MOD. Labeled charts were used to train methods including regularized logistic
+regression and random forests. Candidate features were demographics, lab values, vital
 signs, medications, and past history based on encounter diagnoses, and
 ER diagnostic orders, from index ER encounter and subsequent
 encounters.
 
-Results: Chart review showed 00% positive predictive value (PPV) for
-the stroke trigger, and 00% PPV for abdominal pain. For stroke, the
-best performing ML filter improved PPV to 00%, missing 00% percent of
-true cases. For abdominal pain, the best ML improved PPV to 00%,
-missing 00% percent of cases. Area under the receiver operating
-characteristic curve was 0.00, indicating reasonable discrimination
-between MOD and no-MOD cases. If applied at scale, the ML-enhanced
+Results: Chart review showed 38/82 flagged records were true positive
+(46% PPV) for
+the stroke trigger.
+The
+best performing ML algorithm filtered 38 cases, of which 37 were true
+positive (97% PPV): in other words, one false positive and one false
+negative, with 37 true positive and 43 false negative (98% accuracy).
+If applied at scale, the ML-enhanced
 triggers would flag 1234 cases instead of 4321, where 1000/1234 are
 true MODs, rather than 1111/4321.
 
