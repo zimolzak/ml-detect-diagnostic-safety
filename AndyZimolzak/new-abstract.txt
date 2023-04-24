@@ -1,4 +1,4 @@
-% Machine Learning for Enhanced Electronic Trigger Detection of Diagnostic Error in the Emergency Department
+% Machine Learning for Enhanced Electronic Trigger Detection of Diagnostic Errors in the Emergency Department
 
 Andrew J. Zimolzak, Max Yu, Angela Wu, Li Wei, Devika Subramanian,
 Usman Mir, Ashish Gupta, Viral Vaghani, Adel Hassan, Justin Mower,
@@ -22,11 +22,11 @@ is required to separate e-trigger outputs into true and false
 instances of missed opportunities for diagnosis (MOD). Second,
 e-triggers are often designed from first principles, rather than based
 on empiric data patterns, so they may not detect all signals of MOD.
-Machine learning (ML) is a promising approach to to enhance e-trigger
+Machine learning (ML) is a promising approach to enhance e-trigger
 predictive value and emulate human chart reviewers at larger scale.
 Therefore, we sought to create an e-trigger with enhanced accuracy,
-where records flagged by a first stage traditional e-trigger are
-further separated by a second stage ML classifier into true and false
+where records flagged by a first-stage traditional e-trigger are
+further separated by a second-stage ML classifier into true and false
 MODs.
 
 Methods: Based on the input of an expert panel, we designed a
@@ -43,12 +43,12 @@ index ER visit, prior, and subsequent visits.
 
 Results: The rules-based e-trigger flagged 82 records as possible MOD.
 Chart review showed 38 of those to be true positive (46% PPV). The
-best performing ML algorithm correctly identified 37 of these 38 true
-positives, and 43 of 44 true negatives (97% PPV). It misclassified one
+best-performing ML algorithm correctly identified 37 of these 38 true
+positives and 43 of 44 true negatives (97% PPV). It misclassified one
 positive and one negative case.
 
 Conclusions: We successfully applied machine learning to enhance the
-accuracy of an electronic method to find missed opportunities of
+accuracy of an electronic method to find missed opportunities for
 diagnosis. We found improved predictive value while missing relatively
 few cases of true MOD. Limitations include time needed for preparation
 of variables used by the ML, although once this is done, the algorithm
