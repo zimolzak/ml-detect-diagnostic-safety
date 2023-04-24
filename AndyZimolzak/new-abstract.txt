@@ -1,17 +1,14 @@
-% Machine Learning for Enhanced Electronic Trigger Detection of Diagnostic Errors in the Emergency Department
+% Machine Learning for Enhanced Electronic Trigger Detection of Diagnostic Errors
 
-Andrew J. Zimolzak, Max Yu, Angela Wu, Li Wei, Devika Subramanian,
-Usman Mir, Ashish Gupta, Viral Vaghani, Adel Hassan, Justin Mower,
+Andrew J. Zimolzak, Max Yu, Angela Wu, Li Wei, Usman Mir, Ashish
+Gupta, Viral Vaghani, Adel Hassan, Justin Mower, Devika Subramanian,
 Hardeep Singh
 
-Due May 2. Sci abstracts 400 words. Really **2800 characters** and
-newline counts as two :( . Title 100 char max. Optional: one figure or
-table (upload) if abstract 350 words. Currently at approx 2886 words.
+Due May 2. SIDM scientific abstracts are 400 words (really 2800
+characters). Title 100 characters max. Optional: one figure or table
+(upload) if abstract is 350 words or less.
 
 # Abstract
-
-
-
 
 Background: Electronic triggers (e-triggers) have been used
 extensively to find cases of diagnostic error in large databases, but
