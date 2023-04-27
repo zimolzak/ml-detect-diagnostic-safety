@@ -16,6 +16,7 @@
 *.joblib
 *.bundle
 *.docx
+for-sidm-gitignore/
 
 #### Residues of various apps
 
