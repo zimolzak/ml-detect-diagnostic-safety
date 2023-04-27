@@ -31,20 +31,20 @@ rules-based electronic trigger to find possible MOD, in the emergency
 department. Specifically, we found cases of an index ER visit with
 dizziness or vertigo, in patients with high risk for stroke, and
 discharge from ER to home, followed by subsequent hospital admission
-for stroke or TIA within 30 days.
-Trained clinicians reviewed a random sample of charts flagged by the
-e-trigger and labeled each as MOD or no MOD. Labeled charts were used
-to train ML methods including regularized logistic regression and
-random forests. ML had access to demographics, lab values, vital
-signs, medications, test orders, and encounter diagnoses; from the
-index ER visit, prior, and subsequent visits.
+for stroke or TIA within 30 days. Trained clinicians reviewed a random
+sample of charts flagged by the e-trigger and labeled each as MOD or
+no MOD. Labeled charts were used to train ML methods including
+regularized logistic regression and random forests. ML had access to
+demographics, lab values, vital signs, medications, test orders, and
+encounter diagnoses; from the index ER visit, prior, and subsequent
+visits.
 
 Results: Of 82 records flagged by the rules-based e-trigger as
-possible MOD and reviewed, 38 were true positive MOD (46%
-positive predictive value). The
-best-performing ML algorithm correctly identified 37 of the 38 true
-positives and 43 of 44 true negatives (97% positive predictive value). It misclassified one
-positive and one negative case.
+possible MOD and reviewed, 38 were true positive MOD (46% positive
+predictive value). The best-performing ML algorithm correctly
+identified 37 of the 38 true positives and 43 of 44 true negatives
+(97% positive predictive value). It misclassified one positive and one
+negative case.
 
 Conclusions: We successfully applied machine learning to enhance the
 accuracy of an electronic method to find missed opportunities for
