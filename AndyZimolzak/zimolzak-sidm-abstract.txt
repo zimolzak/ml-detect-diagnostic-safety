@@ -21,36 +21,39 @@ e-triggers are often designed from first principles, rather than based
 on empiric data patterns, so they may not detect all signals of MOD.
 Machine learning (ML) is a promising approach to enhance e-trigger
 predictive value and emulate human chart reviewers at larger scale.
-Therefore, we sought to create an e-trigger with enhanced accuracy,
+Therefore, we sought to create e-triggers with enhanced accuracy,
 where records flagged by a first-stage traditional e-trigger are
-further separated by a second-stage ML classifier into true and false
+further refined by a second-stage ML classifier into true and false
 MODs.
 
-Methods: Based on the input of an expert panel, we designed a
-rules-based electronic trigger to find possible MOD, in the emergency
-department. Specifically, we found cases of an index ER visit with
-dizziness or vertigo, in patients with high risk for stroke, and
-discharge from ER to home, followed by subsequent hospital admission
-for stroke or TIA within 30 days. Trained clinicians reviewed a random
-sample of charts flagged by the e-trigger and labeled each as MOD or
-no MOD. Labeled charts were used to train ML methods including
-regularized logistic regression and random forests. ML had access to
-demographics, lab values, vital signs, medications, test orders, and
-encounter diagnoses; from the index ER visit, prior, and subsequent
-visits.
+Methods: Based on the input of an expert panel, we designed two
+rules-based e-triggers to find possible MODs, in the emergency
+department. First, we found cases of an index ER visit with dizziness
+or vertigo, in patients with stroke risk factors, and discharge from
+ER to home, followed by hospital admission for stroke or TIA within 30
+days. Second, we found cases of an ER visit with abdominal pain, in
+patients with abnormal temperature, and discharge from ER to home,
+followed by hospital admission within 30 days. Trained clinicians
+reviewed a random sample of charts flagged by the e-trigger and
+labeled each as MOD or no MOD. Labeled charts were used for training
+and test datasets for ML methods including regularized logistic
+regression and random forests. ML had access to demographics, lab
+values, vital signs, medications, test orders, and encounter
+diagnoses.
 
-Results: Of 82 records flagged by the rules-based e-trigger as
-possible MOD and reviewed, 38 were true positive MOD (46% positive
-predictive value). The best-performing ML algorithm correctly
-identified 37 of the 38 true positives and 43 of 44 true negatives
-(97% positive predictive value). It misclassified one positive and one
-negative case.
+Results: For the dizziness e-trigger, 38 records were true positive
+MOD, of 82 flagged (46% positive predictive value [PPV]). The
+best-performing ML algorithm correctly identified 37 of the 38 true
+positives and 43 of 44 true negatives (97% PPV). For the abdominal
+pain e-trigger, 31 records were true positive MOD, of 104 flagged (30%
+PPV). ML correctly identified 26 of 31 true positives and 71
+of 73 true negatives (93% PPV).
 
 Conclusions: We successfully applied machine learning to enhance the
-accuracy of an electronic method to find missed opportunities for
-diagnosis. We found improved predictive value while missing relatively
-few cases of true MOD. Limitations include time needed for preparation
-of variables used by the ML, although once this is done, the algorithm
-can run at large scale. Next steps can include applying this two-stage
-approach to multiple other rules-based e-triggers for diagnostic
-error.
+accuracy of electronic triggers to find missed opportunities for
+diagnosis, using structured data only. This approach improved
+predictive value and missed few cases of true MOD. Limitations include
+time needed to prepare variables used by ML, although once this is
+done, the algorithm can run at large scale. Next steps include
+applying our two-stage approach to other rules-based e-triggers for
+diagnostic error.
