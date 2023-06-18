@@ -44,3 +44,4 @@ trigger-flow.png
 !icd*.csv
 !tidy-icd9-stroke-risk.csv
 !tidy-icd10-stroke-risk.csv
+!neuro-exam-components-substrings.csv
