@@ -1,0 +1,29 @@
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257   1760 Jun 21 15:26 abd_surg_all_sys_30_time.sql
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257   1768 Jun 21 15:26 abd_surg_dig_sys_30_time.sql
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257   1772 Jun 21 15:26 abd_surg_dig_sys_all_time.sql
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257  21600 Jun 21 15:26 abd_util.py
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257   1844 Jun 21 15:26 adels_notes.md
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257 829137 Jun 21 15:26 bagofwords_amh.ipynb
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257 191938 Jun 21 15:26 cpt_codes.csv
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257  97482 Jun 21 15:26 cpt_codes_nomod.xlsx
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257  21470 Jun 21 15:26 dizzy_util.py
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257   6002 Jun 21 15:26 eval_util.py
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257  12296 Jun 21 15:26 feature_util.py
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257   3003 Jun 21 15:26 get_texts.py
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257   1080 Jun 21 15:26 ner.csv
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257   3267 Jun 21 15:26 ner2.csv
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257   3810 Jun 21 15:26 ner3.csv
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257   3978 Jun 21 15:26 ner4.csv
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257   7044 Jun 21 15:26 ner5.csv
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257   7045 Jun 21 15:26 ner6.csv
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257   7045 Jun 21 15:26 ner7.csv
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257   7611 Jun 21 15:26 ner8.csv
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257 145163 Jun 21 15:26 Notes_first_approach.ipynb
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257  53256 Jun 21 15:26 pmh_mentalhealth_exploring.ipynb
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257  21625 Jun 21 15:26 pmh_mentalhealth_slim.ipynb
+-rw-r--r-- 1 VHA16+VHAHOUZimolA 4266656257  32016 Jun 21 15:26 Untitled.ipynb
+
+Viral_data:
+total 4
+drwxr-xr-x 1 VHA16+VHAHOUZimolA 4266656257 0 Jun 21 15:26 ML4_HighRisk_AbdominalPain/
+drwxr-xr-x 1 VHA16+VHAHOUZimolA 4266656257 0 Jun 21 15:26 ML4_HighRisk_Dizziness/
