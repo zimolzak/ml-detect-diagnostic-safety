@@ -38,7 +38,9 @@ __pycache__/
 
 trigger-flow.png
 flow-diagram.png
-
+flow-colors-sparser.png
+flow-colors-sparserLR.png
+	
 #### Don't exclude certain plain text
 
 !short-list-drug-classes.csv

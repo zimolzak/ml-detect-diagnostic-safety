@@ -1,0 +1,39 @@
+digraph G {
+
+node [style = filled, fillcolor="white", fontname="Helvetica", colorscheme="oranges4"]
+  //rankdir = "LR";
+
+// Rectangles for number of charts
+
+twentyMillion [shape="rectangle", label="VA Population\n(~20 million)", fillcolor=1];
+millionsNeg [shape="rectangle", label="Trigger negative\n(millions)", fillcolor=1];
+thousands [shape="rectangle", label="Trigger positive\n(thousands, PPV 50%)", fillcolor=2];
+notReview [shape="rectangle" label="Not\nreviewed", fillcolor=2];
+hundredReview [shape="rectangle", label="To be manually\nreviewed\n(N = 100)", fillcolor=2];
+noMissedOD [shape="rectangle", label="No missed\nopportunity"];
+MissedOD [shape="rectangle", label="Missed opportunity\nfor diagnosis", fillcolor=4, fontcolor="white", fontname="Helvetica-Bold"];
+
+mlneg [shape="rectangle", fillcolor=1, label="ML\nnegative"];
+mlpos [shape="rectangle", fillcolor=3, label="ML\npositive"];  // color 3 is used only for ML +
+ 
+reviewCircle [shape=point, height=0.02, fillcolor="black"];
+mlCircle [shape=point, height=0.02, fillcolor="black"];
+
+
+// Edges
+
+twentyMillion -> millionsNeg;
+twentyMillion -> thousands [label="e-Trigger"];
+
+thousands -> notReview;
+thousands -> hundredReview [label="Sampling"];
+
+hundredReview -> reviewCircle [arrowhead=none];
+reviewCircle -> noMissedOD;
+reviewCircle -> MissedOD [label="Review"];
+
+hundredReview -> mlCircle [arrowhead=none];
+mlCircle -> mlneg;
+mlCircle -> mlpos [label="ML"];
+
+}

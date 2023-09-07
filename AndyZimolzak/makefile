@@ -2,7 +2,9 @@
 files = wordvec-similarity.pdf vinci_technical.pdf handoff_doc.pdf  # LaTeX
 files += pert.pdf trigger-flow.png  # Graphviz
 files += prior-abstract.docx zimolzak-sidm-abstract.docx  # pandoc
-files += flow-diagram.pdf flow-diagram.png with-subgraph.pdf  # Graphviz for talk
+
+# Graphviz for talk
+files += flow-diagram.pdf flow-diagram.png with-subgraph.pdf flow-colors-sparser.png flow-colors-sparser.pdf flow-colors-sparserLR.png
 
 all: $(files)
 
@@ -29,8 +31,14 @@ flow-diagram.pdf: flow-diagram.dot
 with-subgraph.pdf: with-subgraph.dot
 	dot -Tpdf -o $@ $<
 
+flow-colors-sparser.pdf: flow-colors-sparser.dot
+	dot -Tpdf -o $@ $<
+
 %.png: %.dot
 	dot -Tpng -o $@ $<
+
+%LR.png: %.dot
+	dot -Tpng -Grankdir=LR -o $@ $<
 
 # Clean
 
