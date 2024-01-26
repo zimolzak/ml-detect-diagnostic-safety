@@ -1,10 +1,10 @@
 .PHONY: all clean
 files = wordvec-similarity.pdf vinci_technical.pdf handoff_doc.pdf  # LaTeX
-files += pert.pdf trigger-flow.png  # Graphviz
+files += pert.pdf  # Graphviz
 files += prior-abstract.docx zimolzak-sidm-abstract.docx  # pandoc
 
 # Graphviz for talk
-files += flow-diagram.pdf flow-diagram.png with-subgraph.pdf flow-colors-sparser.png flow-colors-sparser.pdf flow-colors-sparserLR.png
+files += flow-colors-sparser.png flow-colors-sparser.pdf flow-colors-sparserLR.png
 
 all: $(files)
 
@@ -23,12 +23,6 @@ all: $(files)
 # Graphviz
 
 pert.pdf: pert.dot
-	dot -Tpdf -o $@ $<
-
-flow-diagram.pdf: flow-diagram.dot
-	dot -Tpdf -o $@ $<
-
-with-subgraph.pdf: with-subgraph.dot
 	dot -Tpdf -o $@ $<
 
 flow-colors-sparser.pdf: flow-colors-sparser.dot
