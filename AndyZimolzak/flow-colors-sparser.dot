@@ -40,4 +40,8 @@ MissedOD -> ML;
 ML -> mlneg;
 ML -> mlpos;
 
+MLImproves[penwidth=0, label="Note the increase in predictive\nvalue from 30% to 93%.\n(e-trigger alone vs. e-trigger plus ML)", fontcolor="#777777", fontname="Helvetica Italic"]
+hundredReview -> MLImproves [style=dashed, dir=none, color="#888888"]
+MLImproves -> mlpos [style=dashed, dir=none, color="#888888"]
+
 }
