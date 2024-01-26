@@ -10,7 +10,7 @@ millionsNeg [shape="rectangle", label="Trigger negative\n(millions)", fillcolor=
 thousands [shape="rectangle", label="Trigger positive\n(thousands)", fillcolor=2];
 
 notReview [shape="rectangle" label="Not\nreviewed", fillcolor=2];
-hundredReview [shape="rectangle", label="To be manually reviewed\n(104 cases, 30% are misses)", fillcolor=2, penwidth=2];
+hundredReview [shape="rectangle", label="To be manually reviewed\n(104 cases, 30% are misses)", fillcolor=2, penwidth=10];
 
 noMissedOD [shape="rectangle", label="No missed\nopportunity\n(73 cases)"];
 MissedOD [shape="rectangle", label="Missed opportunity\nfor diagnosis\n(31 cases)", fillcolor=4, fontcolor="white", fontname="Helvetica-Bold"];
