@@ -4,11 +4,11 @@ node [style = filled, fillcolor="white", fontname="Helvetica", colorscheme="oran
 
 
 
-// Rectangles for number of charts
+// Nodes
 
 twentyMillion [shape="rectangle", label="All ER visits\nfor dizziness", fillcolor=1];
-millionsNeg   [shape="rectangle", label="Trigger negative", fillcolor=1];
-thousands     [shape="rectangle", label="Trigger positive", fillcolor=2];
+millionsNeg   [shape="rectangle", label="Trigger-negative", fillcolor=1];
+thousands     [shape="rectangle", label="Trigger-positive", fillcolor=2];
 
 notReview [shape="rectangle" label="\nNot\nreviewed\n ", fillcolor=2];
 hundredReview [shape="rectangle", label="To be manually reviewed\n(104 cases)\n\n30% PPV", fillcolor=2];
@@ -16,10 +16,10 @@ hundredReview [shape="rectangle", label="To be manually reviewed\n(104 cases)\n\
 noMissedOD [shape="rectangle", label="No missed\nopportunity\n(73 cases)"];
 MissedOD   [shape="rectangle", label="Missed opportunity\nfor diagnosis\n(31 cases)", fillcolor=4, fontcolor="white", fontname="Helvetica-Bold"];
 
-mlneg [shape="rectangle", fillcolor=1, label="\nML negative\n(76 cases)\n "];
-mlpos [shape="rectangle", fillcolor=3, label="ML positive\n(28 cases)\n\n93% PPV"];  // color 3 is used only for ML +
+mlneg [shape="rectangle", fillcolor=1, label="\nML-negative\n(76 cases)\n "];
+mlpos [shape="rectangle", fillcolor=3, label="ML-positive\n(28 cases)\n\n93% PPV"];  // color 3 is used only for ML +
 
-ML [fillcolor="#cccccc", label="Machine\nlearning"];
+ML [fillcolor="#cccccc", label="Machine\nlearning"];  // The only non-rectangle
 
 
 
@@ -41,10 +41,8 @@ MissedOD -> ML;
 ML -> mlneg;
 ML -> mlpos;
 
-MLImproves[penwidth=0, label="Relevant PPV\ncomparison", fontcolor="#777777", fontname="Helvetica Italic"]
-hundredReview -> MLImproves [color="#888888", arrowtail=vee, dir=back]
-MLImproves -> mlpos [color="#888888", arrowhead=vee, constraint=false]
-
-//e-trigger alone vs. e-trigger plus ML
+MLImproves[penwidth=0, label="PPV difference:\l E-trigger vs.\l ML-enhanced e-trigger", fontcolor="#777777", fontname="Helvetica Italic"]
+hundredReview -> MLImproves [color="#888888", arrowtail=vee, dir=back, tailport=e]
+MLImproves -> mlpos [color="#888888", arrowhead=vee, constraint=false, headport=e]
 
 }
