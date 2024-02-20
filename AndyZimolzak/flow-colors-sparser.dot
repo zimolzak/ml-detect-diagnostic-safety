@@ -1,24 +1,25 @@
 digraph G {
 
 node [style = filled, fillcolor="white", fontname="Helvetica", colorscheme="oranges4"]
-  //rankdir = "LR";
+
+
 
 // Rectangles for number of charts
 
-twentyMillion [shape="rectangle", label="VA Population\n(~20 million)", fillcolor=1];
-millionsNeg [shape="rectangle", label="Trigger negative\n(millions)", fillcolor=1];
-thousands [shape="rectangle", label="Trigger positive\n(thousands)", fillcolor=2];
+twentyMillion [shape="rectangle", label="All ER visits\nfor dizziness", fillcolor=1];
+millionsNeg   [shape="rectangle", label="Trigger negative", fillcolor=1];
+thousands     [shape="rectangle", label="Trigger positive", fillcolor=2];
 
 notReview [shape="rectangle" label="Not\nreviewed", fillcolor=2];
-hundredReview [shape="rectangle", label="To be manually reviewed\n(104 cases, 30% are misses)", fillcolor=2, penwidth=5];
+hundredReview [shape="rectangle", label="To be manually reviewed\n(104 cases)\n\n30% PPV", fillcolor=2];
 
 noMissedOD [shape="rectangle", label="No missed\nopportunity\n(73 cases)"];
-MissedOD [shape="rectangle", label="Missed opportunity\nfor diagnosis\n(31 cases)", fillcolor=4, fontcolor="white", fontname="Helvetica-Bold"];
+MissedOD   [shape="rectangle", label="Missed opportunity\nfor diagnosis\n(31 cases)", fillcolor=4, fontcolor="white", fontname="Helvetica-Bold"];
 
 mlneg [shape="rectangle", fillcolor=1, label="ML negative\n(76 cases)"];
-mlpos [shape="rectangle", fillcolor=3, label="ML positive\n(28 cases, 93% are misses)", penwidth=5];  // color 3 is used only for ML +
+mlpos [shape="rectangle", fillcolor=3, label="ML positive\n(28 cases)\n\n93% PPV"];  // color 3 is used only for ML +
 
-ML [fillcolor="#cccccc", label="Machine\nLearning"];
+ML [fillcolor="#cccccc", label="Machine\nlearning"];
 
 
 
@@ -39,9 +40,5 @@ MissedOD -> ML;
 
 ML -> mlneg;
 ML -> mlpos;
-
-MLImproves[penwidth=0, label="Note the increase in predictive\nvalue from 30% to 93%.\n(e-trigger alone vs. e-trigger plus ML)", fontcolor="#777777", fontname="Helvetica Italic"]
-hundredReview -> MLImproves [style=dashed, dir=none, color="#888888"]
-MLImproves -> mlpos [style=dashed, dir=none, color="#888888"]
 
 }
