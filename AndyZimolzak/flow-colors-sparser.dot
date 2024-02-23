@@ -6,7 +6,7 @@ node [style = filled, fillcolor="white", fontname="Helvetica", colorscheme="oran
 
 // Nodes
 
-twentyMillion [shape="rectangle", label="All ER visits\nfor dizziness", fillcolor=1];
+twentyMillion [shape="rectangle", label="All ED visits for\nabdominal pain", fillcolor=1];
 millionsNeg   [shape="rectangle", label="Trigger-negative", fillcolor=1];
 thousands     [shape="rectangle", label="Trigger-positive", fillcolor=2];
 
