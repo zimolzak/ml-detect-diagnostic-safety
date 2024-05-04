@@ -83,13 +83,6 @@ def make_cohort_df(cohort):
     cohort['hosp_stay'] = (cohort.DischargeDateTime - cohort.AdmitDateTime)/np.timedelta64(1,'D')
     cohort['ed_duration'] = (cohort.EDEndDateTime - cohort.EDStartDateTime)/np.timedelta64(1,'h')
     
-    # create ed_first_inp_delta for every PtSSN, EDStartDateTime pair
-    tmp = cohort.groupby(['PtSSN','EDStartDateTime'])[['AdmitDateTime']].agg('min')
-    tmp.rename(columns={'AdmitDateTime':'FirstAdmission'},inplace=True)
-    tmp = tmp.reset_index()
-    cohort1 = pd.merge(cohort,tmp,on=['PtSSN','EDStartDateTime'])
-    cohort1['ed_first_inp_delta'] = (cohort1.FirstAdmission - cohort1.EDEndDateTime)/(np.timedelta64(1,'D'))
-    
     # create num ED visits for every PtSSN, EDStartDateTime pair
     tmp = cohort1.groupby(['PtSSN'])[['EDStartDateTime']].agg('count')
     tmp.rename(columns={'EDStartDateTime':'num_ED_visits'},inplace=True)
@@ -102,13 +95,33 @@ def make_cohort_df(cohort):
     tmp = tmp.reset_index()
     cohort3 = pd.merge(cohort2,tmp,on=['PtSSN','EDStartDateTime'])
     
-    # create sum_hosp_stay for every PtSSN,EDStartDateTime pair
-    tmp = cohort3.groupby(['PtSSN','EDStartDateTime'])[['hosp_stay']].agg('sum')
-    tmp.rename(columns={'hosp_stay':'sum_hosp_stay'},inplace=True)
+    # select records with num_hosp == 2 and check that they are just a few minutes apart
+    # treat them as a new admissions with Admit date from 1st record and Discharge date from 2nd record
+    # drop the two original records
+    
+    hosp2_cohort = cohort3[cohort3.num_hosp==2]
+    
+    
+    # create ed_first_inp_delta for every PtSSN, EDStartDateTime pair
+    tmp = cohort.groupby(['PtSSN','EDStartDateTime'])[['AdmitDateTime']].agg('min')
+    tmp.rename(columns={'AdmitDateTime':'FirstAdmission'},inplace=True)
     tmp = tmp.reset_index()
+    cohort1 = pd.merge(cohort,tmp,on=['PtSSN','EDStartDateTime'])
+    cohort1['ed_first_inp_delta'] = (cohort1.FirstAdmission - cohort1.EDEndDateTime)/(np.timedelta64(1,'D'))
+    
+    
+    
+    # create hosp_stay min, max, mean for every PtSSN,EDStartDateTime pair
+    tmp = cohort3.groupby(['PtSSN','EDStartDateTime'])[['hosp_stay']].agg(['min','max','mean'])
+    tmp.columns = [x[0] + '_' + x[1] for x in tmp.columns.to_flat_index()]
     cohort4 = pd.merge(cohort3,tmp,on=['PtSSN','EDStartDateTime'])
     
-    return cohort4
+    # create ed_duration min, max,mean for every PtSSN
+    tmp = cohort4.groupby(['PtSSN'])[['ed_duration']].agg(['min','max','mean'])
+    tmp.columns = [x[0] + '_' + x[1] for x in tmp.columns.to_flat_index()]
+    cohort5 = pd.merge(cohort4,tmp,on=['PtSSN'])
+    
+    return cohort5
 
 #########################################################################################################################
 # Separate dizzy and abdpain cohorts
@@ -205,8 +218,8 @@ def retrieveLabels_abdpain(fname):
 # currently only tests continuous fields
 def ttest_fields(df,fields,ftypes,show=False):
     sig_fields = []
-    tmp = df.dropna()
-    tmp1 = tmp[tmp.label.isin(['MOD','NoMOD'])]
+    #tmp = df.dropna()
+    tmp1 = df[df.label.isin(['MOD','NoMOD'])]
     for i in range(len(fields)):
         field = fields[i]
         if ftypes[i] == 'c':
@@ -217,7 +230,7 @@ def ttest_fields(df,fields,ftypes,show=False):
             
         if show:
             print(field,tstat,pval)
-        if pval <= 0.15:
+        if pval <= 0.1:
             sig_fields.append(field)
     return sig_fields
         
@@ -374,7 +387,7 @@ def cluster_umap_nolabel(u,N,df,loc):
 
 # produce median statistics of cluster 
 def analyze_clusters(clust,df,feats):
-    N = max(clust.labels_)
+    N = clust.n_clusters
     clusters = pd.DataFrame(data=clust.labels_,columns=["cluster"])
     
     # need to scale the df for tapestry plot
@@ -383,8 +396,8 @@ def analyze_clusters(clust,df,feats):
     scaled_df = pd.DataFrame(data=sX,columns=feats)
     
     median_clusters =np.zeros((clust.n_clusters,len(feats)))
-    for i in range(N+1):
-        print('median statistics of cluster ', i)
+    for i in range(N):
+        print('median statistics of cluster ', i+1)
         print(df.iloc[np.where(clust.labels_==i)[0],:].label.value_counts())
         median_clusters[i,:] = scaled_df[clust.labels_==i].median()
         display(df[clust.labels_==i].median())
@@ -396,7 +409,7 @@ def analyze_clusters(clust,df,feats):
     plt.imshow(median_clusters_df,cmap='jet')
     plt.xticks(ticks=np.arange(median_clusters_df.shape[1]),labels=median_clusters_df.columns,rotation=90)
     plt.colorbar(shrink=0.5)
-    plt.yticks(ticks=np.arange(median_clusters_df.shape[0]),labels=["Cluster "+ str(i) for i in range(median_clusters_df.shape[0])])
+    plt.yticks(ticks=np.arange(median_clusters_df.shape[0]),labels=["Cluster "+ str(i+1) for i in range(median_clusters_df.shape[0])])
           
    
         
@@ -431,16 +444,18 @@ def add_EDvital_column(vitals,vital_col,colname):
     tmp = vitals.groupby(['PtSSN','EDStartDateTime'])[[vital_col]].agg(['count','max','min','first'])
     tmp = tmp.reset_index()
     tmp.columns = [colname + '_'+x[1] if x[1]!= '' else x[0] for x in tmp.columns.to_flat_index()]
-    #print(tmp.columns)
+    
     return tmp
 
 def make_EDvitals_df(EDvitals_df,cohort_df):
     systolic = add_EDvital_column(EDvitals_df,'Systolic','Systolic')
     # fill out missing values
     systolic = pd.merge(cohort_df[['PtSSN','EDStartDateTime']],systolic,how='left')
+    systolic['Systolic_count'].fillna(0,inplace=True)
     
     diastolic = add_EDvital_column(EDvitals_df,'Diastolic','Diastolic')
     diastolic = pd.merge(cohort_df[['PtSSN','EDStartDateTime']],diastolic,how='left')
+    diastolic['Diastolic_count'].fillna(0,inplace=True)
     
     vdf = pd.merge(systolic,diastolic,on=['PtSSN','EDStartDateTime'])
 
@@ -449,7 +464,9 @@ def make_EDvitals_df(EDvitals_df,cohort_df):
         subset_EDvitals = EDvitals_df[EDvitals_df.VitalType==vital_type]
         tmp_df = add_EDvital_column(subset_EDvitals,'VitalResultNumeric',vital_type)
         tmp_df = pd.merge(cohort_df[['PtSSN','EDStartDateTime']],tmp_df,how='left')
+        tmp_df[vital_type+'_count'].fillna(0,inplace=True)
         vdf = pd.merge(vdf,tmp_df,on=['PtSSN','EDStartDateTime'])
+        vdf.drop_duplicates(inplace=True)
     return vdf
 
 
@@ -481,20 +498,23 @@ def add_hosp_vital_column(vitals,vital_col,colname):
 
 def make_hosp_vitals_df(hosp_vitals_df,cohort_df):
     systolic = add_hosp_vital_column(hosp_vitals_df,'Systolic','Systolic')
-    systolic = pd.merge(cohort_df[['PtSSN','EDStartDateTime']],systolic,how='left')
-    
+    systolic = pd.merge(cohort_df[['PtSSN','AdmitDateTime']],systolic,how='left')
+    systolic['HOSP_Systolic_count'].fillna(0,inplace=True)
     diastolic = add_hosp_vital_column(hosp_vitals_df,'Diastolic','Diastolic')
+    diastolic = pd.merge(cohort_df[['PtSSN','AdmitDateTime']],diastolic,how='left')
+    diastolic['HOSP_Diastolic_count'].fillna(0,inplace=True)
     
     vdf = pd.merge(systolic,diastolic,on=['PtSSN','AdmitDateTime'])
-    diastolic = pd.merge(cohort_df[['PtSSN','EDStartDateTime']],diastolic,how='left')
+    
 
     vital_types = ['PULSE','RESPIRATION','PAIN','TEMPERATURE']
     for vital_type in vital_types:
         subset_hosp_vitals = hosp_vitals_df[hosp_vitals_df.VitalType==vital_type]
         tmp_df = add_hosp_vital_column(subset_hosp_vitals,'VitalResultNumeric',vital_type)
-        tmp_df = pd.merge(cohort_df[['PtSSN','EDStartDateTime']],tmp_df,how='left')
+        tmp_df = pd.merge(cohort_df[['PtSSN','AdmitDateTime']],tmp_df,how='left')
+        tmp_df['HOSP_'+vital_type + '_count'].fillna(0,inplace=True)
         vdf = pd.merge(vdf,tmp_df,on=['PtSSN','AdmitDateTime'])
-    return vdf
+    return vdf.drop_duplicates()
 
 
 def separate_cohorts_hosp_vitals(vitals,dizzy_cohort_df,abdpain_cohort_df):
@@ -777,7 +797,7 @@ def separate_cohorts_labs(labs,dizzy_cohort_df,abdpain_cohort_df):
     return dizzy_labs, abdpain_labs
 
 
-def get_labs_data(labs,labname,labfn,demo_df):
+def get_labs_data(labs,labname,labfn,cohort_df):
     # get subset of labs that match labfn
     lab_subset = labs[labs.LOINC.apply(labfn)]
     # group by PtSSN, get count, min, max
@@ -787,7 +807,8 @@ def get_labs_data(labs,labname,labfn,demo_df):
     
     # combine the count, min, max, and abnormal_count into one dataset
     tmp = pd.merge(lab_subset_data,lab_subset_abnormal_count,on='PtSSN')
-    tmp1 = pd.merge(demo_df[['PtSSN']],tmp,on='PtSSN',how='left')
+    pts = pd.DataFrame(cohort_df['PtSSN'].unique(),columns=['PtSSN'])
+    tmp1 = pd.merge(pts,tmp,on='PtSSN',how='left')
     # convert NaN count fields to zero
     tmp1[labname+'_count'].fillna(0,inplace=True)
     tmp1[labname+'_abnormal_count'].fillna(0,inplace=True)
