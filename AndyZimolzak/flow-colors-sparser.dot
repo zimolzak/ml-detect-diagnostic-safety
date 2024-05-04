@@ -41,7 +41,7 @@ MissedOD -> ML;
 ML -> mlneg;
 ML -> mlpos;
 
-MLImproves[penwidth=0, label="PPV difference:\l E-trigger vs.\l ML-enhanced e-trigger", fontcolor="#777777", fontname="Helvetica Italic"]
+MLImproves[penwidth=0, label="PPV difference:\l E-trigger vs.\l ML-enhanced e-trigger", fontcolor="#777777", fontname="Helvetica-Italic"]
 hundredReview -> MLImproves [color="#888888", arrowtail=vee, dir=back, tailport=e]
 MLImproves -> mlpos [color="#888888", arrowhead=vee, constraint=false, headport=e]
 
